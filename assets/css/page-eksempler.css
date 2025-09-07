@@ -1,0 +1,234 @@
+:root {
+  --brand-1: #34d399;
+  --brand-2: #06b6d4;
+}
+/* =========================================================
+   EKSEMPLER / SHOWCASE
+   Ryddige kort med felles layout (samme stil som frisør-kortet)
+   ========================================================= */
+
+.showcase-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1100px) {
+  .showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.showcase-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: color-mix(in oklab, var(--brand-1) 35%, var(--line));
+}
+
+/* Bildedel – samme look som på frisørkortet */
+.showcase-card .img {
+  aspect-ratio: 16 / 9; /* låser høyde uansett bilde */
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.showcase-card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.showcase-card:hover .img img {
+  transform: scale(1.06);
+  filter: saturate(1.05);
+}
+
+/* Tekstdel */
+.showcase-card .body {
+  padding: 14px;
+}
+.showcase-card h3 {
+  margin: 0 0 6px;
+}
+.showcase-card p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+/* CTA-knapp konsistent – bruker eksisterende .btn .btn-primary fra base */
+.showcase-card .btn {
+  align-self: flex-start;
+}
+
+/* Litt ekstra spacing over hele seksjonen */
+.section .container > h1 + p {
+  margin-bottom: 16px;
+}
+/* =============== Inspirasjon =============== */
+.inspo-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 1100px) {
+  .inspo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .inspo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inspo-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.inspo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: color-mix(in oklab, var(--brand-1) 35%, var(--line));
+}
+
+/* toppstripe – matcher showcase-bildets høyde/følelse */
+.inspo-img {
+  aspect-ratio: 16/6;
+  background: linear-gradient(135deg, color-mix(in oklab, var(--brand-1) 18%, transparent), color-mix(in oklab, var(--brand-2) 18%, transparent)),
+    radial-gradient(800px 320px at 0% 0%, rgba(255, 255, 255, 0.05), transparent 60%), var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+}
+
+/* innhold */
+.inspo-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.inspo-body h3 {
+  margin: 0;
+}
+.inspo-body p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.inspo-cta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* note-boks under grid */
+.inspo-note {
+  margin-top: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+}
+.inspo-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px; /* fast høyde for alle logo-rader */
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-alt);
+}
+
+.inspo-logo img {
+  max-height: 50px;
+  max-width: 120px;
+  object-fit: contain;
+}
+/* --- Showcase reorganisering --- */
+.section-intro {
+  max-width: 68ch;
+  color: var(--muted, #b9c2cf);
+}
+
+.group-head {
+  margin-bottom: 1rem;
+}
+.group-head p {
+  margin: 0.25rem 0 1rem;
+  color: var(--muted, #b9c2cf);
+}
+
+/* Pille-lister for små prosjekter */
+.pill-groups {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+.pill-group h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+.pill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.pill {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line, #243141);
+  background: rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.pill:hover {
+  background: rgba(255, 255, 255, 0.075);
+}
+
+/* "Vis hele listen" */
+.more-list summary {
+  cursor: pointer;
+  margin-top: 0.75rem;
+  font-weight: 700;
+}
+.more-list .bullet-list {
+  margin: 0.5rem 0 0 1.2rem;
+}
+.subtle-note {
+  margin-top: 0.75rem;
+  color: var(--muted, #b9c2cf);
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  .pill-groups {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

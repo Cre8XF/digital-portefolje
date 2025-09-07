@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <script>
+    if (location.hostname.endsWith('github.io')) {
+      const repo = location.pathname.split('/')[1] || '';
+      const base = document.createElement('base');
+      base.href = '/' + repo + '/';
+      document.head.prepend(base);
+    }
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bella Frisør – Profesjonell hårstyling i Oslo</title>
+  <meta name="description"
+    content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering, og ubegrensede revisjoner.">
+  <link rel="canonical" href="https://dittdomene.no/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CRE8XF – Digital Design & Nettsider">
+  <meta property="og:description" content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering.">
+  <meta property="og:image" content="https://dittdomene.no/assets/og/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="description" content="Frisørsalong i Oslo med klipp, farging og behandlinger. Book time enkelt på nett.">
+
+  <!-- Ryddet og konsolidert CSS -->
+  <link rel="stylesheet" href="/demos/assets/css/base.css">
+  <link rel="stylesheet" href="/demos/assets/css/frisor.css">
+
+  <meta property="og:title" content="Bella Frisør – Profesjonell hårstyling i Oslo">
+  <meta property="og:description" content="Klipp, farging og behandlinger. Book time enkelt på nett.">
+</head>
+<body class="theme-frisor">
+  <!-- rett etter <body> -->
+  <a href="#main" class="skip-link">Hopp til innhold</a>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="bar container">
+      <div class="brand"><span class="dot"></span><span>Bella Frisør</span></div>
+      <button class="menu-toggle" data-menu-btn aria-expanded="false" aria-controls="site-menu" aria-label="Meny">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div id="site-menu" class="menu" data-menu>
+        <a href="#hjem">Hjem</a>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#priser">Priser</a>
+        <a href="#galleri">Galleri</a>
+        <a href="#kontakt" class="btn btn-primary">Book time</a>
+        <a href="../eksempler.html">Tilbake til eksempler</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hjem" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <span class="badge">Oslo sentrum</span>
+        <h1>Bella Frisør</h1>
+        <p class="lead">Profesjonell hårstyling i hjertet av Oslo. Vi skaper den perfekte looken
+          som fremhever din naturlige skjønnhet.</p>
+
+        <ul class="usp">
+          <li>✂️ Klipp & styling</li>
+          <li>🎨 Balayage & highlights</li>
+          <li>💆‍♀️ Hårkur & keratin – glans</li>
+        </ul>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#kontakt">Book time nå</a>
+          <a class="btn btn-ghost" href="#tjenester">Se tjenester</a>
+        </div>
+
+        <div class="social-proof">
+          <span class="stars">★★★★★</span>
+          <strong>4,9/5</strong> – 500+ fornøyde kunder
+        </div>
+
+        <div class="quick-bar">
+          <span class="hint">Hva trenger du?</span>
+          <a class="chip" href="#priser">Klipp</a>
+          <a class="chip" href="#priser">Farging</a>
+          <a class="chip" href="#priser">Behandling</a>
+          <a class="link" href="tel:+4722123456">Ring oss</a>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card hero-info">
+          <div class="emoji" aria-hidden="true">✂️</div>
+          <h3>Åpningstider</h3>
+          <ul class="hours">
+            <li>Man–Fre: 09–19</li>
+            <li>Lørdag: 09–16</li>
+            <li>Søndag: Stengt</li>
+          </ul>
+          <div class="next-slot"><span class="dot"></span> Neste ledige: i morgen 10:30</div>
+          <div class="quick-actions">
+            <a class="btn small" href="https://maps.google.com" target="_blank" rel="noopener">Finn veien</a>
+            <a class="btn small" href="tel:+4722123456">Ring</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- TJENESTER -->
+  <section id="tjenester" class="section section-alt">
+    <div class="container">
+      <h2 class="title">Våre tjenester</h2>
+      <p class="subtitle">Fra klassisk klipp til moderne farging – alt du trenger for å se fantastisk ut</p>
+
+      <div class="grid features">
+        <article class="card">
+          <div class="badge">✂️ Klipp & styling</div>
+          <h3>Alltid tilpasset deg</h3>
+          <p>Profesjonell hårklipp tilpasset ansiktsform og livsstil. Inkluderer vask, klipp og styling.</p>
+          <strong class="price">Fra 650 kr</strong>
+        </article>
+
+        <article class="card">
+          <div class="badge">🎨 Farging</div>
+          <h3>Naturlig til dristig</h3>
+          <p>Moderne teknikker: balayage, highlights/lowlights, helfarging – skånsomme produkter.</p>
+          <strong class="price">Fra 890 kr</strong>
+        </article>
+
+        <article class="card">
+          <div class="badge">💆‍♀️ Behandlinger</div>
+          <h3>Glans og styrke</h3>
+          <p>Dypnærende kur, protein eller keratin. Perfekt for skadet eller tørt hår.</p>
+          <strong class="price">Fra 450 kr</strong>
+        </article>
+
+        <article class="card">
+          <div class="badge">👧 Barneklipp</div>
+          <h3>Trygt og raskt</h3>
+          <p>Skånsom klipp for de minste – med god tid og rolige rammer.</p>
+          <strong class="price">Fra 350 kr</strong>
+        </article>
+
+        <article class="card">
+          <div class="badge">💃 Styling til fest</div>
+          <h3>Bryllup & spesielle anledninger</h3>
+          <p>Oppsetting, krøller eller glatt – vi fikser looken som varer hele kvelden.</p>
+          <strong class="price">Fra 450 kr</strong>
+        </article>
+
+        <article class="card">
+          <div class="badge">🧖‍♀️ Keratin</div>
+          <h3>Langvarig mykhet</h3>
+          <p>Frizz-kontroll og glans med keratinbehandling – slitesterkt resultat.</p>
+          <strong class="price">Fra 1 800 kr</strong>
+        </article>
+      </div>
+
+      <div class="service-cta">
+        <a class="btn btn-primary" href="#kontakt">Book time</a>
+        <a class="btn btn-ghost" href="#priser">Se alle priser</a>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title">Ofte stilte spørsmål</h3>
+        <div class="faq-grid">
+          <details>
+            <summary>Hvor lang tid tar en klipp?</summary>
+            <p>Vanlig klipp tar ca. 45–60 min inkludert vask og styling.</p>
+          </details>
+          <details>
+            <summary>Kan jeg endre timen min?</summary>
+            <p>Ja, du kan flytte/avbestille kostnadsfritt inntil 24 timer før.</p>
+          </details>
+          <details>
+            <summary>Hvilke produkter bruker dere?</summary>
+            <p>Skånsomme salongprodukter uten unødige tilsetninger.</p>
+          </details>
+          <details>
+            <summary>Tilbyr dere student- eller pensjonistrabatt?</summary>
+            <p>Ja – 10% på utvalgte behandlinger. Spør i salong eller ved booking.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRISER -->
+  <section id="priser" class="section section-plain">
+    <div class="container">
+      <h2 class="title">Prisliste</h2>
+      <p class="subtitle">Transparente priser uten skjulte kostnader</p>
+
+      <div class="grid pricing">
+        <div class="card">
+          <h3>Klipp & styling</h3>
+          <div class="grid two-col">
+            <span>Dame klipp</span><span class="price">650 kr</span>
+            <span>Herre klipp</span><span class="price">450 kr</span>
+            <span>Barn klipp</span><span class="price">350 kr</span>
+            <span>Vask og føn</span><span class="price">250 kr</span>
+            <span>Styling til fest</span><span class="price">450 kr</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Farging & behandling</h3>
+          <div class="grid two-col">
+            <span>Helfarging</span><span class="price">890 kr</span>
+            <span>Highlights (folie)</span><span class="price">1 200 kr</span>
+            <span>Balayage</span><span class="price">1 450 kr</span>
+            <span>Hårkur behandling</span><span class="price">450 kr</span>
+            <span>Keratinbehandling</span><span class="price">1 800 kr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card promo">
+        <h4>🎉 Førstegangskunde?</h4>
+        <p>Få 20% rabatt på din første behandling hos oss!</p>
+        <a class="btn btn-primary light" href="#kontakt">Book din første time</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERI -->
+  <section id="galleri" class="section section-alt">
+    <div class="container">
+      <h2 class="title">Vårt arbeid</h2>
+      <p class="subtitle">Se noen av våre nylige transformasjoner</p>
+
+      <div class="gallery">
+        <figure class="shot"><img src="./assets/img/bob.jpg" alt="Moderne bob" loading="lazy"></figure>
+        <figure class="shot"><img src="./assets/img/balayage.jfif" alt="Balayage" loading="lazy"></figure>
+        <figure class="shot"><img src="./assets/img/festfrisyre.jfif" alt="Festfrisyre" loading="lazy"></figure>
+        <figure class="shot"><img src="./assets/img/kreativ-farging.jfif" alt="Kreativ farging" loading="lazy"></figure>
+        <figure class="shot"><img src="./assets/img/har-kur.webp" alt="Hårkur" loading="lazy"></figure>
+        <figure class="shot"><img src="./assets/img/herreklipp.jpg" alt="Herreklipp" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="section section-plain">
+    <div class="container grid kontakt">
+      <div class="card">
+        <h2 class="title" style="margin-top:0">Book din time</h2>
+        <p class="subtitle">Vi gleder oss til å møte deg!</p>
+
+        <form id="booking-form" class="grid contact-grid">
+          <label>Navn<input type="text" required></label>
+          <label>Telefon<input type="tel" required></label>
+
+          <label class="full">Ønsket tjeneste
+            <select>
+              <option>Klipp og styling</option>
+              <option>Farging</option>
+              <option>Highlights/Balayage</option>
+              <option>Hårkur behandling</option>
+              <option>Festfrisyre</option>
+              <option>Annet</option>
+            </select>
+          </label>
+
+          <label class="full">Ønsket dato og tid
+            <input type="text" placeholder="F.eks. Mandag 15. januar, kl 14:00">
+          </label>
+
+          <label class="full">Ekstra ønsker
+            <textarea rows="3" placeholder="Fortell oss gjerne om håret ditt og hva du ønsker å oppnå..."></textarea>
+          </label>
+
+          <div class="full">
+            <button class="btn btn-primary" type="submit">Send booking-forespørsel</button>
+          </div>
+          <p class="subtitle full"><strong>Demo-melding:</strong> Dette er en eksempel-nettside laget av Cre8XF.</p>
+        </form>
+      </div>
+
+      <aside class="grid sidecards">
+        <div class="card">
+          <h3>📍 Besøk oss</h3>
+          <p><strong>Adresse:</strong> Storgata 15, 0155 Oslo</p>
+          <p><strong>Telefon:</strong> +47 22 12 34 56</p>
+          <p><strong>E-post:</strong> post@bellafrisor.no</p>
+        </div>
+
+        <div class="card">
+          <h3>🕒 Åpningstider</h3>
+          <p>Mandag–Fredag: 09–19<br>Lørdag: 09–16<br>Søndag: Stengt</p>
+        </div>
+
+        <div class="card callout">
+          <h3>💬 Ring oss direkte</h3>
+          <p>Har du spørsmål eller vil du booke over telefon?</p>
+          <a class="btn" href="tel:+4722123456">📞 22 12 34 56</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-cols">
+      <div>
+        <div class="logo">Bella Frisør</div>
+        <p class="muted">Din lokale frisørsalong i Oslo sentrum. Vi skaper den perfekte looken for deg.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Tjenester</h4>
+        <ul>
+          <li>Klipp & styling</li>
+          <li>Farging & highlights</li>
+          <li>Behandlinger</li>
+          <li>Festfrisyrer</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Kontakt</h4>
+        <ul>
+          <li>Storgata 15, Oslo</li>
+          <li>+47 22 12 34 56</li>
+          <li>post@bellafrisor.no</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Følg oss</h4>
+        <div>📘 📸 📱</div>
+        <p class="muted">Følg oss for inspirasjon og tilbud!</p>
+      </div>
+    </div>
+    <div class="container copyright">
+      © 2025 Bella Frisør • Nettside laget av <strong>Cre8XF</strong>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA (mobil) -->
+  <a class="fab-cta" href="#kontakt">Book time</a>
+
+  <!-- Ryddet JS -->
+  <script src="/demos/assets/js/app.js"></script>
+</body>
+</html>

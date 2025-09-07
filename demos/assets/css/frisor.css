@@ -1,0 +1,46 @@
+/* ========== FRISOR.CSS (tema/overstyringer) ========== */
+/* Tema-farger for frisør */
+.theme-frisor{
+  --brand:#e11d48;   /* rose-600 */
+  --brand-2:#a855f7; /* violet-500 */
+  --accent:#f59e0b;  /* amber-500 */
+}
+
+/* Lys/nøytral palett inne i lyse seksjoner */
+.theme-frisor .section-plain,
+.theme-frisor .section-alt{
+  color:#0f172a;
+}
+.theme-frisor .section-plain{ --surface-2:#fff7fb; --surface-1:#ffffff }
+.theme-frisor .section-alt  { --surface-3:#ffeef7; --surface-1:#ffffff }
+
+/* Hero bakgrunn (gradient) */
+.hero{
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color:#fff;
+}
+.hero .badge{background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18)}
+
+/* Info-kort i hero – glassy */
+.hero .hero-info{
+  background: color-mix(in oklab, #ffffff 22%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  color:#fff;
+}
+.hero .hero-info .next-slot .dot{width:8px;height:8px;border-radius:999px;background:#22c55e;box-shadow:0 0 0 4px rgba(34, 197, 94, 0.25)}
+
+/* Knapper i lyse seksjoner */
+.section-plain .btn-ghost,
+.section-alt .btn-ghost{background:#fff; border:1px solid #efe3f1; color: var(--brand)}
+.section-plain .btn-primary,
+.section-alt .btn-primary{box-shadow: 0 10px 20px rgba(225, 29, 72, 0.15)}
+
+/* Promo / Callout */
+.promo, .callout{
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color:#fff;
+}
+.promo .light, .callout .btn{background:#fff; color:var(--brand)}

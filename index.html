@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CRE8XF – Digital Design & Nettsider</title>
+    <meta name="description"
+        content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering, og ubegrensede revisjoner.">
+    <link rel="canonical" href="https://dittdomene.no/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CRE8XF – Digital Design & Nettsider">
+    <meta property="og:description" content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering.">
+    <meta property="og:image" content="https://dittdomene.no/assets/og/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0b0d10">
+
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/page-home.css">
+</head>
+
+<body>
+    <!-- rett etter <body> -->
+    <a href="#main" class="skip-link">Hopp til innhold</a>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html"><span class="mark">CRE8</span><span class="xt">XF</span></a>
+            <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
+            <nav class="nav" data-menu>
+                <a href="index.html">Hjem</a>
+                <a href="tjenester.html">Tjenester</a>
+                <a href="priser.html">Priser</a>
+                <a href="eksempler.html">Eksempler</a>
+                <a href="guide.html">Gratis guide</a>
+                <a href="kontakt.html" class="btn small">Kom i gang</a>
+                <!-- Tema-velger -->
+                <label class="theme-switch">
+                    <span class="sr-only">Velg tema</span>
+                    <select id="themeSelect" class="theme-select" aria-label="Velg tema">
+                        <option value="dark">Dark</option>
+                        <option value="soft">Soft</option>
+                        <option value="neon">Neon</option>
+                    </select>
+                </label>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO (med intro/USP'er slått inn) -->
+    <section id="hjem" class="hero hero--full">
+        <div class="container hero-inner">
+            <div class="hero-panel">
+                <h1>Moderne, raske og <span class="grad">tøffe</span> nettsider</h1>
+                <p>Jeg designer og bygger nettsider som er enkle å drifte, raske å laste og gode å bruke. Se demoene –
+                    så bygger vi din neste side.</p>
+
+                <div class="cta">
+                    <a class="btn" href="eksempler.html">Se prosjekter</a>
+                    <a class="btn ghost" href="kontakt.html">La oss snakke</a>
+                </div>
+
+                <!-- Stats -->
+                <ul class="hero-stats">
+                    <li><strong>7&nbsp;dager</strong><span>levering</span></li>
+                    <li><strong>30+</strong><span>prosjekter</span></li>
+                    <li><strong>100%</strong><span>mobilvennlig</span></li>
+                </ul>
+            </div>
+
+            <!-- USP-er (tidl. Intro) -->
+            <div class="hero-features">
+                <article class="feat">
+                    <h3>Design som skiller seg ut</h3>
+                    <p>Stram typografi, fargebruk og mikro-animasjoner – uten å bli “tung”.</p>
+                </article>
+                <article class="feat">
+                    <h3>Klart innhold</h3>
+                    <p>Struktur og tekster som treffer målgruppen.</p>
+                </article>
+                <article class="feat">
+                    <h3>Fastpris & rask levering</h3>
+                    <p>7 dager og ubegrensede revisjoner.</p>
+                </article>
+                <article class="feat">
+                    <h3>Mobil & SEO</h3>
+                    <p>Responsivt oppsett og grunnleggende SEO som standard.</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- Partner/Trust-bar -->
+        <div class="hero-trust">
+            <div class="container trust-inner">
+                <span class="trust-kicker">Brukt av</span>
+                <div class="trust-logos">
+                    <!-- Bytt disse til <img> når du har ekte logoer -->
+                    <span class="tlogo">LOGO 1</span>
+                    <span class="tlogo">LOGO 2</span>
+                    <span class="tlogo">LOGO 3</span>
+                    <span class="tlogo">LOGO 4</span>
+                    <span class="tlogo">LOGO 5</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ned-pil -->
+        <button class="scroll-cue big" aria-label="Scroll til mer"
+            onclick="document.getElementById('mer').scrollIntoView({behavior:'smooth'})">
+            <span>Scroll for mer</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 16l-6-6h12l-6 6z" fill="currentColor" />
+            </svg>
+        </button>
+
+        <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+    <section class="section alt">
+        <div class="container">
+            <h2>Slik jobber jeg</h2>
+            <div class="grid" style="gap:12px;grid-template-columns:repeat(4,minmax(0,1fr))">
+                <article class="card">
+                    <h3>1. Kartlegging</h3>
+                    <p>Mål, scope, tidslinje.</p>
+                </article>
+                <article class="card">
+                    <h3>2. Design</h3>
+                    <p>Wireframe → stil.</p>
+                </article>
+                <article class="card">
+                    <h3>3. Bygging</h3>
+                    <p>HTML/CSS/JS, iterasjon.</p>
+                </article>
+                <article class="card">
+                    <h3>4. Lansering</h3>
+                    <p>SEO, domene, hosting.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Anker til neste innhold (erstatt/ flytt når du legger inn flere seksjoner) -->
+    <div id="mer"></div>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> CRE8XF – Digital Business</p>
+            <a class="btn ghost small" href="#hjem">Til toppen</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

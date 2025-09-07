@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kontakt – CRE8XF</title>
+    <meta name="description"
+        content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering, og ubegrensede revisjoner.">
+    <link rel="canonical" href="https://dittdomene.no/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CRE8XF – Digital Design & Nettsider">
+    <meta property="og:description" content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering.">
+    <meta property="og:image" content="https://dittdomene.no/assets/og/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0b0d10">
+
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/page-kontakt.css">
+</head>
+
+<body>
+    <!-- rett etter <body> -->
+    <a href="#main" class="skip-link">Hopp til innhold</a>
+
+    <!-- header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html"><span class="mark">CRE8</span><span class="xt">XF</span></a>
+            <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
+            <nav class="nav" data-menu>
+                <a href="index.html">Hjem</a>
+                <a href="tjenester.html">Tjenester</a>
+                <a href="priser.html">Priser</a>
+                <a href="eksempler.html">Eksempler</a>
+                <a href="guide.html">Gratis guide</a>
+                <a href="kontakt.html" class="btn small">Kom i gang</a>
+                <!-- Tema-velger -->
+                <label class="theme-switch">
+                    <span class="sr-only">Velg tema</span>
+                    <select id="themeSelect" class="theme-select" aria-label="Velg tema">
+                        <option value="dark">Dark</option>
+                        <option value="soft">Soft</option>
+                        <option value="neon">Neon</option>
+                    </select>
+                </label>
+    
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="section">
+        <div class="container" style="display:grid; gap:18px; grid-template-columns:1fr">
+            <div class="card">
+                <h2>Kontakt</h2>
+                <p>Si kort hva du trenger, så tar jeg kontakt.</p>
+                <form class="form" id="contactForm" novalidate
+                    onsubmit="event.preventDefault(); alert('Demo – kobles til Netlify Forms / EmailJS.');">
+                    <label>Navn<input type="text" name="name" required></label>
+                    <label>E-post<input type="email" name="email" required></label>
+                    <label>Melding<textarea name="message" rows="4" required></textarea></label>
+                    <button class="btn">Send</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3>Andre kanaler</h3>
+                <p>E-post: <a href="mailto:hei@cre8xf.dev">hei@cre8xf.dev</a></p>
+                <p>Instagram: <a href="#">@cre8xf</a> &nbsp; · &nbsp; LinkedIn: <a href="#">Profil</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> CRE8XF</p><a class="btn ghost small" href="#">Til toppen</a>
+        </div>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
