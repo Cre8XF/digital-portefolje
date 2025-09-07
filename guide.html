@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="no" data-theme="dark">
+<html lang="no" data-theme="neon">
 
 <head>
     <meta charset="utf-8">
@@ -35,10 +35,8 @@
                 <label class="theme-switch">
                     <span class="sr-only">Velg tema</span>
                     <select id="themeSelect" class="theme-select" aria-label="Velg tema">
-                    <option value="light">light</option>
-                    <option value="dark">dark</option>
-                    <option value="neon">neon</option>
-                    <option value="steel">steel</option>
+                        <option value="neon">neon</option>
+                        <option value="steel">steel</option>
                     </select>
                 </label>
             </nav>
@@ -47,8 +45,12 @@
 
     <!-- Hero -->
     <section class="section hero alt">
+        <!-- Ny bakgrunnsnode -->
+        <div class="hero-bg" aria-hidden="true" style="background-image: url('assets/img/guide-bg.jpg')"></div>
+    
         <div class="container hero-inner">
-            <div>
+            <!-- Gi venstre kolonne glasspanel -->
+            <div class="hero-panel">
                 <h1>Gratis guide: Slik får du en god nettside</h1>
                 <p class="lead">Kort og nyttig – alt du må ha klart: mål, innhold, bilder, struktur, enkel SEO og
                     lansering. Perfekt om du vil ha siden ferdig på sju dager.</p>

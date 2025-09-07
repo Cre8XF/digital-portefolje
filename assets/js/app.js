@@ -32,26 +32,47 @@ document.addEventListener('click', e => {
 // årstall i footer
 document.getElementById('year')?.append(document.createTextNode(new Date().getFullYear()));
 
-// --- Theme switcher ---
+// --- Theme switcher (Neon default, only Neon/Steel) ---
 (() => {
-  const THEMES = ['light','dark','neon','steel'];          // <- oppdatert
+  const THEMES = ['neon','steel'];
   const KEY = 'cre8xf:theme';
   const root = document.documentElement;
-  const body = document.body;
-  const sanitize = (n) => THEMES.includes(n) ? n : 'light'; // <- 'light' som fallback
+  const body  = document.body;
+
+  // Gamle navn -> nye (hvis noe ligger i localStorage)
+  const ALIAS = {
+    light: 'neon', soft: 'neon', pearl: 'neon', dark: 'neon',
+    titan: 'steel', steel: 'steel', neon: 'neon'
+  };
+  const sanitize = (n) => (THEMES.includes(n) ? n : (ALIAS[n] || 'neon'));
+
+  function setThemeColor(){
+    const m = document.querySelector('meta[name="theme-color"]');
+    if (!m) return;
+    const val = getComputedStyle(root).getPropertyValue('--bg').trim();
+    if (val) m.setAttribute('content', val);
+  }
 
   function applyTheme(name){
     const theme = sanitize(name);
     root.setAttribute('data-theme', theme);
-    // legg på body-klasse for begge veier (valgfritt, men greit)
     THEMES.forEach(t => body.classList.remove(`theme-${t}`));
     body.classList.add(`theme-${theme}`);
 
+    // Hold select i sync + fjern ukjente options
     const sel = document.getElementById('themeSelect');
-    if (sel && [...sel.options].some(o => o.value === theme)) sel.value = theme;
+    if (sel){
+      [...sel.options].forEach(o => { if (!THEMES.includes(o.value)) o.remove(); });
+      if ([...sel.options].some(o => o.value === theme)) sel.value = theme;
+    }
+    setThemeColor();
   }
 
-  applyTheme(localStorage.getItem(KEY) || 'light');         // <- default 'light'
+  // Init (Neon default). Migrer gamle verdier om nødvendig.
+  const saved = localStorage.getItem(KEY);
+  const initial = sanitize(saved || 'neon');
+  if (initial !== saved) localStorage.setItem(KEY, initial);
+  applyTheme(initial);
 
   document.getElementById('themeSelect')?.addEventListener('change', e => {
     const chosen = sanitize(e.target.value);
@@ -60,7 +81,9 @@ document.getElementById('year')?.append(document.createTextNode(new Date().getFu
   });
 
   window.addEventListener('storage', e => { if (e.key === KEY) applyTheme(e.newValue); });
+  document.addEventListener('DOMContentLoaded', setThemeColor);
 })();
+
 
 
 // ----- Insert shared partials (footer) -----

@@ -261,3 +261,17 @@
 .hero h1 {
   text-shadow: 0 8px 36px color-mix(in oklab, var(--text) 35%, transparent);
 }
+.theme-select {
+  appearance: none;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 6px);
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+.theme-select:focus {
+  outline: 0;
+  border-color: color-mix(in oklab, var(--brand-1) 40%, var(--line));
+  box-shadow: var(--shadow);
+}

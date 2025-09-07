@@ -106,3 +106,46 @@
     box-shadow: none;
   }
 }
+/* Hero-bilde + overlay + fade */
+.hero.alt {
+  position: relative;
+  overflow: clip;
+}
+.hero.alt .hero-bg {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  filter: var(--hero-filter); /* bruker tema-tokenet ditt */
+  z-index: 0;
+}
+.hero.alt .hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, var(--hero-ov-top), var(--hero-ov-bot));
+}
+.hero.alt .hero-bg::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--bg)); /* myk overgang ned */
+}
+.hero.alt .hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glasspanel på venstre kolonne */
+.hero.alt .hero-panel {
+  background: color-mix(in oklab, var(--panel) var(--hero-panel-tint), transparent);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 16px;
+}
