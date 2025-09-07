@@ -1,35 +1,4 @@
-/* ===== Design tokens (default) ===== */
-:root {
-  --bg: #0b0d10;
-  --bg-alt: #0f1217;
-  --panel: #121621;
-  --line: #23283a;
-  --text: #e8eaf2;
-  --muted: #b8bed0;
-
-  --brand-1: #5b8cff; /* kan overstyres pr. side */
-  --brand-2: #e84e92; /* kan overstyres pr. side */
-  --brand-on: #ffffff;
-
-  --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-  --radius: 18px;
-
-  --font: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --lh: 1.6;
-  --container: 1100px;
-  --space-1: 6px;
-  --space-2: 10px;
-  --space-3: 14px;
-  --space-4: 20px;
-  --space-5: 28px;
-  --space-6: 40px;
-}
-:root[data-theme='steel'] body::before {
-  mix-blend-mode: multiply;
-}
-
 /* ===== Base ===== */
-/* base.css – helt i toppen */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -44,8 +13,8 @@
   width: auto;
   height: auto;
   padding: 0.4rem 0.6rem;
-  background: #fff;
-  color: #111;
+  background: var(--panel);
+  color: var(--text);
   border-radius: 8px;
   z-index: 999;
 }
@@ -135,10 +104,10 @@ p {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(12, 14, 18, 0.7);
+  background: var(--header-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid color-mix(in oklab, var(--panel) 6%, transparent);
 }
 .header-inner {
   display: flex;
@@ -159,7 +128,7 @@ p {
   place-items: center;
   border-radius: 10px;
   background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
-  color: #fff;
+  color: var(--brand-on);
   font-weight: 900;
 }
 .nav a {
@@ -167,7 +136,7 @@ p {
   border-radius: 10px;
 }
 .nav a:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: color-mix(in oklab, var(--panel) 6%, transparent);
 }
 .nav a.active {
   background: color-mix(in oklab, var(--brand-2) 25%, transparent);
@@ -177,7 +146,7 @@ p {
   display: none;
   background: transparent;
   border: 0;
-  color: #fff;
+  color: var(--text);
   font-size: 1.25rem;
 }
 @media (max-width: 920px) {
@@ -277,11 +246,13 @@ p {
 .price-card .badge {
   justify-self: start;
   font-size: 0.78rem;
-  padding: 0.2rem 0.55rem;
+  padding: 0.32rem 0.6rem;
   border-radius: 999px;
-  border: 1px solid #2c3146;
-  color: #ffe6a6;
-  background: rgba(255, 223, 128, 0.06);
+  border: 0;
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: var(--brand-on);
+  box-shadow: var(--shadow-sm);
+  font-weight: 800;
 }
 .price-card .price {
   font-weight: 800;
@@ -289,7 +260,7 @@ p {
 }
 .price-card .strike {
   text-decoration: line-through;
-  color: #94a3b8;
+  color: var(--muted);
   font-size: 0.9rem;
   font-weight: 600;
   margin-left: 8px;
@@ -323,7 +294,7 @@ p {
   display: grid;
   place-items: center;
   background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
-  color: #fff;
+  color: var(--brand-on);
   font-weight: 800;
   font-size: 0.9rem;
   margin-bottom: 6px;
@@ -345,6 +316,7 @@ p {
   padding: 10px 10px 10px 28px;
   border: 1px solid var(--line);
   border-radius: 12px;
+  background: var(--chip-bg);
   position: relative;
 }
 .check-grid li::before {
@@ -368,7 +340,7 @@ p {
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--bg-alt);
-  color: #cfd3e2;
+  color: var(--muted);
 }
 
 /* Forms / footer */
@@ -380,8 +352,8 @@ p {
 .form input,
 .form textarea {
   width: 100%;
-  background: #0d1117;
-  border: 1px solid #2a3042;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
   color: var(--text);
   border-radius: 12px;
   padding: 0.75rem 0.9rem;
@@ -391,17 +363,6 @@ p {
   border-color: var(--brand-1);
   box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand-1) 28%, transparent);
 }
-.site-footer {
-  border-top: 1px solid var(--line);
-  background: #0a0c10;
-  padding: 20px 0;
-}
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 /* Utilities */
 :target {
   scroll-margin-top: 90px;
@@ -424,7 +385,7 @@ p {
 }
 .price-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow);
   border-color: color-mix(in oklab, var(--brand-1) 30%, var(--line));
 }
 .price-card h3 {
@@ -441,7 +402,7 @@ p {
 }
 .price-card .check-grid li {
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.02);
+  background: color-mix(in oklab, var(--panel) 2%, transparent);
 }
 
 /* CTA alltid nederst i kortet */
@@ -457,17 +418,15 @@ p {
 
 /* badge alltid over tekst/innehold */
 .price-card .badge {
-  position: absolute;
-  top: -12px; /* løft den litt over innholdet */
-  left: 12px;
-  z-index: 10; /* viktig */
-  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
-  color: #0b0d10;
-  border: 0;
+  justify-self: start;
+  font-size: 0.78rem;
   padding: 0.32rem 0.6rem;
-  font-weight: 800;
   border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  border: 0;
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: var(--brand-on);
+  box-shadow: var(--shadow-sm);
+  font-weight: 800;
 }
 
 .offer-details {
@@ -510,12 +469,12 @@ p {
 }
 .compare thead th {
   font-weight: 800;
-  background: #0f1217;
+  background: var(--bg-alt);
   position: sticky;
   top: 0;
 }
 .compare tbody tr:hover td {
-  background: rgba(255, 255, 255, 0.02);
+  background: color-mix(in oklab, var(--panel) 2%, transparent);
 }
 .faq p {
   margin: 0.4rem 0;
@@ -532,8 +491,8 @@ p {
   font-weight: 800;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
-  color: #0b0d10;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  color: var(--brand-on);
+  box-shadow: var(--shadow-lg);
   display: none;
 }
 @media (max-width: 820px) {
@@ -555,9 +514,26 @@ p {
 }
 /* ===== Global footer ===== */
 .site-footer {
-  margin-top: 24px;
-  background: #0a1014;
-  border-top: 1px solid var(--line, #243141);
+  background: var(--footer-bg);
+  border-top: 1px solid var(--line);
+  padding: 20px 0;
+
+  /* sørg for lys tekst på mørk footer i lyse tema */
+  color: var(--text);
+}
+
+/* Sentrer alt pent, uansett innhold */
+.site-footer .footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* Lenker arver tekstfargen i footer */
+.site-footer a {
+  color: inherit;
 }
 .footer-grid {
   display: grid;
@@ -577,18 +553,30 @@ p {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--brand-1, #ff9a3f), var(--brand-2, #ffdd59));
-  color: #0b0d10;
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: var(--brand-on);
 }
 .foot-brand .xt {
   opacity: 0.95;
 }
 .foot-brand p {
   margin: 0.25rem 0 0;
-  color: var(--muted, #b9c2cf);
+  color: var(--muted);
 }
 .foot-meta {
   font-size: 0.95rem;
+}
+
+/* Ghost-knappen i footer skal fortsatt se “lys og ren” ut */
+.site-footer .btn.ghost {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+.site-footer .btn.ghost:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
 }
 
 .foot-nav h4,
@@ -608,7 +596,7 @@ p {
 }
 .foot-contact a {
   text-decoration: none;
-  border-bottom: 1px dashed var(--line, #243141);
+  border-bottom: 1px dashed var(--line);
 }
 
 @media (min-width: 900px) {
@@ -627,7 +615,7 @@ p {
   max-width: 160px; /* mobil */
   height: auto;
   border-radius: 8px; /* valgfritt – fjern om du vil ha helt rett kant */
-  filter: drop-shadow(0 6px 18px rgba(255, 230, 120, 0.18)); /* subtil glød */
+  filter: drop-shadow(0 6px 18px color-mix(in oklab, var(--brand-2) 18%, transparent)); /* subtil glød */
 }
 @media (min-width: 900px) {
   .foot-brand .logo-img {
@@ -658,7 +646,7 @@ body::before {
   background: var(--panel);
   border-radius: 18px;
   border: 1px solid var(--line);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow);
 }
 .card.edge::before {
   content: '';
@@ -682,7 +670,7 @@ body::before {
 .hero--titan {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(9, 12, 16, 0.2), var(--bg) 60%);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--bg) 20%, transparent), var(--bg) 60%);
 }
 .hero--titan::after {
   content: '';
@@ -706,7 +694,7 @@ body::before {
 /* Tekst med luksus-preg (valgfritt på store titler) */
 .titan-title {
   letter-spacing: 0.4px;
-  background: linear-gradient(90deg, #fff, rgba(var(--edge-cyan), 0.85));
+  background: linear-gradient(90deg, color-mix(in oklab, var(--panel) 90%, transparent), rgba(var(--edge-cyan), 0.85));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -737,51 +725,12 @@ body::before {
   background: radial-gradient(160px 160px at var(--x, 50%) var(--y, 50%), rgba(var(--edge-cyan), 0.1), transparent 60%);
   mix-blend-mode: screen;
 }
-/* Lys bakgrunn: subtil glød i stedet for tunge mørke vignetter */
-:root[data-theme='pearl'] body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: radial-gradient(900px 540px at 8% -8%, rgba(var(--edge-cyan), 0.06), transparent 60%), radial-gradient(900px 540px at 100% 0%, rgba(var(--edge-amber), 0.05), transparent 60%);
-  mix-blend-mode: multiply; /* ser naturlig ut på lys */
-}
 
-/* Kort på lys bakgrunn */
-:root[data-theme='pearl'] .card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
-}
-
-/* Edge-glow justert for lys bakgrunn */
-:root[data-theme='pearl'] .card.edge::before {
-  filter: blur(10px) saturate(1.05);
-  opacity: 0.45;
-}
-
-/* Alt-seksjoner (bånd) på lys bakgrunn */
-:root[data-theme='pearl'] .section.alt {
-  background: linear-gradient(180deg, #ffffff, var(--bg-soft));
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-/* Knapper – samme profil, men litt mørkere tekstkontrast */
-:root[data-theme='pearl'] .btn {
-  color: #0b0d10;
-}
-:root[data-theme='pearl'] .btn.ghost {
-  background: #ffffff;
-  border-color: var(--line);
-  color: var(--text);
-}
 /* LUXE hero for lys tema */
 .hero--luxe {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 65%);
+  background: linear-gradient(180deg, var(--panel) 0%, var(--bg) 65%);
 }
 .hero--luxe::after {
   content: '';
@@ -801,13 +750,7 @@ body::before {
     transform: translateY(2.5%) scale(1.02);
   }
 }
-/* Cursor-glød: bruk multiply på lys bakgrunn */
-:root[data-theme='pearl'] .cursor-glow {
-  background: radial-gradient(160px 160px at var(--x, 50%) var(--y, 50%), rgba(var(--edge-cyan), 0.1), transparent 60%);
-  mix-blend-mode: multiply;
-}
-
-/* Magnetiske knapper: litt lavere styrke på lys bakgrunn (valgfritt) */
-:root[data-theme='pearl'] .btn.magnetic {
-  transform: translateZ(0); /* hint til GPU */
+/* Basis – arver normal tekstfarge */
+.site-footer {
+  color: var(--text);
 }

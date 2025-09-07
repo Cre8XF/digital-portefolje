@@ -1,12 +1,3 @@
-:root {
-  --brand-1: #f59e0b;
-  --brand-2: #ef4444;
-}
-:root {
-  --brand-1: #f59e0b;
-  --brand-2: #ef4444;
-}
-
 /* litt lavere sub-hero så pris-grid kommer høyere */
 .hero--sub {
   min-height: 42vh;
@@ -14,5 +5,5 @@
 
 /* subtil glød under hero-heading */
 .hero--sub .hero-inner h1 {
-  text-shadow: 0 8px 36px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 8px 36px color-mix(in oklab, var(--text) 35%, transparent);
 }
