@@ -1,61 +1,81 @@
 /* =========================================================
-   THEMES – variabel-overstyringer per tema
-   Bruk: <body class="theme-soft"> eller styres via JS
+   THEMES.CSS – fire profiler (light, dark, neon, steel)
+   Bruk enten <body class="theme-…"> ELLER <html data-theme="…">
+   Variabler: --bg, --bg-alt, --panel, --line, --text, --muted,
+              --brand-1, --brand-2, --brand-on, --radius, shadows
    ========================================================= */
 
-/* Dark (default) – base.css definerer allerede disse */
-body.theme-dark {
+/* Felles: dropdown-stil for tema-velger (valgfritt) */
+.theme-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+.theme-select:focus {
+  outline: 2px solid color-mix(in oklab, var(--brand-1) 55%, transparent);
+  outline-offset: 2px;
 }
 
-/* SOFT/LIGHT – lys bakgrunn, hvite kort, kraftige skygger */
-body.theme-soft {
-  --bg: #f8f5fa;
-  --bg-alt: #f2edf7;
-  --panel: #fff;
-  --line: #e7e4ee;
+/* ---------------------------------------------------------
+   LIGHT — "Pearl Luxe": lys, eksklusiv midtone (ikke kritthvit)
+   --------------------------------------------------------- */
+:root[data-theme='light'],
+body.theme-light {
+  --bg: #f6f8fb;
+  --bg-alt: #eef2f7;
+  --panel: #ffffff;
+  --line: #d7e0ea;
   --text: #0f172a;
-  --muted: #4b5563;
-  --brand-1: #ff72b6;
-  --brand-2: #ff8a57;
-  --brand-on: #111318;
+  --muted: #5b6b80;
+  --brand-1: #0ea5e9; /* cyan */
+  --brand-2: #f59e0b; /* amber */
+  --brand-on: #0b0d10;
   --radius: 16px;
-  --shadow-sm: 0 4px 12px rgba(17, 18, 20, 0.05);
-  --shadow: 0 10px 28px rgba(17, 18, 20, 0.1);
-  --shadow-lg: 0 22px 60px rgba(17, 18, 20, 0.16);
-  background: radial-gradient(800px 420px at 10% -10%, rgba(255, 114, 182, 0.14), transparent 60%), radial-gradient(820px 460px at 110% 0%, rgba(255, 138, 87, 0.12), transparent 62%), var(--bg);
+
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.12);
+
+  /* bakgrunn med subtil glød */
+  background: radial-gradient(1000px 520px at 12% -12%, rgba(14, 165, 233, 0.08), transparent 62%), radial-gradient(980px 520px at 100% 0%, rgba(245, 158, 11, 0.06), transparent 64%),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 42%, var(--bg-alt) 100%);
   color: var(--text);
 }
-body.theme-soft .feat,
-body.theme-soft .card,
-body.theme-soft .price-card {
+:root[data-theme='light'] .feat,
+:root[data-theme='light'] .card,
+:root[data-theme='light'] .price-card,
+body.theme-light .feat,
+body.theme-light .card,
+body.theme-light .price-card {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-body.theme-soft .btn {
-  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
-  color: var(--brand-on);
-  box-shadow: var(--shadow);
-}
-body.theme-soft .btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.06);
-  box-shadow: var(--shadow-lg);
-}
-body.theme-soft .site-header {
-  background: rgba(255, 255, 255, 0.75);
+:root[data-theme='light'] .site-header,
+body.theme-light .site-header {
+  background: rgba(255, 255, 255, 0.78);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #ece8f4;
+  border-bottom: 1px solid color-mix(in oklab, var(--line) 90%, transparent);
 }
-body.theme-soft .nav a {
+:root[data-theme='light'] .nav a,
+body.theme-light .nav a {
   position: relative;
   border-radius: 12px;
   padding: 0.55rem 0.8rem;
-  transition: color 0.15s ease, transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition: color 0.15s, transform 0.15s, background 0.2s, box-shadow 0.2s;
 }
-body.theme-soft .nav a::after {
+:root[data-theme='light'] .nav a::after,
+body.theme-light .nav a::after {
   content: '';
   position: absolute;
   left: 12px;
@@ -65,20 +85,153 @@ body.theme-soft .nav a::after {
   background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.22s ease;
+  transition: transform 0.22s;
   border-radius: 2px;
   opacity: 0.85;
 }
-body.theme-soft .nav a:hover {
+:root[data-theme='light'] .nav a:hover,
+body.theme-light .nav a:hover {
   background: #fff;
   box-shadow: var(--shadow-sm);
   transform: translateY(-1px);
 }
-body.theme-soft .nav a:hover::after {
+:root[data-theme='light'] .nav a:hover::after,
+body.theme-light .nav a:hover::after {
   transform: scaleX(1);
 }
+:root[data-theme='light'] .btn,
+body.theme-light .btn {
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: var(--brand-on);
+  box-shadow: var(--shadow);
+}
+:root[data-theme='light'] .btn:hover,
+body.theme-light .btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: var(--shadow-lg);
+}
+:root[data-theme='light'] .card:hover,
+:root[data-theme='light'] .price-card:hover,
+body.theme-light .card:hover,
+body.theme-light .price-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--brand-1) 26%, var(--line));
+  box-shadow: 0 18px 50px rgba(14, 165, 233, 0.1), var(--shadow);
+}
+:root[data-theme='light'] .section.alt,
+body.theme-light .section.alt {
+  background: linear-gradient(180deg, #fff, var(--bg-alt));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 
-/* NEON NOIR – mørk base + cyan/magenta glow */
+/* ---------------------------------------------------------
+   DARK — "Carbon Dark": mørk karbon med cyan/amber aksenter
+   --------------------------------------------------------- */
+:root[data-theme='dark'],
+body.theme-dark {
+  --bg: #0b0f14;
+  --bg-alt: #0e141b;
+  --panel: #0f151c;
+  --line: #1e2a39;
+  --text: #e8eefc;
+  --muted: #9fb0ca;
+  --brand-1: #39c6ff;
+  --brand-2: #ffb74a;
+  --brand-on: #061017;
+  --radius: 16px;
+
+  --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.35);
+  --shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.6);
+
+  background: radial-gradient(900px 520px at -10% -20%, rgba(57, 198, 255, 0.14), transparent 60%), radial-gradient(900px 520px at 110% 0%, rgba(255, 183, 74, 0.12), transparent 60%), var(--bg);
+  color: var(--text);
+}
+:root[data-theme='dark'] .feat,
+:root[data-theme='dark'] .card,
+:root[data-theme='dark'] .price-card,
+body.theme-dark .feat,
+body.theme-dark .card,
+body.theme-dark .price-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+:root[data-theme='dark'] .site-header,
+body.theme-dark .site-header {
+  background: rgba(9, 12, 20, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+:root[data-theme='dark'] .nav a,
+body.theme-dark .nav a {
+  position: relative;
+  border-radius: 12px;
+  padding: 0.55rem 0.8rem;
+  transition: transform 0.12s, background 0.2s, box-shadow 0.2s;
+}
+:root[data-theme='dark'] .nav a::after,
+body.theme-dark .nav a::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s;
+  border-radius: 2px;
+  opacity: 0.95;
+}
+:root[data-theme='dark'] .nav a:hover,
+body.theme-dark .nav a:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-1px);
+  box-shadow: 0 0 14px rgba(57, 198, 255, 0.12);
+}
+:root[data-theme='dark'] .nav a:hover::after,
+body.theme-dark .nav a:hover::after {
+  transform: scaleX(1);
+}
+:root[data-theme='dark'] .btn,
+body.theme-dark .btn {
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: var(--brand-on);
+  box-shadow: 0 0 0 0 rgba(57, 198, 255, 0), var(--shadow);
+}
+:root[data-theme='dark'] .btn:hover,
+body.theme-dark .btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 0 24px rgba(57, 198, 255, 0.22), 0 0 36px rgba(255, 183, 74, 0.18), var(--shadow);
+}
+:root[data-theme='dark'] .card:hover,
+:root[data-theme='dark'] .price-card:hover,
+body.theme-dark .card:hover,
+body.theme-dark .price-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--brand-1) 30%, var(--line));
+  box-shadow: 0 18px 50px rgba(57, 198, 255, 0.12), var(--shadow);
+}
+:root[data-theme='dark'] .section.alt,
+body.theme-dark .section.alt {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ---------------------------------------------------------
+   NEON — "Neon Pop": fargerik, mørk neon med glass
+   --------------------------------------------------------- */
+:root[data-theme='neon'],
 body.theme-neon {
   --bg: #0a0d14;
   --bg-alt: #0d1220;
@@ -86,54 +239,65 @@ body.theme-neon {
   --line: #222a43;
   --text: #e6ecff;
   --muted: #9fb0d1;
-  --brand-1: #40e0ff;
-  --brand-2: #ff5ad9;
+  --brand-1: #40e0ff; /* cyan */
+  --brand-2: #ff5ad9; /* magenta */
   --brand-on: #0a0d14;
   --radius: 16px;
+
   --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.35);
   --shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.6);
+
   background: radial-gradient(900px 520px at -10% -20%, rgba(64, 224, 255, 0.18), transparent 60%), radial-gradient(900px 520px at 110% 0%, rgba(255, 90, 217, 0.16), transparent 60%), var(--bg);
   color: var(--text);
 }
+:root[data-theme='neon'] .feat,
+:root[data-theme='neon'] .card,
+:root[data-theme='neon'] .price-card,
 body.theme-neon .feat,
 body.theme-neon .card,
 body.theme-neon .price-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
+:root[data-theme='neon'] .price-card:hover,
 body.theme-neon .price-card:hover {
   transform: translateY(-4px);
   border-color: color-mix(in oklab, var(--brand-1) 35%, var(--line));
   box-shadow: 0 18px 50px rgba(64, 224, 255, 0.12), 0 10px 26px rgba(255, 90, 217, 0.1), var(--shadow);
   filter: saturate(1.05);
 }
+:root[data-theme='neon'] .btn,
 body.theme-neon .btn {
   background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
   color: var(--brand-on);
   box-shadow: 0 0 0 0 rgba(64, 224, 255, 0), var(--shadow);
 }
+:root[data-theme='neon'] .btn:hover,
 body.theme-neon .btn:hover {
   transform: translateY(-2px);
   filter: brightness(1.06);
   box-shadow: 0 0 24px rgba(64, 224, 255, 0.25), 0 0 36px rgba(255, 90, 217, 0.18), var(--shadow);
 }
+:root[data-theme='neon'] .site-header,
 body.theme-neon .site-header {
   background: rgba(9, 12, 20, 0.7);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
+:root[data-theme='neon'] .nav a,
 body.theme-neon .nav a {
   position: relative;
   border-radius: 12px;
   padding: 0.55rem 0.8rem;
-  transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.12s, background 0.2s, box-shadow 0.2s;
 }
+:root[data-theme='neon'] .nav a::after,
 body.theme-neon .nav a::after {
   content: '';
   position: absolute;
@@ -144,65 +308,156 @@ body.theme-neon .nav a::after {
   background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.22s ease;
+  transition: transform 0.22s;
   border-radius: 2px;
   opacity: 0.95;
 }
+:root[data-theme='neon'] .nav a:hover,
 body.theme-neon .nav a:hover {
   background: rgba(255, 255, 255, 0.03);
   transform: translateY(-1px);
   box-shadow: 0 0 14px rgba(64, 224, 255, 0.12);
 }
+:root[data-theme='neon'] .nav a:hover::after,
 body.theme-neon .nav a:hover::after {
   transform: scaleX(1);
 }
 
-/* Liten styling av selecten */
-.theme-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: var(--panel);
+/* ---------------------------------------------------------
+   STEEL — "Steel & Glass": nøytral midtone, stål + glass-wow
+   --------------------------------------------------------- */
+:root[data-theme='steel'],
+body.theme-steel {
+  --bg: #e9edf2; /* kald, nøytral base */
+  --bg-alt: #e2e7ee; /* bånd */
+  --panel: #fdfefe; /* lett hvit med blått hint */
+  --line: #cfd7e3; /* stål-kant */
+  --text: #0e1420; /* dyp skriftfarge */
+  --muted: #58677d;
+  --brand-1: #7aa7ff; /* steel blue */
+  --brand-2: #c8d6ff; /* pale steel highlight */
+  --brand-on: #0b0f14;
+  --radius: 18px;
+  --edge-cyan: 122, 167, 255;
+  --edge-amber: 200, 214, 255;
+
+  --shadow-sm: 0 4px 12px rgba(10, 16, 26, 0.06);
+  --shadow: 0 12px 28px rgba(10, 16, 26, 0.09);
+  --shadow-lg: 0 24px 60px rgba(10, 16, 26, 0.13);
+
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 50%, var(--bg-alt) 100%), radial-gradient(880px 480px at 8% -10%, rgba(122, 167, 255, 0.1), transparent 64%);
   color: var(--text);
+}
+
+/* Glass/steel-kort med metallisk "sheen" */
+:root[data-theme='steel'] .feat,
+:root[data-theme='steel'] .card,
+:root[data-theme='steel'] .price-card,
+body.theme-steel .feat,
+body.theme-steel .card,
+body.theme-steel .price-card {
+  position: relative;
+  isolation: isolate;
+  background: color-mix(in oklab, #fff 92%, rgba(122, 167, 255, 0.02));
   border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 0.45rem 0.9rem;
-  margin-left: 0.4rem;
-  font-weight: 700;
-  cursor: pointer;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(8px) saturate(1.05);
+  backdrop-filter: blur(8px) saturate(1.05);
+}
+:root[data-theme='steel'] .card::before,
+body.theme-steel .card::before,
+:root[data-theme='steel'] .price-card::before,
+body.theme-steel .price-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from 200deg, rgba(122, 167, 255, 0) 0deg, rgba(122, 167, 255, 0.3) 70deg, rgba(200, 214, 255, 0) 180deg, rgba(200, 214, 255, 0.3) 250deg, rgba(122, 167, 255, 0) 360deg);
+  filter: blur(12px);
+  opacity: 0.35;
+}
+:root[data-theme='steel'] .card::after,
+body.theme-steel .card::after,
+:root[data-theme='steel'] .price-card::after,
+body.theme-steel .price-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), transparent 40%);
+  mix-blend-mode: soft-light; /* topp-sheen */
+}
+:root[data-theme='steel'] .card:hover,
+:root[data-theme='steel'] .price-card:hover,
+body.theme-steel .card:hover,
+body.theme-steel .price-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--brand-1) 24%, var(--line));
+  box-shadow: 0 18px 50px rgba(122, 167, 255, 0.12), var(--shadow);
+}
+
+/* Header & nav (glass-bar) */
+:root[data-theme='steel'] .site-header,
+body.theme-steel .site-header {
+  background: rgba(253, 254, 254, 0.75);
+  -webkit-backdrop-filter: blur(12px) saturate(1.05);
+  backdrop-filter: blur(12px) saturate(1.05);
+  border-bottom: 1px solid color-mix(in oklab, var(--line) 90%, transparent);
+}
+:root[data-theme='steel'] .nav a,
+body.theme-steel .nav a {
+  position: relative;
+  border-radius: 12px;
+  padding: 0.55rem 0.8rem;
+  transition: transform 0.15s, background 0.2s, box-shadow 0.2s;
+}
+:root[data-theme='steel'] .nav a::after,
+body.theme-steel .nav a::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s;
+  border-radius: 2px;
+  opacity: 0.75;
+}
+:root[data-theme='steel'] .nav a:hover,
+body.theme-steel .nav a:hover {
+  background: #fff;
+  transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
-.theme-select:focus {
-  outline: 2px solid color-mix(in oklab, var(--brand-1) 55%, transparent);
-  outline-offset: 2px;
+:root[data-theme='steel'] .nav a:hover::after,
+body.theme-steel .nav a:hover::after {
+  transform: scaleX(1);
 }
-/* === THEME: TITAN NOIR === */
-:root[data-theme='titan'] {
-  --bg: #090c10;
-  --bg-soft: #0e1319;
-  --panel: #0f151c;
-  --text: #eaf2ff;
-  --muted: #a9b6c8;
-  --brand-1: #39c6ff; /* electric cyan */
-  --brand-2: #ffb74a; /* warm amber */
-  --line: #1e2a39;
 
-  /* extra accents for effects */
-  --edge-cyan: 39, 198, 255;
-  --edge-amber: 255, 183, 74;
+/* Knapper */
+:root[data-theme='steel'] .btn,
+body.theme-steel .btn {
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: var(--brand-on);
+  box-shadow: var(--shadow);
 }
-/* === THEME: PEARL LUXE (lys, eksklusiv) === */
-:root[data-theme='pearl'] {
-  --bg: #f6f8fb; /* bakgrunn */
-  --bg-soft: #eef2f7; /* lett bånd/alt */
-  --panel: #ffffff; /* kort/panel */
-  --text: #0f172a; /* hovedtekst (slate-900) */
-  --muted: #5b6b80; /* sekundærtekst */
-  --brand-1: #0ea5e9; /* electric cyan */
-  --brand-2: #f59e0b; /* warm amber */
-  --line: #d7e0ea; /* rammer/linjer */
+:root[data-theme='steel'] .btn:hover,
+body.theme-steel .btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: var(--shadow-lg);
+}
 
-  /* glød-farger for effekter */
-  --edge-cyan: 14, 165, 233;
-  --edge-amber: 245, 158, 11;
+/* Alt-bånd */
+:root[data-theme='steel'] .section.alt,
+body.theme-steel .section.alt {
+  background: linear-gradient(180deg, #fff, var(--bg-alt));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }

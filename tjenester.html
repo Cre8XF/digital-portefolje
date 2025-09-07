@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="no" data-theme="titan">
+<html lang="no" data-theme="steel">
 
 <head>
     <meta charset="utf-8">
@@ -10,11 +10,10 @@
     <link rel="canonical" href="https://dittdomene.no/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="CRE8XF – Digital Design & Nettsider">
-    <meta property="og:description" content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering.">
     <meta property="og:image" content="https://dittdomene.no/assets/og/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#0b0d10">
+    <meta name="theme-color" content="#e9edf2">
 
     <meta name="description"
         content="Design, utvikling og innhold – raskt, ryddig og mobilvennlig. Se hvordan jeg jobber og hva som inngår i en flersidig nettside.">
@@ -43,11 +42,10 @@
                 <label class="theme-switch">
                     <span class="sr-only">Velg tema</span>
                     <select id="themeSelect" class="theme-select" aria-label="Velg tema">
-                        <option value="titan">Titan</option>
-                        <option value="pearl">Pearl</option>
-                        <option value="dark">Dark</option>
-                        <option value="soft">Soft</option>
-                        <option value="neon">Neon</option>
+                        <option value="light">light</option>
+                        <option value="dark">dark</option>
+                        <option value="neon">neon</option>
+                        <option value="steel">steel</option>
                     </select>
                 </label>
     
@@ -63,7 +61,10 @@
             <p>Design, utvikling og innhold – raskt, ryddig og mobilvennlig.</p>
         </div>
         <div class="hero-bg" aria-hidden="true" style="background-image:
-          linear-gradient(180deg, rgba(11,13,16,.25), rgba(11,13,16,.95)),
+          linear-gradient(180deg,
+            color-mix(in oklab, var(--bg) 20%, transparent),
+            color-mix(in oklab, var(--bg) 72%, transparent)
+          ),
           url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop');"></div>
 
     </section>
@@ -73,19 +74,19 @@
         <div class="container">
             <!-- Hva jeg leverer -->
             <div class="grid features">
-                <article class="feat">
+                <article class="feat edge">
                     <h3>Design</h3>
                     <p>Profil, farger, typografi og uttrykk.</p>
                 </article>
-                <article class="feat">
+                <article class="feat edge">
                     <h3>Utvikling</h3>
                     <p>Ren HTML/CSS/JS for fart og stabilitet.</p>
                 </article>
-                <article class="feat">
+                <article class="feat edge">
                     <h3>Innhold</h3>
                     <p>Struktur, tekster og bilder – klart til publisering.</p>
                 </article>
-                <article class="feat">
+                <article class="feat edge">
                     <h3>Videre drift</h3>
                     <p>Oppdateringer, forbedringer og vedlikehold.</p>
                 </article>
@@ -95,22 +96,22 @@
             <div class="steps">
                 <h3>Slik jobber jeg</h3>
                 <div class="steps-grid">
-                    <div class="step">
+                    <div class="step edge">
                         <div class="step-num">1</div>
                         <h4>Kartlegging</h4>
                         <p>Mål, behov og scope.</p>
                     </div>
-                    <div class="step">
+                    <div class="step edge">
                         <div class="step-num">2</div>
                         <h4>Design</h4>
                         <p>Wireframe + stil.</p>
                     </div>
-                    <div class="step">
+                    <div class="step edge">
                         <div class="step-num">3</div>
                         <h4>Bygging</h4>
                         <p>Kode + iterasjon.</p>
                     </div>
-                    <div class="step">
+                    <div class="step edge">
                         <div class="step-num">4</div>
                         <h4>Lansering</h4>
                         <p>SEO, domene & hosting.</p>

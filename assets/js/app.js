@@ -32,51 +32,36 @@ document.addEventListener('click', e => {
 // årstall i footer
 document.getElementById('year')?.append(document.createTextNode(new Date().getFullYear()));
 
-// --- Theme switcher (oppdatert) ---
+// --- Theme switcher ---
 (() => {
-  const THEMES = ['dark','soft','neon','titan','pearl'];
+  const THEMES = ['light','dark','neon','steel'];          // <- oppdatert
   const KEY = 'cre8xf:theme';
-  const root = document.documentElement; // for data-theme
-  const body = document.body;            // for legacy .theme-*
-
-  const sanitize = (name) => THEMES.includes(name) ? name : 'pearl';
+  const root = document.documentElement;
+  const body = document.body;
+  const sanitize = (n) => THEMES.includes(n) ? n : 'light'; // <- 'light' som fallback
 
   function applyTheme(name){
     const theme = sanitize(name);
-
-    // Ny: bruk data-theme på :root (til CSS-variabler per tema)
     root.setAttribute('data-theme', theme);
-
-    // Legacy: fjern/generer gamle .theme-* klasser (dark = ingen klasse)
+    // legg på body-klasse for begge veier (valgfritt, men greit)
     THEMES.forEach(t => body.classList.remove(`theme-${t}`));
-    if (theme !== 'dark') body.classList.add(`theme-${theme}`);
+    body.classList.add(`theme-${theme}`);
 
-    // Sync <select> om den finnes
     const sel = document.getElementById('themeSelect');
-    if (sel && [...sel.options].some(o => o.value === theme)) {
-      sel.value = theme;
-    }
+    if (sel && [...sel.options].some(o => o.value === theme)) sel.value = theme;
   }
 
-  // Init: lagret valg → ellers 'pearl' (lys som standard)
-  const current = localStorage.getItem(KEY) || 'pearl';
-  applyTheme(current);
+  applyTheme(localStorage.getItem(KEY) || 'light');         // <- default 'light'
 
-  // Lytt på select-endringer
-  const select = document.getElementById('themeSelect');
-  if (select){
-    select.addEventListener('change', (e) => {
-      const chosen = sanitize(e.target.value);
-      localStorage.setItem(KEY, chosen);
-      applyTheme(chosen);
-    });
-  }
-
-  // Sync mellom faner
-  window.addEventListener('storage', (e) => {
-    if (e.key === KEY) applyTheme(e.newValue);
+  document.getElementById('themeSelect')?.addEventListener('change', e => {
+    const chosen = sanitize(e.target.value);
+    localStorage.setItem(KEY, chosen);
+    applyTheme(chosen);
   });
+
+  window.addEventListener('storage', e => { if (e.key === KEY) applyTheme(e.newValue); });
 })();
+
 
 // ----- Insert shared partials (footer) -----
 async function includePartials(){

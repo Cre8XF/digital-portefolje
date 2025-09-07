@@ -24,6 +24,9 @@
   --space-5: 28px;
   --space-6: 40px;
 }
+:root[data-theme='steel'] body::before {
+  mix-blend-mode: multiply;
+}
 
 /* ===== Base ===== */
 /* base.css – helt i toppen */
@@ -342,7 +345,6 @@ p {
   padding: 10px 10px 10px 28px;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: #0f1217;
   position: relative;
 }
 .check-grid li::before {
