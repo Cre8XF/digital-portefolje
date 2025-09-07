@@ -32,37 +32,52 @@ document.addEventListener('click', e => {
 // årstall i footer
 document.getElementById('year')?.append(document.createTextNode(new Date().getFullYear()));
 
-// --- Theme switcher ---
+// --- Theme switcher (oppdatert) ---
 (() => {
-  const THEMES = ['dark','soft','neon'];
-  const key = 'cre8xf:theme';
-  const body = document.body;
+  const THEMES = ['dark','soft','neon','titan','pearl'];
+  const KEY = 'cre8xf:theme';
+  const root = document.documentElement; // for data-theme
+  const body = document.body;            // for legacy .theme-*
+
+  const sanitize = (name) => THEMES.includes(name) ? name : 'pearl';
 
   function applyTheme(name){
+    const theme = sanitize(name);
+
+    // Ny: bruk data-theme på :root (til CSS-variabler per tema)
+    root.setAttribute('data-theme', theme);
+
+    // Legacy: fjern/generer gamle .theme-* klasser (dark = ingen klasse)
     THEMES.forEach(t => body.classList.remove(`theme-${t}`));
-    if (name && name !== 'dark') body.classList.add(`theme-${name}`);
+    if (theme !== 'dark') body.classList.add(`theme-${theme}`);
+
+    // Sync <select> om den finnes
     const sel = document.getElementById('themeSelect');
-    if (sel) sel.value = name || 'dark';
+    if (sel && [...sel.options].some(o => o.value === theme)) {
+      sel.value = theme;
+    }
   }
 
-  // init: lagret valg eller systempreferanse
-  let current = localStorage.getItem(key);
-  if (!current) {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    current = prefersDark ? 'dark' : 'soft';
-  }
+  // Init: lagret valg → ellers 'pearl' (lys som standard)
+  const current = localStorage.getItem(KEY) || 'pearl';
   applyTheme(current);
 
-  // bind select
+  // Lytt på select-endringer
   const select = document.getElementById('themeSelect');
   if (select){
-    select.addEventListener('change', e => {
-      const chosen = e.target.value;
-      localStorage.setItem(key, chosen);
+    select.addEventListener('change', (e) => {
+      const chosen = sanitize(e.target.value);
+      localStorage.setItem(KEY, chosen);
       applyTheme(chosen);
     });
   }
+
+  // Sync mellom faner
+  window.addEventListener('storage', (e) => {
+    if (e.key === KEY) applyTheme(e.newValue);
+  });
 })();
+
 // ----- Insert shared partials (footer) -----
 async function includePartials(){
   const nodes = document.querySelectorAll('[data-include]');

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="no">
+<html lang="no" data-theme="pearl">
 
 <head>
     <meta charset="utf-8">
@@ -14,7 +14,8 @@
     <meta property="og:image" content="https://dittdomene.no/assets/og/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#0b0d10">
+    <meta name="theme-color" content="#f6f8fb">
+
 
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/themes.css">
@@ -41,6 +42,8 @@
                 <label class="theme-switch">
                     <span class="sr-only">Velg tema</span>
                     <select id="themeSelect" class="theme-select" aria-label="Velg tema">
+                        <option value="titan">Titan</option>
+                        <option value="pearl">Pearl</option>
                         <option value="dark">Dark</option>
                         <option value="soft">Soft</option>
                         <option value="neon">Neon</option>
@@ -52,15 +55,15 @@
     </header>
 
     <!-- HERO (med intro/USP'er slått inn) -->
-    <section id="hjem" class="hero hero--full">
-        <div class="container hero-inner">
+    <section id="hjem" class="section hero hero--luxe">
+        <div class="container hero-inner" data-reveal>
             <div class="hero-panel">
                 <h1>Moderne, raske og <span class="grad">tøffe</span> nettsider</h1>
                 <p>Jeg designer og bygger nettsider som er enkle å drifte, raske å laste og gode å bruke. Se demoene –
                     så bygger vi din neste side.</p>
 
                 <div class="cta">
-                    <a class="btn" href="eksempler.html">Se prosjekter</a>
+                    <a class="btn magnetic" href="eksempler.html">Se prosjekter</a>
                     <a class="btn ghost" href="kontakt.html">La oss snakke</a>
                 </div>
 
@@ -148,12 +151,12 @@
 <section id="mer" class="section">
     <div class="container about">
         <div class="about-grid">
-            <figure class="about-photo card">
+            <figure class="about-photo card edge" data-reveal>
                 <!-- Bytt til ditt eget bilde/sti -->
                 <img src="assets/img/profil-bilde.jpg" alt="Portrett" width="960" height="1200" loading="lazy" decoding="async">
             </figure>
 
-            <div class="about-body">
+            <div class="about-body" data-reveal>
                 <h2>Om meg</h2>
                 
                 <p class="identity">
@@ -180,7 +183,7 @@
                 </ul>
 
                 <div class="about-cta">
-                    <a class="btn" href="eksempler.html">Se prosjekter</a>
+                    <a class="btn magnetic" href="eksempler.html">Se prosjekter</a>
                     <a class="btn ghost" href="kontakt.html">Kontakt</a>
                 </div>
             </div>
@@ -229,6 +232,7 @@
 
 
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/effects.js"></script>
 </body>
 
 </html>

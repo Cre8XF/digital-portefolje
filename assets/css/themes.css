@@ -176,3 +176,33 @@ body.theme-neon .nav a:hover::after {
   outline: 2px solid color-mix(in oklab, var(--brand-1) 55%, transparent);
   outline-offset: 2px;
 }
+/* === THEME: TITAN NOIR === */
+:root[data-theme='titan'] {
+  --bg: #090c10;
+  --bg-soft: #0e1319;
+  --panel: #0f151c;
+  --text: #eaf2ff;
+  --muted: #a9b6c8;
+  --brand-1: #39c6ff; /* electric cyan */
+  --brand-2: #ffb74a; /* warm amber */
+  --line: #1e2a39;
+
+  /* extra accents for effects */
+  --edge-cyan: 39, 198, 255;
+  --edge-amber: 255, 183, 74;
+}
+/* === THEME: PEARL LUXE (lys, eksklusiv) === */
+:root[data-theme='pearl'] {
+  --bg: #f6f8fb; /* bakgrunn */
+  --bg-soft: #eef2f7; /* lett bånd/alt */
+  --panel: #ffffff; /* kort/panel */
+  --text: #0f172a; /* hovedtekst (slate-900) */
+  --muted: #5b6b80; /* sekundærtekst */
+  --brand-1: #0ea5e9; /* electric cyan */
+  --brand-2: #f59e0b; /* warm amber */
+  --line: #d7e0ea; /* rammer/linjer */
+
+  /* glød-farger for effekter */
+  --edge-cyan: 14, 165, 233;
+  --edge-amber: 245, 158, 11;
+}

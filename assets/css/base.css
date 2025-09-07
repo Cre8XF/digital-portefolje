@@ -638,3 +638,174 @@ p {
 .foot-brand .xt {
   display: none;
 }
+/* Karbon-støy (diskret korn) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(900px 540px at 10% -10%, rgba(var(--edge-cyan), 0.06), transparent 60%), radial-gradient(900px 540px at 110% 10%, rgba(var(--edge-amber), 0.06), transparent 60%);
+  mix-blend-mode: screen;
+}
+
+/* Edge-glow kort */
+.card.edge {
+  position: relative;
+  isolation: isolate;
+  background: var(--panel);
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.card.edge::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 180deg,
+    rgba(var(--edge-cyan), 0) 0deg,
+    rgba(var(--edge-cyan), 0.35) 70deg,
+    rgba(var(--edge-amber), 0) 180deg,
+    rgba(var(--edge-amber), 0.35) 250deg,
+    rgba(var(--edge-cyan), 0) 360deg
+  );
+  filter: blur(12px) saturate(1.2);
+  opacity: 0.6;
+}
+
+/* Hero lysstråler (legg .hero--titan på hero-seksjonen) */
+.hero--titan {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(9, 12, 16, 0.2), var(--bg) 60%);
+}
+.hero--titan::after {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(1200px 280px at 50% -5%, rgba(var(--edge-cyan), 0.18), transparent 60%), radial-gradient(900px 220px at 20% 0%, rgba(var(--edge-amber), 0.16), transparent 60%),
+    radial-gradient(900px 220px at 80% 0%, rgba(var(--edge-cyan), 0.14), transparent 60%);
+  filter: blur(16px) saturate(1.1);
+  animation: titanFloat 14s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes titanFloat {
+  0% {
+    transform: translateY(-2%) scale(1);
+  }
+  100% {
+    transform: translateY(3%) scale(1.03);
+  }
+}
+
+/* Tekst med luksus-preg (valgfritt på store titler) */
+.titan-title {
+  letter-spacing: 0.4px;
+  background: linear-gradient(90deg, #fff, rgba(var(--edge-cyan), 0.85));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Scroll-reveal (bruk [data-reveal] i HTML) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.6s ease;
+}
+[data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Magnetisk knapp (marker med .magnetic på .btn) */
+.btn.magnetic {
+  will-change: transform;
+}
+
+/* Cursor glow container (JS legger inn .cursor-glow) */
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(160px 160px at var(--x, 50%) var(--y, 50%), rgba(var(--edge-cyan), 0.1), transparent 60%);
+  mix-blend-mode: screen;
+}
+/* Lys bakgrunn: subtil glød i stedet for tunge mørke vignetter */
+:root[data-theme='pearl'] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(900px 540px at 8% -8%, rgba(var(--edge-cyan), 0.06), transparent 60%), radial-gradient(900px 540px at 100% 0%, rgba(var(--edge-amber), 0.05), transparent 60%);
+  mix-blend-mode: multiply; /* ser naturlig ut på lys */
+}
+
+/* Kort på lys bakgrunn */
+:root[data-theme='pearl'] .card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+}
+
+/* Edge-glow justert for lys bakgrunn */
+:root[data-theme='pearl'] .card.edge::before {
+  filter: blur(10px) saturate(1.05);
+  opacity: 0.45;
+}
+
+/* Alt-seksjoner (bånd) på lys bakgrunn */
+:root[data-theme='pearl'] .section.alt {
+  background: linear-gradient(180deg, #ffffff, var(--bg-soft));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Knapper – samme profil, men litt mørkere tekstkontrast */
+:root[data-theme='pearl'] .btn {
+  color: #0b0d10;
+}
+:root[data-theme='pearl'] .btn.ghost {
+  background: #ffffff;
+  border-color: var(--line);
+  color: var(--text);
+}
+/* LUXE hero for lys tema */
+.hero--luxe {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 65%);
+}
+.hero--luxe::after {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(1200px 260px at 50% -6%, rgba(var(--edge-cyan), 0.14), transparent 60%), radial-gradient(900px 220px at 15% 0%, rgba(var(--edge-amber), 0.12), transparent 60%),
+    radial-gradient(900px 220px at 85% 0%, rgba(var(--edge-cyan), 0.1), transparent 60%);
+  filter: blur(14px) saturate(1.05);
+  animation: luxeFloat 16s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes luxeFloat {
+  0% {
+    transform: translateY(-1%) scale(1);
+  }
+  100% {
+    transform: translateY(2.5%) scale(1.02);
+  }
+}
+/* Cursor-glød: bruk multiply på lys bakgrunn */
+:root[data-theme='pearl'] .cursor-glow {
+  background: radial-gradient(160px 160px at var(--x, 50%) var(--y, 50%), rgba(var(--edge-cyan), 0.1), transparent 60%);
+  mix-blend-mode: multiply;
+}
+
+/* Magnetiske knapper: litt lavere styrke på lys bakgrunn (valgfritt) */
+:root[data-theme='pearl'] .btn.magnetic {
+  transform: translateZ(0); /* hint til GPU */
+}
