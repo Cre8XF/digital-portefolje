@@ -395,3 +395,63 @@
     padding: 12px 14px;
   }
 }
+/* ========== OM MEG ========== */
+.about-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.about-photo {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 5; /* pen portrett-ratio */
+  filter: saturate(0.96) contrast(1.02);
+}
+.about-body h2 {
+  margin: 0 0 0.35rem;
+}
+.about-body p {
+  margin: 0.35rem 0 0;
+  max-width: 65ch;
+}
+
+.fact-chips {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.chip {
+  display: inline-block;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--line, #243141);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.about-cta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 860px) {
+  .about-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+  .about-photo {
+    max-width: 520px;
+  }
+}

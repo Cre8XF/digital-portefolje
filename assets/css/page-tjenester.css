@@ -214,3 +214,10 @@
   outline-offset: 4px;
   border-radius: 10px;
 }
+.text-link {
+  border-bottom: 1px dashed var(--line, #243141);
+  padding-bottom: 2px;
+}
+.text-link:hover {
+  opacity: 0.9;
+}
