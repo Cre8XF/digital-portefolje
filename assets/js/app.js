@@ -63,3 +63,24 @@ document.getElementById('year')?.append(document.createTextNode(new Date().getFu
     });
   }
 })();
+// ----- Insert shared partials (footer) -----
+async function includePartials(){
+  const nodes = document.querySelectorAll('[data-include]');
+  await Promise.all([...nodes].map(async el => {
+    try {
+      const href = el.getAttribute('data-include');
+      const res  = await fetch(href);
+      if (res.ok) el.outerHTML = await res.text();
+    } catch (err) { console.warn('Include failed:', err); }
+  }));
+  // year + to-top handler after footer is in DOM
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-to-top]');
+    if (!btn) return;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+document.addEventListener('DOMContentLoaded', includePartials);

@@ -551,3 +551,90 @@ p {
     transition: none !important;
   }
 }
+/* ===== Global footer ===== */
+.site-footer {
+  margin-top: 24px;
+  background: #0a1014;
+  border-top: 1px solid var(--line, #243141);
+}
+.footer-grid {
+  display: grid;
+  gap: 18px;
+  padding: 22px 0;
+  grid-template-columns: 1fr;
+}
+.foot-brand .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 900;
+}
+.foot-brand .mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--brand-1, #ff9a3f), var(--brand-2, #ffdd59));
+  color: #0b0d10;
+}
+.foot-brand .xt {
+  opacity: 0.95;
+}
+.foot-brand p {
+  margin: 0.25rem 0 0;
+  color: var(--muted, #b9c2cf);
+}
+.foot-meta {
+  font-size: 0.95rem;
+}
+
+.foot-nav h4,
+.foot-contact h4 {
+  margin: 0 0 0.35rem;
+}
+.foot-nav ul,
+.foot-contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.foot-nav a {
+  text-decoration: none;
+}
+.foot-contact a {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--line, #243141);
+}
+
+@media (min-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    align-items: start;
+  }
+}
+/* Footer-logo */
+.foot-brand .logo {
+  display: inline-flex;
+  align-items: center;
+}
+.foot-brand .logo-img {
+  display: block;
+  max-width: 160px; /* mobil */
+  height: auto;
+  border-radius: 8px; /* valgfritt – fjern om du vil ha helt rett kant */
+  filter: drop-shadow(0 6px 18px rgba(255, 230, 120, 0.18)); /* subtil glød */
+}
+@media (min-width: 900px) {
+  .foot-brand .logo-img {
+    max-width: 200px;
+  }
+}
+
+/* Hvis du tidligere brukte tekst/logo-mark i footeren, sørg for at den ikke vises samtidig */
+.foot-brand .mark,
+.foot-brand .xt {
+  display: none;
+}

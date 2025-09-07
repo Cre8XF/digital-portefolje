@@ -455,3 +455,14 @@
     max-width: 520px;
   }
 }
+.identity {
+  margin: 0.25rem 0 0.5rem;
+}
+.identity .alias {
+  color: var(--muted, #b9c2cf);
+  font-weight: 600;
+}
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}

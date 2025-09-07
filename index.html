@@ -150,19 +150,27 @@
         <div class="about-grid">
             <figure class="about-photo card">
                 <!-- Bytt til ditt eget bilde/sti -->
-                <img src="assets/img/meg.jpg" alt="Portrett" width="960" height="1200" loading="lazy" decoding="async">
+                <img src="assets/img/profil-bilde.jpg" alt="Portrett" width="960" height="1200" loading="lazy" decoding="async">
             </figure>
 
             <div class="about-body">
                 <h2>Om meg</h2>
-                <p>
-                    Jeg bygger raske, ryddige og mobilvennlige nettsider – med fokus på klar struktur, god typografi
-                    og målbart resultat. Jeg liker å gjøre ting enkelt å drifte og lett å forstå.
+                
+                <p class="identity">
+                    <strong>Roger Sørqvist</strong> <span class="alias">(Cre8XF)</span> · 45 år · gift, 4 barn · Bor i Fredrikstad
                 </p>
-                <p>
-                    Bakgrunnen min er praktisk: jeg jobber mye datadrevet i hverdagen, og tar samme tankesett inn i
-                    design og utvikling – små, effektive leveranser som gjør en forskjell.
+                
+                <p class="lead">
+                    Jeg begynte med koding for å lære litt – og oppdaget fort at jeg elsker kombinasjonen av struktur,
+                    design og problemløsing. Det som startet som nysgjerrighet, har utviklet seg til et ønske om å
+                    bygge raske, ryddige nettsider for andre.
                 </p>
+                
+                <p>
+                    Jeg jobber praktisk og datadrevet: små, tydelige leveranser, målbart resultat og minst mulig støy.
+                    Fokus på klar struktur, god typografi og enkel drift – løsninger som er lette å bruke og vedlikeholde.
+                </p>
+
 
                 <ul class="fact-chips">
                     <li class="chip">HTML/CSS/JS</li>
@@ -182,12 +190,43 @@
 
 
     <!-- FOOTER -->
-    <footer id="footer" class="site-footer">
-        <div class="container footer-inner">
-            <p>© <span id="year"></span> CRE8XF – Digital Business</p>
-            <a class="btn ghost small" href="#hjem">Til toppen</a>
+<footer class="site-footer">
+    <div class="container footer-grid">
+    <div class="foot-brand">
+        <a class="logo" href="index.html" aria-label="CRE8XF – til forsiden">
+            <img class="logo-img" src="assets/img/cre8xf-logo.webp" alt="CRE8XF – Creation X-Force" width="200" height="200"
+                loading="lazy" decoding="async" sizes="(min-width: 900px) 200px, 160px">
+        </a>
+    
+        <p>Raske, ryddige nettsider – fastpris og levering på 7 dager.</p>
+        <p class="foot-meta">© <span id="year"></span> CRE8XF · Roger Sørqvist (Cre8XF)</p>
+    </div>
+
+
+        <nav class="foot-nav" aria-label="Sider">
+            <h4>Sider</h4>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="tjenester.html">Tjenester</a></li>
+                <li><a href="priser.html">Priser</a></li>
+                <li><a href="eksempler.html">Eksempler</a></li>
+                <li><a href="guide.html">Gratis guide</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="foot-contact">
+            <h4>Kontakt</h4>
+            <ul>
+                <li>E-post: <a href="mailto:post@dittdomene.no">post@dittdomene.no</a></li>
+                <li>Telefon: <a href="tel:+4712345678">+47 12 34 56 78</a></li>
+                <li>Fredrikstad, Norge</li>
+            </ul>
+            <button class="btn ghost small" data-to-top>Til toppen</button>
         </div>
-    </footer>
+    </div>
+</footer>
+
 
     <script src="assets/js/app.js"></script>
 </body>
