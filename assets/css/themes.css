@@ -1,6 +1,6 @@
 /* =========================================================
-   THEMES.CSS – four profiles (light, dark, neon, steel)
-   Use either <body class="theme-…"> OR <html data-theme="…">
+   THEMES.CSS – kun NEON
+   Bruk <body class="theme-neon"> eller <html data-theme="neon">
    Shared tokens: --bg, --bg-alt, --panel, --line, --text, --text-inverse, --muted,
                   --brand-1, --brand-2, --brand-on, --radius, --header-bg, --footer-bg,
                   --chip-bg, --chip-border, --code-bg, --code-border,
@@ -8,91 +8,13 @@
    ========================================================= */
 
 :root {
-  /* fornuftige standarder hvis et tema ikke setter disse eksplisitt */
   --footer-bg: color-mix(in oklab, var(--bg) 10%, var(--text) 90%);
   --text-inverse: #eaf2ff;
-}
-/* defaults */
-:root {
-  --hero-ov-top: color-mix(in oklab, var(--bg) 16%, transparent);
-  --hero-ov-bot: color-mix(in oklab, var(--bg) 72%, transparent);
-  --hero-filter: none;
-  --hero-panel-tint: 16%; /* hvor “melkete” panelet er */
-}
 
-/* lyse tema: mørkere overlay + litt kontrast/brightness på bildet */
-:root[data-theme='light'],
-:root[data-theme='steel'] {
-  --hero-ov-top: color-mix(in oklab, var(--text) 24%, transparent);
-  --hero-ov-bot: color-mix(in oklab, var(--text) 8%, transparent);
-  --hero-filter: brightness(0.92) contrast(1.06) saturate(1.05);
-  --hero-panel-tint: 24%; /* panelet litt tettere i lyse tema */
-}
-
-/* mørke tema: mykere overlay, ingen filter nødvendig */
-:root[data-theme='dark'],
-:root[data-theme='neon'] {
   --hero-ov-top: color-mix(in oklab, var(--bg) 10%, transparent);
   --hero-ov-bot: color-mix(in oklab, var(--bg) 66%, transparent);
   --hero-filter: none;
   --hero-panel-tint: 16%;
-}
-
-/* ---------- LIGHT (Pearl Luxe) ---------- */
-:root[data-theme='light'],
-body.theme-light {
-  --bg: #f6f8fb;
-  --bg-alt: #eef2f7;
-  --panel: #ffffff;
-  --line: #d7e0ea;
-  --text: #0f172a;
-  --muted: #5b6b80;
-  --brand-1: #0ea5e9;
-  --brand-2: #f59e0b;
-  --brand-on: #0b0d10;
-  --radius: 16px;
-
-  --header-bg: color-mix(in oklab, var(--panel) 78%, transparent);
-  --footer-bg: linear-gradient(180deg, #fff, var(--bg-alt));
-  --chip-bg: color-mix(in oklab, var(--panel) 4%, transparent);
-  --chip-border: var(--line);
-  --code-bg: color-mix(in oklab, var(--bg) 85%, var(--panel) 15%);
-  --code-border: var(--line);
-
-  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.06);
-  --shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.12);
-
-  --edge-cyan: 14, 165, 233;
-  --edge-amber: 245, 158, 11;
-}
-
-/* ---------- DARK (Carbon Dark) ---------- */
-:root[data-theme='dark'],
-body.theme-dark {
-  --bg: #0b0f14;
-  --bg-alt: #0e141b;
-  --line: #1e2a39;
-  --text: #e8eefc;
-  --muted: #9fb0ca;
-  --brand-1: #39c6ff;
-  --brand-2: #ffb74a;
-  --brand-on: #061017;
-  --radius: 16px;
-
-  --header-bg: rgba(9, 12, 20, 0.7);
-  --footer-bg: #0a1014;
-  --chip-bg: rgba(255, 255, 255, 0.04);
-  --chip-border: var(--line);
-  --code-bg: #121922;
-  --code-border: #263345;
-
-  --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.35);
-  --shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.6);
-
-  --edge-cyan: 57, 198, 255;
-  --edge-amber: 255, 183, 74;
 }
 
 /* ---------- NEON (Neon Pop) ---------- */
@@ -104,8 +26,8 @@ body.theme-neon {
   --line: #222a43;
   --text: #e6ecff;
   --muted: #9fb0d1;
-  --brand-1: #40e0ff;
-  --brand-2: #ff5ad9;
+  --brand-1: #00f0ff; /* mer intens turkis */
+  --brand-2: #a259ff; /* lilla */
   --brand-on: #0a0d14;
   --radius: 16px;
 
@@ -120,35 +42,6 @@ body.theme-neon {
   --shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.6);
 
-  --edge-cyan: 64, 224, 255;
-  --edge-amber: 255, 90, 217;
-}
-
-/* ---------- STEEL (Steel & Glass) ---------- */
-:root[data-theme='steel'],
-body.theme-steel {
-  --bg: #e9edf2;
-  --bg-alt: #e2e7ee;
-  --panel: #fdfefe;
-  --line: #cfd7e3;
-  --text: #0e1420;
-  --muted: #58677d;
-  --brand-1: #7aa7ff;
-  --brand-2: #c8d6ff;
-  --brand-on: #0b0f14;
-  --radius: 18px;
-
-  --header-bg: color-mix(in oklab, var(--panel) 78%, transparent);
-  --footer-bg: color-mix(in oklab, var(--panel) 96%, var(--text) 4%);
-  --chip-bg: color-mix(in oklab, var(--panel) 4%, transparent);
-  --chip-border: var(--line);
-  --code-bg: color-mix(in oklab, var(--bg) 85%, var(--panel) 15%);
-  --code-border: var(--line);
-
-  --shadow-sm: 0 4px 12px rgba(10, 16, 26, 0.06);
-  --shadow: 0 12px 28px rgba(10, 16, 26, 0.09);
-  --shadow-lg: 0 24px 60px rgba(10, 16, 26, 0.13);
-
-  --edge-cyan: 122, 167, 255;
-  --edge-amber: 200, 214, 255;
+  --edge-cyan: 0, 240, 255; /* turkis neon */
+  --edge-amber: 162, 89, 255; /* lilla neon */
 }
