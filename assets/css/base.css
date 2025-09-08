@@ -148,13 +148,15 @@ p {
   padding: 0.5rem 0.7rem;
   border-radius: 10px;
 }
-.nav a:hover {
+.nav a:hover:not(.btn) {
   background: color-mix(in oklab, var(--panel) 6%, transparent);
 }
-.nav a.active {
+
+.nav a.active:not(.btn) {
   background: color-mix(in oklab, var(--brand-2) 25%, transparent);
   border: 1px solid color-mix(in oklab, var(--brand-2) 45%, transparent);
 }
+
 .nav-toggle {
   display: none;
   background: transparent;
@@ -776,4 +778,20 @@ body::before {
 /* Basis – arver normal tekstfarge */
 .site-footer {
   color: var(--text);
+}
+/* før: .nav a:hover { ... } */
+.nav a:hover:not(.btn) {
+  background: color-mix(in oklab, var(--panel) 6%, transparent);
+}
+
+/* før: .nav a.active { ... } */
+.nav a.active:not(.btn) {
+  background: color-mix(in oklab, var(--brand-2) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--brand-2) 45%, transparent);
+}
+
+/* valgfritt: gi knappen egen hover for litt løft */
+.nav .btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
 }
