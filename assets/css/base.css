@@ -122,7 +122,7 @@ p {
   font-weight: 800;
 }
 .mark {
-  width: 36px;
+  width: 46px;
   height: 36px;
   display: grid;
   place-items: center;
@@ -131,6 +131,19 @@ p {
   color: var(--brand-on);
   font-weight: 900;
 }
+.logo-img {
+  height: 60px; /* eller juster til ønsket høyde */
+  width: auto;
+  display: block;
+}
+.logo-img {
+  filter: drop-shadow(0 0 6px #00f0ff) drop-shadow(0 0 12px #a259ff);
+  transition: filter 0.3s ease-in-out;
+}
+.logo-img:hover {
+  filter: drop-shadow(0 0 10px #00f0ff) drop-shadow(0 0 20px #a259ff);
+}
+
 .nav a {
   padding: 0.5rem 0.7rem;
   border-radius: 10px;
