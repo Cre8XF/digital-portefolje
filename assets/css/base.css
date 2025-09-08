@@ -566,6 +566,16 @@ p {
 .foot-meta {
   font-size: 0.95rem;
 }
+/* Neon-effekt på footer-logo */
+.foot-brand .logo-img {
+  filter: drop-shadow(0 0 6px #00f0ff) drop-shadow(0 0 12px #00f0ff) drop-shadow(0 0 18px #a259ff);
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Litt ekstra glow ved hover */
+.foot-brand .logo-img:hover {
+  filter: drop-shadow(0 0 8px #00f0ff) drop-shadow(0 0 16px #00f0ff) drop-shadow(0 0 24px #a259ff);
+}
 
 /* Ghost-knappen i footer skal fortsatt se “lys og ren” ut */
 .site-footer .btn.ghost {
