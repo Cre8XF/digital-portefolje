@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yogalærer / PT – Demo</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/yoga.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html"><img class="logo-img"
+                    src="https://dummyimage.com/200x60/000/fff&text=CRE8+WEB" alt=""></a>
+            <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
+            <nav class="nav" data-menu>
+                <a href="#timer">Timeplan</a>
+                <a href="#pakker">Pakker</a>
+                <a href="#om">Om</a>
+                <a class="btn small" href="#bestill">Bestill</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="innhold">
+        <section class="hero hero--luxe">
+            <div class="container hero-inner">
+                <h1 class="grad">Yoga & Personlig Trening</h1>
+                <p>Myk, trygg og effektiv trening – i studio eller hjemme hos deg.</p>
+                <p><a class="btn" href="#timer">Se timeplan</a></p>
+            </div>
+            <div class="hero-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600&auto=format&fit=crop');">
+            </div>
+        </section>
+
+        <section id="timer" class="section">
+            <div class="container">
+                <h2>Ukesplan</h2>
+                <div class="grid timetable">
+                    <div class="card">
+                        <h3>Mandag</h3>
+                        <p>17:30 – Yin Yoga</p>
+                        <p>19:00 – PT (ledig)</p>
+                    </div>
+                    <div class="card">
+                        <h3>Tirsdag</h3>
+                        <p>07:30 – Morgenflow</p>
+                        <p>18:00 – PT (booket)</p>
+                    </div>
+                    <div class="card">
+                        <h3>Onsdag</h3>
+                        <p>18:00 – Vinyasa</p>
+                        <p>19:15 – Avspenning</p>
+                    </div>
+                    <div class="card">
+                        <h3>Torsdag</h3>
+                        <p>07:30 – Morgenflow</p>
+                        <p>17:30 – PT (ledig)</p>
+                    </div>
+                    <div class="card">
+                        <h3>Fredag</h3>
+                        <p>12:00 – Bedriftsyoga</p>
+                        <p>16:00 – PT (ledig)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pakker" class="section alt">
+            <div class="container">
+                <h2>Pakker & priser</h2>
+                <div class="grid pricing">
+                    <article class="price-card">
+                        <span class="badge">Start</span>
+                        <h3>Prøvetime (60 min)</h3>
+                        <p class="price">590 kr</p>
+                        <ul class="check-grid">
+                            <li>Kartlegging</li>
+                            <li>Skreddersydd plan</li>
+                            <li>Oppfølging på e-post</li>
+                        </ul>
+                        <p><a class="btn" href="#bestill">Book</a></p>
+                    </article>
+                    <article class="price-card">
+                        <span class="badge">Best verdi</span>
+                        <h3>PT x 5</h3>
+                        <p class="price">2 690 kr</p>
+                        <ul class="check-grid">
+                            <li>5 × 60 min</li>
+                            <li>Program + video</li>
+                            <li>Chat-støtte</li>
+                        </ul>
+                        <p><a class="btn" href="#bestill">Book</a></p>
+                    </article>
+                    <article class="price-card">
+                        <h3>Yoga kurs (8 uker)</h3>
+                        <p class="price">1 990 kr</p>
+                        <ul class="check-grid">
+                            <li>Liten gruppe</li>
+                            <li>Ro & bevegelighet</li>
+                            <li>Matte inkludert</li>
+                        </ul>
+                        <p><a class="btn ghost" href="#bestill">Meld interesse</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="om" class="section">
+            <div class="container grid about">
+                <div>
+                    <h2>Om instruktøren</h2>
+                    <p>Utdannet yogalærer (RYT200) og PT. Fokus på pust, teknikk og mestring.</p>
+                    <div class="chips"><span class="chip">Yin</span><span class="chip">Vinyasa</span><span
+                            class="chip">Mobilitet</span></div>
+                </div>
+                <img class="about-img"
+                    src="https://images.unsplash.com/photo-1534367610401-9f5090bff70d?q=80&w=1200&auto=format&fit=crop"
+                    alt="">
+            </div>
+        </section>
+
+        <section id="bestill" class="section alt">
+            <div class="container">
+                <h2>Bestill time</h2>
+                <form class="form grid contact">
+                    <label>Navn<input required></label>
+                    <label>E-post<input type="email" required></label>
+                    <label>Ønsket tid<textarea rows="3" placeholder="Foreslå dag/tid"></textarea></label>
+                    <p><button class="btn">Send</button></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="foot-meta">© Demo – Yoga/PT</div>
+        </div>
+    </footer>
+    <script>
+        const b = document.querySelector('[data-menu-btn]'), n = document.querySelector('[data-menu]');
+        if (b && n) { b.addEventListener('click', () => n.classList.toggle('open')) }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+{
+  "phases": [
+    {
+      "id": "P0",
+      "name": "Oppsett & fundament",
+      "outcomes": [
+        "Publisert gratisguide",
+        "Mappe for nedlastinger etablert",
+        "Startpakke: Excel, SoMe, Canva-plassholdere"
+      ],
+      "tasks": [
+        {
+          "id": "T01",
+          "title": "Opprette /assets/downloads struktur",
+          "owner": "Roger",
+          "status": "todo"
+        },
+        {
+          "id": "T02",
+          "title": "Publisere guide-01-god-nettside",
+          "owner": "Roger",
+          "status": "todo"
+        },
+        {
+          "id": "T03",
+          "title": "Laste opp budget.xlsx",
+          "owner": "Roger",
+          "status": "todo"
+        },
+        {
+          "id": "T04",
+          "title": "Opprette CTA til Startpakken i guide.html",
+          "owner": "Roger",
+          "status": "doing"
+        }
+      ],
+      "acceptance": [
+        "URL til gratisguide fungerer",
+        "Zip/Excel kan lastes ned",
+        "CTA for kjøp/forespørsel synlig"
+      ]
+    },
+    {
+      "id": "P1",
+      "name": "Første tre guider",
+      "outcomes": [
+        "Guide 02 (Excel-budsjett) publisert",
+        "Guide 03 (Canva-profil) publisert",
+        "Guide 04 (Instagram 1–2–3) publisert"
+      ],
+      "tasks": [
+        {
+          "id": "T11",
+          "title": "Fylle ut guide-02 innhold og skjermbilder",
+          "owner": "Roger",
+          "status": "todo"
+        },
+        {
+          "id": "T12",
+          "title": "Opprette Canva-maler og lenker",
+          "owner": "Roger",
+          "status": "todo"
+        },
+        {
+          "id": "T13",
+          "title": "Planlegge 12 IG-poster (tekst + hashtags)",
+          "owner": "Roger",
+          "status": "todo"
+        }
+      ],
+      "acceptance": [
+        "Alle tre guider har innhold, bilder og nedlastinger",
+        "Interne lenker og navigasjon fungerer",
+        "Mobilvisning sjekket"
+      ]
+    }
+  ]
+}

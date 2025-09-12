@@ -1,0 +1,44 @@
+:root {
+  --brand-1: #46e0c2;
+  --brand-2: #8fdc6f;
+  --brand-on: #0b0f0c;
+  --bg: #0b0f0c;
+  --bg-alt: #0f1310;
+  --panel: #121a15;
+  --line: #223126;
+  --text: #e7f0ea;
+  --muted: #b4c8be;
+  --font: system-ui, Inter;
+  --lh: 1.6;
+  --container: 1100px;
+  --radius: 16px;
+  --chip-bg: rgba(255, 255, 255, 0.03);
+  --code-bg: #0e1612;
+  --code-border: #223126;
+  --edge-cyan: 86, 224, 194;
+  --edge-amber: 214, 255, 163;
+}
+.timetable {
+  grid-template-columns: repeat(5, 1fr);
+}
+.timetable .card {
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .timetable {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.about {
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 24px;
+}
+.about-img {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+.contact {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+}

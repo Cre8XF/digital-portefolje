@@ -4,19 +4,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Tjenester – Cre8Web</title>
+
+    <title>Tjenester | Cre8Web – Nettsider tilpasset småbedrifter</title>
     <meta name="description"
-        content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering, og ubegrensede revisjoner.">
-    <link rel="canonical" href="https://dittdomene.no/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Cre8Web – Digital Design & Nettsider">
-    <meta property="og:image" content="https://dittdomene.no/assets/og/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+        content="Utforsk våre tjenester: design av enkle nettsider, flersidige løsninger, SEO-grunnpakke og støtte etter lansering. Alt skreddersydd for småbedrifter.">
+    <link rel="canonical" href="https://cre8web.netlify.app/tjenester.html">
+    <meta name="robots" content="index,follow">
     <meta name="theme-color" content="#e9edf2">
 
-    <meta name="description"
-        content="Design, utvikling og innhold – raskt, ryddig og mobilvennlig. Se hvordan jeg jobber og hva som inngår i en flersidig nettside.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cre8Web">
+    <meta property="og:title" content="Tjenester | Cre8Web – Nettsider tilpasset småbedrifter">
+    <meta property="og:description"
+        content="Utforsk våre tjenester: design av enkle nettsider, flersidige løsninger, SEO-grunnpakke og støtte etter lansering. Alt skreddersydd for småbedrifter.">
+    <meta property="og:url" content="https://cre8web.netlify.app/tjenester.html">
+    <meta property="og:image" content="https://cre8web.netlify.app/assets/img/cre8web.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tjenester | Cre8Web – Nettsider tilpasset småbedrifter">
+    <meta name="twitter:description"
+        content="Utforsk våre tjenester: design av enkle nettsider, flersidige løsninger, SEO-grunnpakke og støtte etter lansering. Alt skreddersydd for småbedrifter.">
+    <meta name="twitter:image" content="https://cre8web.netlify.app/assets/img/cre8web.jpg">
+
+    <!-- Breadcrumbs JSON-LD -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Hjem","item":"https://cre8web.netlify.app/"},
+      {"@type":"ListItem","position":2,"name":"Tjenester","item":"https://cre8web.netlify.app/tjenester.html"}
+    ]
+  }
+  </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/themes.css">
     <link rel="stylesheet" href="assets/css/page-tjenester.css">
@@ -24,26 +53,25 @@
 </head>
 
 <body>
-    <!-- rett etter <body> -->
+    <!-- Skip link -->
     <a href="#main" class="skip-link">Hopp til innhold</a>
 
     <!-- Header -->
     <header class="site-header">
         <div class="container header-inner">
-    
             <!-- Logo som bilde -->
             <a class="logo" href="index.html" aria-label="CRE8Web – til forsiden">
                 <img src="assets/img/cre8web-header2.jpg" alt="CRE8Web logo" class="logo-img" width="160" height="auto"
                     loading="lazy" decoding="async">
             </a>
-    
+
             <!-- Burger knapp for mobil -->
             <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
-    
+
             <!-- Navigasjon -->
             <nav class="nav" data-menu>
                 <a href="index.html">Hjem</a>
-                <a href="tjenester.html">Tjenester</a>
+                <a href="tjenester.html" aria-current="page">Tjenester</a>
                 <a href="priser.html">Priser</a>
                 <a href="eksempler.html">Eksempler</a>
                 <a href="guide.html">Guider & maler</a>
@@ -52,139 +80,135 @@
         </div>
     </header>
 
-
-    <!-- Hero (underside) -->
-    <section class="hero hero--sub">
-        <div class="container hero-inner">
-            <h1 class="grad">Tjenester</h1>
-            <p>Design, utvikling og innhold – raskt, ryddig og mobilvennlig.</p>
-        </div>
-        <div class="hero-bg" aria-hidden="true" style="background-image:
-          linear-gradient(180deg,
-            color-mix(in oklab, var(--bg) 20%, transparent),
-            color-mix(in oklab, var(--bg) 72%, transparent)
-          ),
-          url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop');"></div>
-
-    </section>
-
-    <!-- Innhold -->
-    <section class="section section--vh">
-        <div class="container">
-            <!-- Hva jeg leverer -->
-            <div class="grid features">
-                <article class="feat edge">
-                    <h3>Design</h3>
-                    <p>Profil, farger, typografi og uttrykk.</p>
-                </article>
-                <article class="feat edge">
-                    <h3>Utvikling</h3>
-                    <p>Ren HTML/CSS/JS for fart og stabilitet.</p>
-                </article>
-                <article class="feat edge">
-                    <h3>Innhold</h3>
-                    <p>Struktur, tekster og bilder – klart til publisering.</p>
-                </article>
-                <article class="feat edge">
-                    <h3>Videre drift</h3>
-                    <p>Oppdateringer, forbedringer og vedlikehold.</p>
-                </article>
+    <main id="main">
+        <!-- Hero (underside) -->
+        <section class="hero hero--sub">
+            <div class="container hero-inner">
+                <h1 class="grad">Tjenester</h1>
+                <p>Design, utvikling og innhold – raskt, ryddig og mobilvennlig.</p>
             </div>
+            <div class="hero-bg" aria-hidden="true" style="background-image:
+        linear-gradient(180deg,
+          color-mix(in oklab, var(--bg) 20%, transparent),
+          color-mix(in oklab, var(--bg) 72%, transparent)
+        ),
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop');"></div>
+        </section>
 
-            <!-- Prosess -->
-            <div class="steps">
-                <h3>Slik jobber jeg</h3>
-                <div class="steps-grid">
-                    <div class="step edge">
-                        <div class="step-num">1</div>
-                        <h4>Kartlegging</h4>
-                        <p>Mål, behov og scope.</p>
-                    </div>
-                    <div class="step edge">
-                        <div class="step-num">2</div>
-                        <h4>Design</h4>
-                        <p>Wireframe + stil.</p>
-                    </div>
-                    <div class="step edge">
-                        <div class="step-num">3</div>
-                        <h4>Bygging</h4>
-                        <p>Kode + iterasjon.</p>
-                    </div>
-                    <div class="step edge">
-                        <div class="step-num">4</div>
-                        <h4>Lansering</h4>
-                        <p>SEO, domene & hosting.</p>
+        <!-- Innhold -->
+        <section class="section section--vh">
+            <div class="container">
+                <!-- Hva jeg leverer -->
+                <div class="grid features">
+                    <article class="feat edge">
+                        <h3>Design</h3>
+                        <p>Profil, farger, typografi og uttrykk.</p>
+                    </article>
+                    <article class="feat edge">
+                        <h3>Utvikling</h3>
+                        <p>Ren HTML/CSS/JS for fart og stabilitet.</p>
+                    </article>
+                    <article class="feat edge">
+                        <h3>Innhold</h3>
+                        <p>Struktur, tekster og bilder – klart til publisering.</p>
+                    </article>
+                    <article class="feat edge">
+                        <h3>Videre drift</h3>
+                        <p>Oppdateringer, forbedringer og vedlikehold.</p>
+                    </article>
+                </div>
+
+                <!-- Prosess -->
+                <div class="steps">
+                    <h3>Slik jobber jeg</h3>
+                    <div class="steps-grid">
+                        <div class="step edge">
+                            <div class="step-num">1</div>
+                            <h4>Kartlegging</h4>
+                            <p>Mål, behov og scope.</p>
+                        </div>
+                        <div class="step edge">
+                            <div class="step-num">2</div>
+                            <h4>Design</h4>
+                            <p>Wireframe + stil.</p>
+                        </div>
+                        <div class="step edge">
+                            <div class="step-num">3</div>
+                            <h4>Bygging</h4>
+                            <p>Kode + iterasjon.</p>
+                        </div>
+                        <div class="step edge">
+                            <div class="step-num">4</div>
+                            <h4>Lansering</h4>
+                            <p>SEO, domene & hosting.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Pakkeoversikt uten pris/knapper -->
+                <div class="card offer">
+                    <h3>Pakkene</h3>
+                    <p>
+                        Velg mellom en enkel <strong>one-pager</strong> eller en <strong>flersidig nettside</strong>.
+                        Pris og detaljer finner du på <a class="text-link" href="priser.html">prissiden</a>.
+                    </p>
+
+                    <details class="offer-details" style="margin-top:10px">
+                        <summary>Se hva som inngår</summary>
+                        <ul class="check-grid" style="margin-top:6px">
+                            <li>Designsystem (farger, typografi, komponenter)</li>
+                            <li>Rask, responsiv front-end (HTML/CSS/JS)</li>
+                            <li>Hero + intro pr. underside (ved flersidig)</li>
+                            <li>Grunnleggende SEO (titler, beskrivelser, struktur)</li>
+                            <li>Kontakt-/CTA-seksjoner</li>
+                            <li>Netlify/GitHub-oppsett ved behov</li>
+                        </ul>
+                        <div class="chips" style="margin-top:10px">
+                            <span class="chip">Mobil først</span>
+                            <span class="chip">Ytelse</span>
+                            <span class="chip">Tilgjengelighet</span>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="foot-brand">
+                <a class="logo" href="index.html" aria-label="Cre8Web – til forsiden">
+                    <img class="logo-img" src="assets/img/cre8web.jpg" alt="Cre8Web – Creation X-Force" width="200"
+                        height="200" loading="lazy" decoding="async" sizes="(min-width: 900px) 200px, 160px">
+                </a>
+
+                <p>Raske, ryddige nettsider – fastpris og levering på 7 dager.</p>
+                <p class="foot-meta">© <span id="year"></span> Cre8Web · Roger Sørqvist (Cre8Web)</p>
             </div>
 
-        <!-- Pakkeoversikt uten pris/knapper -->
-        <div class="card offer">
-            <h3>Pakkene</h3>
-            <p>
-                Velg mellom en enkel <strong>one-pager</strong> eller en <strong>flersidig nettside</strong>.
-                Pris og detaljer finner du på <a class="text-link" href="priser.html">prissiden</a>.
-            </p>
-        
-            <details class="offer-details" style="margin-top:10px">
-                <summary>Se hva som inngår</summary>
-                <ul class="check-grid" style="margin-top:6px">
-                    <li>Designsystem (farger, typografi, komponenter)</li>
-                    <li>Rask, responsiv front-end (HTML/CSS/JS)</li>
-                    <li>Hero + intro pr. underside (ved flersidig)</li>
-                    <li>Grunnleggende SEO (titler, beskrivelser, struktur)</li>
-                    <li>Kontakt-/CTA-seksjoner</li>
-                    <li>Netlify/GitHub-oppsett ved behov</li>
+            <nav class="foot-nav" aria-label="Sider">
+                <h4>Sider</h4>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="tjenester.html" aria-current="page">Tjenester</a></li>
+                    <li><a href="priser.html">Priser</a></li>
+                    <li><a href="eksempler.html">Eksempler</a></li>
+                    <li><a href="ressurser.html">Ressurser</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
-                <div class="chips" style="margin-top:10px">
-                    <span class="chip">Mobil først</span>
-                    <span class="chip">Ytelse</span>
-                    <span class="chip">Tilgjengelighet</span>
-                </div>
-            </details>
+            </nav>
+
+            <div class="foot-contact">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li>E-post: <a href="mailto:cre8xf@gmail.com">cre8xf@gmail.com</a></li>
+                    <li>Telefon: <a href="tel:+4791558393">+47 91 55 83 93</a></li>
+                    <li>Fredrikstad, Norge</li>
+                </ul>
+            </div>
         </div>
-
-
-        </div>
-    </section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-    <div class="container footer-grid">
-        <div class="foot-brand">
-            <a class="logo" href="index.html" aria-label="Cre8Web – til forsiden">
-                <img class="logo-img" src="assets/img/cre8web.jpg" alt="Cre8Web – Creation X-Force" width="200"
-                    height="200" loading="lazy" decoding="async" sizes="(min-width: 900px) 200px, 160px">
-            </a>
-
-            <p>Raske, ryddige nettsider – fastpris og levering på 7 dager.</p>
-            <p class="foot-meta">© <span id="year"></span> Cre8Web · Roger Sørqvist (Cre8Web)</p>
-        </div>
-
-
-        <nav class="foot-nav" aria-label="Sider">
-            <h4>Sider</h4>
-            <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="tjenester.html">Tjenester</a></li>
-                <li><a href="priser.html">Priser</a></li>
-                <li><a href="eksempler.html">Eksempler</a></li>
-                <li><a href="guide.html">Guider & maler</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-
-        <div class="foot-contact">
-            <h4>Kontakt</h4>
-            <ul>
-                <li>E-post: <a href="mailto:cre8xf@gmail.com">cre8xf@gmail.com</a></li>
-                <li>Telefon: <a href="tel:+4791558393">+47 91 55 83 93</a></li>
-                <li>Fredrikstad, Norge</li>
-            </ul>
-            
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/effects.js"></script>

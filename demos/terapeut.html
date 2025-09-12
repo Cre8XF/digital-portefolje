@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Terapeut / Coach – Demo</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/terapeut.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html"><img class="logo-img"
+                    src="https://dummyimage.com/200x60/000/fff&text=CRE8+WEB" alt=""></a>
+            <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
+            <nav class="nav" data-menu>
+                <a href="#tjenester">Tjenester</a>
+                <a href="#faq">FAQ</a>
+                <a class="btn small" href="#bestill">Bestill</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="innhold">
+        <section class="hero hero--luxe">
+            <div class="container hero-inner">
+                <h1 class="grad">Samtaleterapi & coaching</h1>
+                <p>Lav terskel, konfidensielt og trygg oppfølging – fysisk eller digitalt.</p>
+                <p><a class="btn" href="#tjenester">Se tjenester</a></p>
+            </div>
+            <div class="hero-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1523246199808-8b1677d8d5a5?q=80&w=1600&auto=format&fit=crop');">
+            </div>
+        </section>
+
+        <section id="tjenester" class="section">
+            <div class="container">
+                <h2>Tjenester</h2>
+                <div class="grid features">
+                    <div class="feat">
+                        <h3>Individuell terapi</h3>
+                        <p>60 min samtale. Fokus på verktøy og mestring i hverdagen.</p>
+                    </div>
+                    <div class="feat">
+                        <h3>Parterapi</h3>
+                        <p>Kommunikasjon, mønstre og konkrete øvelser.</p>
+                    </div>
+                    <div class="feat">
+                        <h3>Coaching</h3>
+                        <p>Mål, retning og ansvar – privat eller jobb.</p>
+                    </div>
+                    <div class="feat">
+                        <h3>Digital time</h3>
+                        <p>Video/telefon for enkel tilgjengelighet.</p>
+                    </div>
+                </div>
+                <div class="grid pricing" style="margin-top:18px">
+                    <article class="price-card">
+                        <h3>Enkelttime</h3>
+                        <p class="price">990 kr</p>
+                        <ul class="check-grid">
+                            <li>60 min</li>
+                            <li>Oppsummering</li>
+                        </ul>
+                        <p><a class="btn" href="#bestill">Book</a></p>
+                    </article>
+                    <article class="price-card">
+                        <span class="badge">Anbefalt</span>
+                        <h3>Pakke x 5</h3>
+                        <p class="price">4 490 kr</p>
+                        <ul class="check-grid">
+                            <li>5 × 60 min</li>
+                            <li>Hjemmeoppgaver</li>
+                        </ul>
+                        <p><a class="btn" href="#bestill">Book</a></p>
+                    </article>
+                    <article class="price-card">
+                        <h3>Par (90 min)</h3>
+                        <p class="price">1 690 kr</p>
+                        <ul class="check-grid">
+                            <li>Strukturert opplegg</li>
+                            <li>Øvelser mellom timene</li>
+                        </ul>
+                        <p><a class="btn ghost" href="#bestill">Forespørsel</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section alt">
+            <div class="container">
+                <h2>Ofte stilte spørsmål</h2>
+                <div class="faq">
+                    <details class="offer-details">
+                        <summary>Hvordan foregår en time?</summary>
+                        <p>Vi starter med målsetting og avtaler rammene. Du får konkrete verktøy underveis.</p>
+                    </details>
+                    <details class="offer-details">
+                        <summary>Kan jeg avbestille?</summary>
+                        <p>Ja, kostnadsfritt innen 24 timer før avtalt tid.</p>
+                    </details>
+                    <details class="offer-details">
+                        <summary>Har du taushetsplikt?</summary>
+                        <p>Ja, all informasjon behandles konfidensielt.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="bestill" class="section">
+            <div class="container">
+                <h2>Bestill</h2>
+                <form class="form grid contact">
+                    <label>Navn<input required></label>
+                    <label>E-post<input type="email" required></label>
+                    <label>Ønsket tjeneste<textarea rows="3"></textarea></label>
+                    <p><button class="btn">Send forespørsel</button></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="foot-meta">© Demo – Terapeut/Coach</div>
+        </div>
+    </footer>
+    <script>
+        const b = document.querySelector('[data-menu-btn]'), n = document.querySelector('[data-menu]');
+        if (b && n) { b.addEventListener('click', () => n.classList.toggle('open')) }
+    </script>
+</body>
+
+</html>

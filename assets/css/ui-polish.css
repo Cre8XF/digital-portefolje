@@ -84,6 +84,20 @@
   box-shadow: var(--shadow);
   transform: translateY(-1px);
 }
+/* 6b) Ghost buttons (små, f.eks. "Til innhold") */
+.btn.ghost.small {
+  font-size: 0.95rem; /* litt større tekst */
+  padding: 0.45em 1em; /* mer luft rundt */
+  background: rgba(153, 135, 182, 0.48); /* lysere bakgrunn */
+  color: var(--text);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 6px;
+}
+
+.btn.ghost.small:hover {
+  background: rgba(255, 255, 255, 0.22); /* enda litt lysere på hover */
+  transform: translateY(-1px);
+}
 
 /* 7) Footer layout helpers (non-intrusive) */
 .site-footer .footer-inner {

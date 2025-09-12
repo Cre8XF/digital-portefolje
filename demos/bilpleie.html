@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bilpleie & Detailing – Demo</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/bilpleie.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html"><img class="logo-img"
+                    src="https://dummyimage.com/200x60/000/fff&text=CRE8+WEB" alt=""></a>
+            <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
+            <nav class="nav" data-menu>
+                <a href="#pakker">Pakker</a>
+                <a href="#galleri">Før/etter</a>
+                <a class="btn small" href="#kontakt">Bestill</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="innhold">
+        <section class="hero hero--titan">
+            <div class="container hero-inner">
+                <h1 class="grad">Showroom-finish – hver gang</h1>
+                <p>Grundig vask, polering og keramisk coating. Klare pakker med faste priser.</p>
+                <p><a class="btn" href="#pakker">Se pakker</a></p>
+            </div>
+            <div class="hero-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1600&auto=format&fit=crop');">
+            </div>
+        </section>
+
+        <section id="pakker" class="section">
+            <div class="container">
+                <h2>Pakker</h2>
+                <div class="grid pricing">
+                    <article class="price-card">
+                        <span class="badge">Populær</span>
+                        <h3>Bronse – Grundig vask</h3>
+                        <p class="price">1 290 kr</p>
+                        <ul class="check-grid">
+                            <li>Skum & håndvask</li>
+                            <li>Felgrens</li>
+                            <li>Innvendig støvsug</li>
+                        </ul>
+                        <p><a class="btn" href="#kontakt">Bestill</a></p>
+                    </article>
+                    <article class="price-card">
+                        <h3>Sølv – Polering</h3>
+                        <p class="price">2 990 kr</p>
+                        <ul class="check-grid">
+                            <li>1-stegs polering</li>
+                            <li>Forsegling</li>
+                            <li>Vindusbehandling</li>
+                        </ul>
+                        <p><a class="btn" href="#kontakt">Bestill</a></p>
+                    </article>
+                    <article class="price-card">
+                        <h3>Gull – Keramisk coating</h3>
+                        <p class="price">Fra 5 990 kr</p>
+                        <ul class="check-grid">
+                            <li>2-stegs polering</li>
+                            <li>3-års coating</li>
+                            <li>Etterkontroll</li>
+                        </ul>
+                        <p><a class="btn ghost" href="#kontakt">Forespørsel</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="galleri" class="section alt">
+            <div class="container">
+                <h2>Før / etter</h2>
+                <div class="grid compare-cards">
+                    <div class="card before-after">
+                        <img src="https://images.unsplash.com/photo-1607860108855-64e6e5f9b1f5?q=80&w=1200&auto=format&fit=crop"
+                            alt="Før">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=1200&auto=format&fit=crop"
+                            alt="Etter">
+                    </div>
+                    <div class="card before-after">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop"
+                            alt="Før">
+                        <img src="https://images.unsplash.com/photo-1533473350867-376a9b01215f?q=80&w=1200&auto=format&fit=crop"
+                            alt="Etter">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="section">
+            <div class="container">
+                <h2>Bestill time</h2>
+                <form class="form grid contact">
+                    <label>Navn<input required></label>
+                    <label>Telefon<input required></label>
+                    <label>Bilmodell<input placeholder="f.eks. VW ID.4"></label>
+                    <label>Pakke<textarea rows="3" placeholder="Bronse / Sølv / Gull"></textarea></label>
+                    <p><button class="btn">Send</button></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="foot-meta">© Demo – Bilpleie</div>
+        </div>
+    </footer>
+    <script>
+        const b = document.querySelector('[data-menu-btn]'), n = document.querySelector('[data-menu]');
+        if (b && n) { b.addEventListener('click', () => n.classList.toggle('open')) }
+    </script>
+</body>
+
+</html>

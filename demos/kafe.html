@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <script>
+    if (location.hostname.endsWith('github.io')) {
+      const repo = location.pathname.split('/')[1] || '';
+      const base = document.createElement('base');
+      base.href = '/' + repo + '/';
+      document.head.prepend(base);
+    }
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solstua Kafé – Håndbakt & lokalt</title>
+  <meta name="description" content="Kafé-demo med meny, åpningstider og catering-forespørsel.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solstua Kafé – Håndbakt & lokalt">
+  <meta property="og:description" content="Kafé-demo med meny, åpningstider og catering-forespørsel.">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0b0d10">
+
+  <!-- Shared demo CSS -->
+  <link rel="stylesheet" href="/demos/assets/css/base.css">
+  <link rel="stylesheet" href="/demos/assets/css/kafe.css">
+</head>
+<body class="theme-kafe">
+  <a href="#main" class="skip-link">Hopp til innhold</a>
+
+  <nav class="nav">
+    <div class="bar container">
+      <div class="brand"><span class="dot"></span><span>Solstua Kafé</span></div>
+      <button class="menu-toggle" data-menu-btn aria-expanded="false" aria-controls="site-menu" aria-label="Meny">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div id="site-menu" class="menu" data-menu>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#om">Om</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn small" href="/kontakt.html">Forespørsel</a>
+        <a href="../eksempler.html">Tilbake til eksempler</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1>Håndbakt, lokalt og hyggelig</h1>
+        <p class="lead">Dagens meny, fersk bakst og god kaffe. Catering på bestilling.</p>
+        <div class="quick-bar">
+          <span class="hint">Populært:</span>
+          <a class="chip" href="#tjenester">Meny</a><a class="chip" href="#tjenester">Bakst</a><a class="chip" href="#tjenester">Catering</a>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="#kontakt">Forespørsel</a>
+          <a class="btn ghost" href="/eksempler.html">Se flere demoer</a>
+        </div>
+      </div>
+      <aside class="hero-right">
+        <div class="card hero-info">
+          <div class="emoji" aria-hidden="true">📍</div>
+          <h3>Åpningstider</h3>
+          <ul class="hours">
+            <li>Man–fre: 09–17</li><li>Lør: 10–15</li><li>Søn: Stengt</li>
+          </ul>
+          <p class="muted">Storgata 12, Vestby</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <section id="tjenester" class="section">
+    <div class="container">
+      <h2>Meny & tilbud</h2>
+      <div class="grid cards">
+        <article class="card"><div class="card-body"><h3>Kaffe & te</h3><p>Filter, espresso, latté, urtete.</p></div></article><article class="card"><div class="card-body"><h3>Bakst</h3><p>Kanelsnurr, croissant, surdeigsbrød.</p></div></article><article class="card"><div class="card-body"><h3>Dagens suppe</h3><p>Serveres med brød & smør.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="om" class="section alt">
+    <div class="container">
+      <h2>Hvorfor velge oss</h2>
+      <ul class="list cols-2">
+        <li>Lokale råvarer</li><li>Hyggelig service</li><li>Uteservering</li><li>Veganske alternativer</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontakt" class="section">
+    <div class="container">
+      <h2>Bestill catering</h2>
+      <p>Fortell oss om anledningen – vi svarer raskt og foreslår meny.</p>
+      <a class="btn" href="/kontakt.html">Kontakt oss</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-cols">
+      <div>
+        <div class="logo">Solstua Kafé</div>
+        <p class="muted">Hyggelig nabolagskafé med fokus på kvalitet og gode råvarer.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Snarveier</h4>
+        <ul>
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#om">Om oss</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Cre8Web</h4>
+        <ul>
+          <li><a href="/eksempler.html">Eksempler</a></li>
+          <li><a href="/priser.html">Priser</a></li>
+          <li><a href="/guide.html">Guider & maler</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      © 2025 Solstua Kafé • Nettside laget av <strong>Cre8Web</strong>
+    </div>
+  </footer>
+
+  <script src="/demos/assets/js/app.js"></script>
+</body>
+</html>

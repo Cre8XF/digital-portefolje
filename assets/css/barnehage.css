@@ -1,0 +1,46 @@
+:root {
+  --brand-1: #ff8a00;
+  --brand-2: #ffc400;
+  --brand-on: #140a00;
+  --bg: #0c0c10;
+  --bg-alt: #101018;
+  --panel: #141424;
+  --line: #27273a;
+  --text: #f0f3ff;
+  --muted: #b8bed3;
+  --font: system-ui, Inter;
+  --lh: 1.6;
+  --container: 1100px;
+  --radius: 16px;
+  --chip-bg: rgba(255, 255, 255, 0.03);
+  --code-bg: #0e0e16;
+  --code-border: #24243a;
+  --edge-cyan: 0, 240, 255;
+  --edge-amber: 255, 195, 0;
+}
+.about {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 22px;
+}
+.about-img {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.docs {
+  grid-template-columns: repeat(3, 1fr);
+}
+.docs .card {
+  text-align: center;
+  padding: 18px;
+}
+@media (max-width: 960px) {
+  .docs {
+    grid-template-columns: 1fr;
+  }
+}
+.contact {
+  grid-template-columns: 1fr;
+  max-width: 700px;
+}

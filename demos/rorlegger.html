@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <script>
+    if (location.hostname.endsWith('github.io')) {
+      const repo = location.pathname.split('/')[1] || '';
+      const base = document.createElement('base');
+      base.href = '/' + repo + '/';
+      document.head.prepend(base);
+    }
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vestby Rør & Service – Godkjent rørlegger</title>
+  <meta name="description" content="Rørlegger-demo med tjenester og tilbudsforespørsel.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vestby Rør & Service – Godkjent rørlegger">
+  <meta property="og:description" content="Rørlegger-demo med tjenester og tilbudsforespørsel.">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0b0d10">
+
+  <!-- Shared demo CSS -->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/rorlegger.css">
+</head>
+<body class="theme-rorlegger">
+  <a href="#main" class="skip-link">Hopp til innhold</a>
+
+  <nav class="nav">
+    <div class="bar container">
+      <div class="brand"><span class="dot"></span><span>Vestby Rør & Service</span></div>
+      <button class="menu-toggle" data-menu-btn aria-expanded="false" aria-controls="site-menu" aria-label="Meny">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div id="site-menu" class="menu" data-menu>
+        <a href="#tjenester">Tjenester</a>
+        <a href="#om">Om</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn small" href="/kontakt.html">Forespørsel</a>
+        <a href="../eksempler.html">Tilbake til eksempler</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1>Rørlegger når du trenger det</h1>
+        <p class="lead">Service, rehabilitering og varmepumpe – dokumentert kvalitet.</p>
+        <div class="quick-bar">
+          <span class="hint">Populært:</span>
+          <a class="chip" href="#tjenester">Service</a><a class="chip" href="#tjenester">Bad & kjøkken</a><a class="chip" href="#tjenester">Varmepumpe</a>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="#kontakt">Forespørsel</a>
+          <a class="btn ghost" href="/eksempler.html">Se flere demoer</a>
+        </div>
+      </div>
+      <aside class="hero-right">
+        <div class="card hero-info">
+          <div class="emoji" aria-hidden="true">📍</div>
+          <h3>Åpningstider</h3>
+          <ul class="hours">
+            <li>Man–fre: 09–17</li><li>Lør: 10–15</li><li>Søn: Stengt</li>
+          </ul>
+          <p class="muted">Storgata 12, Vestby</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+  <div class="cta-emergency" aria-label="Akutt hjelp knapp">
+    <a href="tel:+4740000000">🚨 Akutt hjelp – ring nå</a>
+  </div>
+
+
+  <section id="tjenester" class="section">
+    <div class="container">
+      
+  <section class="section alt" id="akutt" aria-labelledby="akutt-heading">
+    <div class="container">
+      <h2 id="akutt-heading">Akutt hjelp – lekkasje eller tett rør?</h2>
+      <div class="grid two">
+        <div>
+          <p>Vi rykker ut <strong>samme dag</strong> i Vestby, Ås, Ski, Kolbotn og omegn. Midlertidig sikring på stedet og varig løsning innen 48 timer.</p>
+          <ul class="tags">
+            <li>Hasteoppdrag 08–20</li><li>Utrykning: <strong class="price">1 290,-</strong></li><li>Kveld/helg: <strong>+25%</strong></li>
+          </ul>
+          <p><a class="btn" href="tel:+4740000000">Ring nå</a> <a class="btn ghost" href="#kontakt">Få tilbud</a></p>
+        </div>
+        <aside class="card">
+          <h3>Hva gjør du nå?</h3>
+          <ol class="numbered">
+            <li>Steng hovedkranen</li>
+            <li>Koble fra strøm nær vann</li>
+            <li>Tørk opp – ta bilder</li>
+            <li>Ring oss – vi guider deg</li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+\1
+      <div class="grid cards">
+        <article class="card"><div class="card-body"><h3>Service & reparasjon</h3><p>Lekkasje, utskifting og feilsøk.</p></div></article><article class="card"><div class="card-body"><h3>Bad & kjøkken</h3><p>Totalpakke eller delarbeid.</p></div></article><article class="card"><div class="card-body"><h3>Varmepumpe</h3><p>Montering, vedlikehold, råd.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section" id="omrade" aria-labelledby="omrade-heading">
+    <div class="container">
+      <h2 id="omrade-heading">Dekningsområde</h2>
+      <div class="grid two">
+        <div>
+          <ul class="tags">
+            <li>Vestby</li><li>Ås</li><li>Ski</li><li>Kolbotn</li><li>Drøbak</li>
+          </ul>
+          <p class="small">Fastpris på utrykning i områdene over. Utenfor disse: etter avtale.</p>
+        </div>
+        <div class="map card">
+          <iframe title="Kart Vestby" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Vestby&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="om" class="section alt">
+    <div class="container">
+      <h2>Derfor velger kunder oss</h2>
+      <ul class="list cols-2">
+        <li>Rask respons</li><li>Faste avtaler</li><li>Dokumentasjon</li><li>10+ år erfaring</li>
+      </ul>
+    </div>
+  </section>
+
+  
+  <section class="section alt" id="priseksempler" aria-labelledby="pris-heading">
+    <div class="container">
+      <h2 id="pris-heading">Priseksempler</h2>
+      <div class="grid three">
+        <div class="card"><h3>Bytte blandebatteri</h3><p>Fra</p><div class="price">1 990,-</div><p class="small">Ekskl. armatur</p></div>
+        <div class="card"><h3>Tette rør – rens</h3><p>Fra</p><div class="price">1 490,-</div></div>
+        <div class="card"><h3>Lekkasje-søk</h3><p>Fra</p><div class="price">2 490,-</div></div>
+      </div>
+      <p class="small">Prisene er veiledende. Fastpris etter befaring eller bilder/video.</p>
+    </div>
+  </section>
+
+<section id="kontakt" class="section">
+    <div class="container">
+      <h2>Få uforpliktende tilbud</h2>
+      <p>Beskriv jobben kort, så tar vi kontakt for pris og tidspunkt.</p>
+      <a class="btn" href="/kontakt.html">Kontakt oss</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-cols">
+      <div>
+        <div class="logo">Vestby Rør & Service</div>
+        <p class="muted">Din lokale rørlegger – vi tar små og store oppdrag.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Snarveier</h4>
+        <ul>
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#om">Om oss</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Cre8Web</h4>
+        <ul>
+          <li><a href="/eksempler.html">Eksempler</a></li>
+          <li><a href="/priser.html">Priser</a></li>
+          <li><a href="/guide.html">Guider & maler</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      © 2025 Vestby Rør & Service • Nettside laget av <strong>Cre8Web</strong>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Plumber", "name": "Vestby Rør & Service", "areaServed": ["Vestby", "Ås", "Ski", "Kolbotn", "Drøbak"], "telephone": "+47 400 00 000", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Priseksempler", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bytte blandebatteri"}, "priceCurrency": "NOK", "price": "1990"}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tette rør – rens"}, "priceCurrency": "NOK", "price": "1490"}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lekkasje-søk"}, "priceCurrency": "NOK", "price": "2490"}]}}</script>
+</body>
+</html>

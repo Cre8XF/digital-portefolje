@@ -4,18 +4,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Eksempler – Cre8Web</title>
+
+    <title>Eksempler | Cre8Web – Demo-nettsider for småbedrifter</title>
     <meta name="description"
-        content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering, og ubegrensede revisjoner.">
-    <link rel="canonical" href="https://dittdomene.no/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Cre8Web – Digital Design & Nettsider">
-    <meta property="og:description" content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering.">
-    <meta property="og:image" content="https://dittdomene.no/assets/og/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+        content="Se våre demo-nettsider: frisør, konsulent, tattoo, kafé, hytteutleie og rørlegger. Ferdige maler du kan bygge videre på for din småbedrift.">
+    <link rel="canonical" href="https://cre8web.netlify.app/eksempler.html">
+    <meta name="robots" content="index,follow">
     <meta name="theme-color" content="#0b0d10">
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cre8Web">
+    <meta property="og:title" content="Eksempler | Cre8Web – Demo-nettsider for småbedrifter">
+    <meta property="og:description"
+        content="Se demo-nettsider for frisør, konsulent, tattoo, kafé, hytte og rørlegger.">
+    <meta property="og:url" content="https://cre8web.netlify.app/eksempler.html">
+    <meta property="og:image" content="https://cre8web.netlify.app/assets/img/eksempler-bg.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eksempler | Cre8Web – Demo-nettsider for småbedrifter">
+    <meta name="twitter:description"
+        content="Se demo-nettsider for frisør, konsulent, tattoo, kafé, hytte og rørlegger.">
+    <meta name="twitter:image" content="https://cre8web.netlify.app/assets/img/eksempler-bg.jpg">
+
+    <!-- Breadcrumbs JSON-LD -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Hjem","item":"https://cre8web.netlify.app/"},
+      {"@type":"ListItem","position":2,"name":"Eksempler","item":"https://cre8web.netlify.app/eksempler.html"}
+    ]
+  }
+  </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/themes.css">
     <link rel="stylesheet" href="assets/css/page-eksempler.css">
@@ -23,342 +53,376 @@
 </head>
 
 <body>
-    <!-- rett etter <body> -->
     <a href="#main" class="skip-link">Hopp til innhold</a>
 
-<!-- Header -->
-<header class="site-header">
-    <div class="container header-inner">
-
-        <!-- Logo som bilde -->
-        <a class="logo" href="index.html" aria-label="CRE8Web – til forsiden">
-            <img src="assets/img/cre8web-header2.jpg" alt="CRE8Web logo" class="logo-img" width="160" height="auto"
-                loading="lazy" decoding="async">
-        </a>
-
-        <!-- Burger knapp for mobil -->
-        <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
-
-        <!-- Navigasjon -->
-        <nav class="nav" data-menu>
-            <a href="index.html">Hjem</a>
-            <a href="tjenester.html">Tjenester</a>
-            <a href="priser.html">Priser</a>
-            <a href="eksempler.html">Eksempler</a>
-            <a href="guide.html">Guider & maler</a>
-            <a href="kontakt.html" class="btn small">Kom i gang</a>
-        </nav>
-    </div>
-</header>
-
-    <section class="section hero alt">
-        <div class="hero-bg" aria-hidden="true" style="background-image:url('assets/img/eksempler-bg.jpg')"></div>
-    
-        <div class="container hero-inner">
-            <div class="hero-panel">
-                <h1>Kundedemoer & eksempler</h1>
-                <p class="lead">Utvalgte demo-sider og personlige prosjekter – flere på vei.</p>
-            </div>
-        </div>
-    </section>
-
-
-<!-- Showcase -->
-<section class="section">
-    <div class="container">
-        <h1>Showcase</h1>
-        <p class="section-intro">
-            Her er en strukturert oversikt over det jeg bygger. Start med kundedemoene under – de viser hvordan en
-            enkel, fokusert
-            nettside kan se ut. Deretter finner du noen av mine egne prosjekter, og til slutt en større liste over
-            apper, spill og
-            små verktøy jeg har laget.
-        </p>
-    </div>
-</section>
-
-<!-- 1) Kundedemoer -->
-<section class="section" id="demoer">
-    <div class="container">
-        <div class="group-head">
-            <h2>Kundedemoer</h2>
-            <p>Tre ferdige demoserier bygd for konvertering: tydelig struktur, rask lastetid og enkel redigering.</p>
-        </div>
-
-        <div class="showcase-grid">
-            <!-- Tattoo -->
-            <article class="showcase-card">
-                <div class="img">
-                    <img src="/assets/img/tattoo.jpg" alt="Tattoo salong – demo" loading="lazy" decoding="async">
-                </div>
-                <div class="body">
-                    <h3>Tattoo salong – demo</h3>
-                    <p>Stemningsfull one-pager med galleri, artister og booking-CTA.</p>
-                    <a class="btn btn-primary" href="./demos/tattoo.html">Se demo</a>
-                </div>
-            </article>
-
-            <!-- Frisør -->
-            <article class="showcase-card">
-                <div class="img">
-                    <img src="./demos/assets/img/salong.jpg" alt="Frisørsalong nettside" loading="lazy"
-                        decoding="async">
-                </div>
-                <div class="body">
-                    <h3>Frisørsalong nettside</h3>
-                    <p>Komplett nettside med tjenester, priser, booking og galleri.</p>
-                    <a class="btn btn-primary" href="./demos/frisor.html">Se demo</a>
-                </div>
-            </article>
-
-            <!-- Konsulent -->
-            <article class="showcase-card">
-                <div class="img">
-                    <img src="/assets/img/konsulent.jpg" alt="Konsulent nettside – demo" loading="lazy"
-                        decoding="async">
-                </div>
-                <div class="body">
-                    <h3>Konsulent nettside</h3>
-                    <p>Tjenester, case-studier og kontakt – strukturert for konvertering.</p>
-                    <a class="btn btn-primary" href="./demos/konsulent/index.html">Se demo</a>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- 2) Egne prosjekter -->
-<section class="section" id="prosjekter">
-    <div class="container">
-        <div class="group-head">
-            <h2>Egne prosjekter</h2>
-            <p>Personlige bygg jeg bruker til å teste idéer, UI-mønstre og datahåndtering.</p>
-        </div>
-
-        <div class="showcase-grid">
-            <!-- Butikkoversikt -->
-            <article class="showcase-card">
-                <div class="img">
-                    <img src="/assets/img/butikkoversikt.jpg" alt="Butikkoversikt.no – case" loading="lazy"
-                        decoding="async">
-                </div>
-                <div class="body">
-                    <h3>Butikkoversikt.no</h3>
-                    <p>Katalog med kategorier, filter og JSON-drevet innhold.</p>
-                    <a class="btn btn-primary" href="https://butikkoversikt.no/" target="_blank" rel="noopener">Se
-                        case</a>
-                </div>
-            </article>
-
-            <!-- AI-verktøy -->
-            <article class="showcase-card">
-                <div class="img">
-                    <img src="/assets/img/ai-verktoykassa.jpg" alt="AI-verktøy demo" loading="lazy" decoding="async">
-                </div>
-                <div class="body">
-                    <h3>AI-verktøy</h3>
-                    <p>UI for prompts, resultater og eksport – bygget for raske iterasjoner.</p>
-                    <a class="btn btn-primary" href="https://ai-verktoy.netlify.app" target="_blank" rel="noopener">Se
-                        demo</a>
-                </div>
-            </article>
-
-            <!-- DVD-samlingen -->
-            <article class="showcase-card">
-                <div class="img">
-                    <img src="/assets/img/dvd-arkivet.jpg" alt="DVD-samlingen – demo" loading="lazy" decoding="async">
-                </div>
-                <div class="body">
-                    <h3>DVD-samlingen</h3>
-                    <p>Filter, sortering og detaljer – liten SPA som lister egen samling.</p>
-                    <a class="btn btn-primary" href="https://dvd-arkivet.netlify.app" target="_blank" rel="noopener">Se
-                        demo</a>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- 3) Mer jeg har laget -->
-<!-- 3) Mer jeg har laget -->
-<section class="section" id="mer">
-    <div class="container">
-        <div class="group-head">
-            <h2>Mer jeg har laget</h2>
-            <p>Et utvalg av prosjekter jeg enten jobber med nå eller allerede har levert.
-                Dette er for å vise bredden – spør gjerne om du vil se en av dem i detalj.</p>
-        </div>
-
-        <div class="pill-groups">
-            <div class="pill-group">
-                <h3>Mikroapper & kalkulatorer</h3>
-                <ul class="pill-list">
-                    <li><span class="pill">Elbil-ladekost kalkulator</span></li>
-                    <li><span class="pill">Omregningsmester (volum/vekt mm.)</span></li>
-                    <li><span class="pill">Materialkalkulator (prosjekter)</span></li>
-                </ul>
-            </div>
-
-            <div class="pill-group">
-                <h3>Spill & eksperimenter</h3>
-                <ul class="pill-list">
-                    <li><span class="pill">Falcon-inspired</span></li>
-                    <li><span class="pill">Lightsout</span></li>
-                    <li><span class="pill">Plattformspill</span></li>
-                </ul>
-            </div>
-
-            <div class="pill-group">
-                <h3>Tekniske verktøy</h3>
-                <ul class="pill-list">
-                    <li><span class="pill">Promt-Generator</span></li>
-                    <li><span class="pill">Relex/Butler eksport-skript</span></li>
-                    <li><span class="pill">OCR test – skjermbilder → JSON</span></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="cta-panel card">
-            <p><strong>Vil du se noe spesifikt?</strong> Si hva du er ute etter, så sender jeg riktig demo eller lager
-                en rask skisse.</p>
-            <a class="btn small" href="#kontakt">Kontakt meg</a>
-        </div>
-    </div>
-</section>
-
-
-<!-- Inspirasjon (uendret, flyttet ned) -->
-<section class="section">
-    <div class="container">
-        <h2>Velg en stil du liker</h2>
-        <p>Er du usikker på uttrykk? Her er noen kilder du kan bruke for å finne inspirasjon. Send meg lenken – så
-            bygger jeg en løsning med samme struktur, tilpasset dine farger og innhold.</p>
-    
-            <div class="inspo-grid">
-                <!-- Kort 1 -->
-                <article class="inspo-card">
-                    <div class="inspo-logo">
-                        <img src="assets/img/logos/nicepage.png" alt="Nicepage logo" loading="lazy" decoding="async">
-                    </div>
-                    <div class="inspo-body">
-                        <h3>Nicepage Templates</h3>
-                        <p>Stort utvalg av moderne maler for ulike behov.</p>
-                        <a class="btn btn-primary inspo-cta" href="https://nicepage.com/templates" target="_blank"
-                            rel="noopener noreferrer">
-                            Åpne
-                            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill="currentColor"
-                                    d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-    
-                <!-- Kort 2 -->
-                <article class="inspo-card">
-                    <div class="inspo-logo">
-                        <img src="assets/img/logos/colorlib.png" alt="Colorlib logo" loading="lazy" decoding="async">
-                    </div>
-                    <div class="inspo-body">
-                        <h3>Colorlib Templates</h3>
-                        <p>Gratis responsive maler for små bedrifter og prosjekter.</p>
-                        <a class="btn btn-primary inspo-cta" href="https://colorlib.com/wp/templates/" target="_blank"
-                            rel="noopener noreferrer">Åpne
-                            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill="currentColor"
-                                    d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-    
-                <!-- Kort 3 -->
-                <article class="inspo-card">
-                    <div class="inspo-logo">
-                        <img src="assets/img/logos/html5up.jpg" alt="HTML5 UP logo" loading="lazy" decoding="async">
-                    </div>
-                    <div class="inspo-body">
-                        <h3>HTML5 UP</h3>
-                        <p>Minimalistiske og raske nettsidemaler.</p>
-                        <a class="btn btn-primary inspo-cta" href="https://html5up.net/" target="_blank"
-                            rel="noopener noreferrer">Åpne
-                            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill="currentColor"
-                                    d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-    
-                <!-- Kort 4 -->
-                <article class="inspo-card">
-                    <div class="inspo-logo">
-                        <img src="assets/img/logos/templatemo.jpg" alt="TemplateMo logo" loading="lazy"
-                            decoding="async">
-                    </div>
-                    <div class="inspo-body">
-                        <h3>TemplateMo</h3>
-                        <p>Fine templates for personlig eller profesjonell bruk.</p>
-                        <a class="btn btn-primary inspo-cta" href="https://templatemo.com/" target="_blank"
-                            rel="noopener noreferrer">Åpne
-                            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill="currentColor"
-                                    d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-            </div>
-    
-            <div class="inspo-note card">
-                <p><strong>Tips:</strong> Finn en mal du liker og <strong>send meg lenken på e-post</strong>. Jeg bruker
-                    designet som inspirasjon og koder alt selv – ingen lisensproblemer, og du får et raskt, tilpasset
-                    nettsted.</p>
-            </div>
-        </div>
-    </section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-    <div class="container footer-grid">
-        <div class="foot-brand">
-            <a class="logo" href="index.html" aria-label="Cre8Web – til forsiden">
-                <img class="logo-img" src="assets/img/cre8web.jpg" alt="Cre8Web – Creation X-Force" width="200"
-                    height="200" loading="lazy" decoding="async" sizes="(min-width: 900px) 200px, 160px">
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="CRE8Web – til forsiden">
+                <img src="assets/img/cre8web-header2.jpg" alt="CRE8Web logo" class="logo-img" width="160" height="auto"
+                    loading="lazy" decoding="async">
             </a>
 
-            <p>Raske, ryddige nettsider – fastpris og levering på 7 dager.</p>
-            <p class="foot-meta">© <span id="year"></span> Cre8Web · Roger Sørqvist (Cre8Web)</p>
+            <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
+
+            <nav class="nav" data-menu>
+                <a href="index.html">Hjem</a>
+                <a href="tjenester.html">Tjenester</a>
+                <a href="priser.html">Priser</a>
+                <a href="eksempler.html" aria-current="page">Eksempler</a>
+                <a href="ressurser.html">Ressurser</a>
+                <a href="kontakt.html" class="btn small">Kom i gang</a>
+            </nav>
         </div>
+    </header>
 
-
-        <nav class="foot-nav" aria-label="Sider">
-            <h4>Sider</h4>
-            <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="tjenester.html">Tjenester</a></li>
-                <li><a href="priser.html">Priser</a></li>
-                <li><a href="eksempler.html">Eksempler</a></li>
-                <li><a href="guide.html">Guider & maler</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-
-        <div class="foot-contact">
-            <h4>Kontakt</h4>
-            <ul>
-                <li>E-post: <a href="mailto:cre8xf@gmail.com">cre8xf@gmail.com</a></li>
-                <li>Telefon: <a href="tel:+4791558393">+47 91 55 83 93</a></li>
-                <li>Fredrikstad, Norge</li>
-            </ul>
-            <button class="btn ghost small" data-to-top>Til toppen</button>
+    <!-- Hero -->
+    <section class="section hero alt">
+        <div class="hero-bg" aria-hidden="true" style="background-image:url('assets/img/eksempler-bg.jpg')"></div>
+        <div class="container hero-inner">
+            <div class="hero-panel">
+                <h1 id="main">Kundedemoer & eksempler</h1>
+                <p class="lead">Utvalgte demo-sider og egne prosjekter – flere legges til fortløpende.</p>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
+    <!-- Showcase intro -->
+    <section class="section">
+        <div class="container">
+            <h2>Showcase</h2>
+            <p class="section-intro">
+                Under finner du demoer bygd for småbedrifter. Bruk filtrene for å hoppe rett til bransjer.
+                Hver demo kan tilpasses med dine farger, tekster og bilder.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter -->
+    <section class="section" id="filter">
+        <div class="container">
+            <div class="filter-bar card">
+                <strong>Filtrer:</strong>
+                <div class="filters" role="tablist" aria-label="Filtrer demoer">
+                    <button class="chip is-active" data-filter="*">Alle</button>
+                    <button class="chip" data-filter="velvaere">Velvære</button>
+                    <button class="chip" data-filter="tjenester">Tjenester</button>
+                    <button class="chip" data-filter="matdrikke">Mat & drikke</button>
+                    <button class="chip" data-filter="utleie">Utleie</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kundedemoer -->
+    <section class="section" id="demoer">
+        <div class="container">
+            <div class="group-head">
+                <h2>Kundedemoer</h2>
+                <p>Strukturert for konvertering: tydelige seksjoner, rask lastetid og enkel redigering.</p>
+            </div>
+    
+            <div class="showcase-grid" data-grid>
+                <!-- Tattoo -->
+                <article class="showcase-card" data-cat="velvaere">
+                    <div class="img">
+                        <img src="./assets/img/tattoo.jpg" alt="Tattoo salong – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Tattoo salong – demo</h3>
+                        <p>Stemningsfull one-pager med galleri, artister og booking-CTA.</p>
+                        <a class="btn btn-primary" href="./demos/tattoo.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Frisør -->
+                <article class="showcase-card" data-cat="velvaere">
+                    <div class="img">
+                        <img src="./demos/assets/img/salong.jpg" alt="Frisørsalong nettside – demo" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Frisørsalong nettside</h3>
+                        <p>Komplett nettside med tjenester, priser, booking og galleri.</p>
+                        <a class="btn btn-primary" href="./demos/frisor.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Konsulent -->
+                <article class="showcase-card" data-cat="tjenester">
+                    <div class="img">
+                        <img src="./assets/img/konsulent.jpg" alt="Konsulent nettside – demo" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Konsulent nettside</h3>
+                        <p>Tjenester, case-studier og kontakt – strukturert for konvertering.</p>
+                        <a class="btn btn-primary" href="./demos/konsulent.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Kafé – NY -->
+                <article class="showcase-card" data-cat="matdrikke">
+                    <div class="img">
+                        <img src="./assets/img/kafe.jpg" alt="Kafé – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Kafé – demo</h3>
+                        <p>One-pager med meny, åpningstider og catering-CTA.</p>
+                        <a class="btn btn-primary" href="./demos/kafe.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Hytteutleie – NY -->
+                <article class="showcase-card" data-cat="utleie">
+                    <div class="img">
+                        <img src="./assets/img/hytte-forside.jpg" alt="Hytteutleie – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Hytteutleie – demo</h3>
+                        <p>Fasiliteter, galleri og enkel forespørsel om dato og pris.</p>
+                        <a class="btn btn-primary" href="./demos/hytte.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Rørlegger – NY -->
+                <article class="showcase-card" data-cat="tjenester">
+                    <div class="img">
+                        <img src="./assets/img/rorlegger.jpg" alt="Rørlegger – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Rørlegger – demo</h3>
+                        <p>Tjenester, fordeler og uforpliktende tilbud på 1–2–3.</p>
+                        <a class="btn btn-primary" href="./demos/rorlegger.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Fotograf – NY -->
+                <article class="showcase-card" data-cat="tjenester">
+                    <div class="img">
+                        <img src="./assets/img/fotograf.jfif"
+                            alt="Fotograf – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Fotograf – demo</h3>
+                        <p>Portefølje/galleri, priseksempler og kontaktskjema.</p>
+                        <a class="btn btn-primary" href="./demos/fotograf.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Yogalærer / PT – NY -->
+                <article class="showcase-card" data-cat="velvaere">
+                    <div class="img">
+                        <img src="https://images.unsplash.com/photo-1540206276207-3af25c08abc4?q=80&w=1200&auto=format&fit=crop"
+                            alt="Yogalærer / PT – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Yogalærer / PT – demo</h3>
+                        <p>Ukesplan, pakker/priser og enkel booking.</p>
+                        <a class="btn btn-primary" href="./demos/yoga.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Barnehage / AKS – NY -->
+                <article class="showcase-card" data-cat="tjenester">
+                    <div class="img">
+                        <img src="https://images.unsplash.com/photo-1503457574462-bd27054394c1?q=80&w=1200&auto=format&fit=crop"
+                            alt="Barnehage – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Barnehage / AKS – demo</h3>
+                        <p>Verdier, kalender og nedlastbare skjemaer.</p>
+                        <a class="btn btn-primary" href="./demos/barnehage.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Bilpleie / Detailing – NY -->
+                <article class="showcase-card" data-cat="tjenester">
+                    <div class="img">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1200&auto=format&fit=crop"
+                            alt="Bilpleie / Detailing – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Bilpleie / Detailing – demo</h3>
+                        <p>Pakker med priser og før/etter-galleri.</p>
+                        <a class="btn btn-primary" href="./demos/bilpleie.html">Se demo</a>
+                    </div>
+                </article>
+    
+                <!-- Terapeut / Coach – NY -->
+                <article class="showcase-card" data-cat="velvaere">
+                    <div class="img">
+                        <img src="https://images.unsplash.com/photo-1523246165121-4c1f6c2f2f5b?q=80&w=1200&auto=format&fit=crop"
+                            alt="Terapeut / Coach – demo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Terapeut / Coach – demo</h3>
+                        <p>Tjenester, priseksempler og FAQ med <code>&lt;details&gt;</code>.</p>
+                        <a class="btn btn-primary" href="./demos/terapeut.html">Se demo</a>
+                    </div>
+                </article>
+            </div><!-- /.showcase-grid -->
+        </div>
+    </section>
+
+
+    <!-- Egne prosjekter (uendret) -->
+    <section class="section" id="prosjekter">
+        <div class="container">
+            <div class="group-head">
+                <h2>Egne prosjekter</h2>
+                <p>Personlige bygg jeg bruker til å teste idéer, UI-mønstre og datahåndtering.</p>
+            </div>
+
+            <div class="showcase-grid">
+                <article class="showcase-card">
+                    <div class="img">
+                        <img src="/assets/img/butikkoversikt.jpg" alt="Butikkoversikt.no – case" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>Butikkoversikt.no</h3>
+                        <p>Katalog med kategorier, filter og JSON-drevet innhold.</p>
+                        <a class="btn btn-primary" href="https://butikkoversikt.no/" target="_blank" rel="noopener">Se
+                            case</a>
+                    </div>
+                </article>
+
+                <article class="showcase-card">
+                    <div class="img">
+                        <img src="/assets/img/ai-verktoykassa.jpg" alt="AI-verktøy demo" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>AI-verktøy</h3>
+                        <p>UI for prompts, resultater og eksport – bygget for raske iterasjoner.</p>
+                        <a class="btn btn-primary" href="https://ai-verktoy.netlify.app" target="_blank"
+                            rel="noopener">Se demo</a>
+                    </div>
+                </article>
+
+                <article class="showcase-card">
+                    <div class="img">
+                        <img src="/assets/img/dvd-arkivet.jpg" alt="DVD-samlingen – demo" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <div class="body">
+                        <h3>DVD-samlingen</h3>
+                        <p>Filter, sortering og detaljer – liten SPA som lister egen samling.</p>
+                        <a class="btn btn-primary" href="https://dvd-arkivet.netlify.app" target="_blank"
+                            rel="noopener">Se demo</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mer jeg har laget (uendret) -->
+    <section class="section" id="mer">
+        <div class="container">
+            <div class="group-head">
+                <h2>Mer jeg har laget</h2>
+                <p>Et utvalg av prosjekter jeg jobber med eller har levert. Spør hvis du vil se en i detalj.</p>
+            </div>
+
+            <div class="pill-groups">
+                <div class="pill-group">
+                    <h3>Mikroapper & kalkulatorer</h3>
+                    <ul class="pill-list">
+                        <li><span class="pill">Elbil-ladekost kalkulator</span></li>
+                        <li><span class="pill">Omregningsmester</span></li>
+                        <li><span class="pill">Materialkalkulator</span></li>
+                    </ul>
+                </div>
+
+                <div class="pill-group">
+                    <h3>Spill & eksperimenter</h3>
+                    <ul class="pill-list">
+                        <li><span class="pill">Falcon-inspired</span></li>
+                        <li><span class="pill">Lightsout</span></li>
+                        <li><span class="pill">Plattformspill</span></li>
+                    </ul>
+                </div>
+
+                <div class="pill-group">
+                    <h3>Tekniske verktøy</h3>
+                    <ul class="pill-list">
+                        <li><span class="pill">Prompt-generator</span></li>
+                        <li><span class="pill">Relex/Butler eksport-skript</span></li>
+                        <li><span class="pill">OCR test – skjermbilder → JSON</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta-panel card">
+                <p><strong>Vil du se noe spesifikt?</strong> Si hva du er ute etter, så sender jeg riktig demo – eller
+                    lager en rask skisse.</p>
+                <a class="btn small" href="kontakt.html">Kontakt meg</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="foot-brand">
+                <a class="logo" href="index.html" aria-label="Cre8Web – til forsiden">
+                    <img class="logo-img" src="assets/img/cre8web.jpg" alt="Cre8Web – Creation X-Force" width="200"
+                        height="200" loading="lazy" decoding="async" sizes="(min-width: 900px) 200px, 160px">
+                </a>
+                <p>Raske, ryddige nettsider – fastpris og levering på 7 dager.</p>
+                <p class="foot-meta">© <span id="year"></span> Cre8Web · Roger Sørqvist (Cre8Web)</p>
+            </div>
+
+            <nav class="foot-nav" aria-label="Sider">
+                <h4>Sider</h4>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="tjenester.html">Tjenester</a></li>
+                    <li><a href="priser.html">Priser</a></li>
+                    <li><a href="eksempler.html" aria-current="page">Eksempler</a></li>
+                    <li><a href="guide.html">Guider & maler</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="foot-contact">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li>E-post: <a href="mailto:cre8xf@gmail.com">cre8xf@gmail.com</a></li>
+                    <li>Telefon: <a href="tel:+4791558393">+47 91 55 83 93</a></li>
+                    <li>Fredrikstad, Norge</li>
+                </ul>
+                <button class="btn ghost small" data-to-top>Til toppen</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/effects.js"></script>
+    <script>
+        // Enkel filtrering av demo-kort
+        (function () {
+            const buttons = document.querySelectorAll('[data-filter]');
+            const cards = document.querySelectorAll('[data-grid] .showcase-card');
+
+            function applyFilter(cat) {
+                cards.forEach(card => {
+                    const ok = (cat === '*') || card.dataset.cat.split(',').includes(cat);
+                    card.style.display = ok ? '' : 'none';
+                });
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('is-active'));
+                    btn.classList.add('is-active');
+                    applyFilter(btn.dataset.filter);
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>

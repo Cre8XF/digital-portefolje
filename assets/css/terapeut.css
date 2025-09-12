@@ -1,0 +1,32 @@
+:root {
+  --brand-1: #b388ff;
+  --brand-2: #70d6ff;
+  --brand-on: #0b0b12;
+  --bg: #0b0b12;
+  --bg-alt: #0f0f18;
+  --panel: #141428;
+  --line: #26263c;
+  --text: #eef0ff;
+  --muted: #b5b9d0;
+  --font: system-ui, Inter;
+  --lh: 1.6;
+  --container: 1100px;
+  --radius: 16px;
+  --chip-bg: rgba(255, 255, 255, 0.02);
+  --code-bg: #0e0e18;
+  --code-border: #25253a;
+  --edge-cyan: 112, 214, 255;
+  --edge-amber: 179, 136, 255;
+}
+.features {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 900px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.contact {
+  grid-template-columns: 1fr;
+  max-width: 680px;
+}

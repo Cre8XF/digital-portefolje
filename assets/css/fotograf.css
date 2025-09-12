@@ -1,0 +1,46 @@
+:root {
+  --brand-1: #8a5cff;
+  --brand-2: #00e0ff;
+  --brand-on: #0b0b12;
+  --bg: #0b0b12;
+  --bg-alt: #0e0e18;
+  --panel: #121222;
+  --line: #27273a;
+  --text: #e9e9f1;
+  --muted: #a7acc2;
+  --font: system-ui, Segoe UI, Inter;
+  --lh: 1.6;
+  --container: 1100px;
+  --radius: 16px;
+  --chip-bg: rgba(255, 255, 255, 0.02);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --code-bg: #101018;
+  --code-border: #222235;
+  --edge-cyan: 0, 240, 255;
+  --edge-amber: 255, 153, 0;
+}
+.gallery-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery-3 img {
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+@media (max-width: 900px) {
+  .gallery-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.about {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+}
+.about-img {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.contact {
+  grid-template-columns: 1fr;
+  max-width: 680px;
+}

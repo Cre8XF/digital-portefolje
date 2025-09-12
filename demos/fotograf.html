@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fotograf – Demo</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/fotograf.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html">
+                <img class="logo-img" src="https://dummyimage.com/200x60/000/fff&text=CRE8+WEB" alt="CRE8Web">
+            </a>
+            <button class="nav-toggle" aria-label="Meny" data-menu-btn>☰</button>
+            <nav class="nav" data-menu>
+                <a href="#portefolje">Portefølje</a>
+                <a href="#pakker">Priser</a>
+                <a href="#om">Om meg</a>
+                <a class="btn small" href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="innhold">
+        <section class="hero hero--titan">
+            <div class="container hero-inner">
+                <h1 class="grad">Fotograf til bryllup, portrett og bedrift</h1>
+                <p>Profesjonelle bilder med naturlig lys og ekte uttrykk. Rask levering og klare priser.</p>
+                <p><a class="btn" href="#pakker">Se priseksempler</a></p>
+            </div>
+            <div class="hero-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1600&auto=format&fit=crop');">
+            </div>
+        </section>
+
+        <section id="portefolje" class="section">
+            <div class="container">
+                <h2>Portefølje</h2>
+                <div class="grid gallery-3">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=900&auto=format&fit=crop"
+                        alt="Portrett">
+                    <img src="https://images.unsplash.com/photo-1526045431048-71f144de3f1c?q=80&w=900&auto=format&fit=crop"
+                        alt="Bryllup">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900&auto=format&fit=crop"
+                        alt="Natur">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=900&auto=format&fit=crop"
+                        alt="Bedrift">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=900&auto=format&fit=crop"
+                        alt="Produkter">
+                    <img src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?q=80&w=900&auto=format&fit=crop"
+                        alt="Familie">
+                </div>
+            </div>
+        </section>
+
+        <section id="pakker" class="section alt">
+            <div class="container">
+                <h2>Priseksempler</h2>
+                <div class="grid pricing">
+                    <article class="price-card">
+                        <span class="badge">Populær</span>
+                        <h3>Portrett – 45 min</h3>
+                        <p class="price">1 990 kr</p>
+                        <ul class="check-grid">
+                            <li>1 lokasjon i nærområde</li>
+                            <li>10 ferdig redigerte bilder</li>
+                            <li>Online galleri</li>
+                            <li>Levering innen 3 dager</li>
+                        </ul>
+                        <p><a class="btn" href="#kontakt">Bestill tid</a></p>
+                    </article>
+                    <article class="price-card">
+                        <h3>Bedriftspakke</h3>
+                        <p class="price">Fra 4 900 kr</p>
+                        <ul class="check-grid">
+                            <li>Portretter + miljø</li>
+                            <li>Lisens til web/SoMe</li>
+                            <li>Rask levering</li>
+                            <li>Mulighet for fast avtale</li>
+                        </ul>
+                        <p><a class="btn ghost" href="#kontakt">Be om tilbud</a></p>
+                    </article>
+                    <article class="price-card">
+                        <h3>Bryllup – halv dag</h3>
+                        <p class="price">12 900 kr</p>
+                        <ul class="check-grid">
+                            <li>Vielse + portretter</li>
+                            <li>200+ redigerte bilder</li>
+                            <li>Privat galleri</li>
+                            <li>Reise i nærområde</li>
+                        </ul>
+                        <p><a class="btn" href="#kontakt">Sjekk dato</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="om" class="section">
+            <div class="container grid about">
+                <div>
+                    <h2>Om fotografen</h2>
+                    <p>Jeg brenner for historiefortelling gjennom bilder og jobber like gjerne med små og store oppdrag.
+                    </p>
+                    <div class="chips">
+                        <span class="chip">Bryllup</span>
+                        <span class="chip">Portrett</span>
+                        <span class="chip">Bedrift</span>
+                        <span class="chip">Produkter</span>
+                    </div>
+                </div>
+                <img class="about-img"
+                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1200&auto=format&fit=crop"
+                    alt="Fotograf i arbeid">
+            </div>
+        </section>
+
+        <section id="kontakt" class="section alt">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <form class="form grid contact">
+                    <label>Navn<input required placeholder="Ditt navn"></label>
+                    <label>E-post<input type="email" required placeholder="navn@epost.no"></label>
+                    <label>Hva ønsker du?<textarea rows="4" placeholder="Kort om oppdraget"></textarea></label>
+                    <p><button class="btn">Send forespørsel</button></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="foot-meta">© Demo – Fotograf</div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('[data-menu-btn]');
+        const nav = document.querySelector('[data-menu]');
+        if (btn && nav) { btn.addEventListener('click', () => nav.classList.toggle('open')); }
+    </script>
+</body>
+
+</html>

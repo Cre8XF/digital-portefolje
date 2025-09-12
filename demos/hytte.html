@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+  <!-- Base (behold github.io-base-hack) -->
+  <script>
+    if (location.hostname.endsWith('github.io')) {
+      const repo = location.pathname.split('/')[1] || '';
+      const base = document.createElement('base');
+      base.href = '/' + repo + '/';
+      document.head.prepend(base);
+    }
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fjellro – Hytte ved skog og vann | 6 senger, badstue & peis</title>
+  <meta name="description"
+    content="Familievennlig hytte med 3 soverom/6 senger, badstue, peis og uteplass med grill. 15 min til alpinbakke. Sjekk ledige datoer og pris.">
+  <link rel="canonical" href="https://cre8web.netlify.app/demos/hytte.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0b0d10">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fjellro Hytte">
+  <meta property="og:title" content="Fjellro – Hytte ved skog og vann | 6 senger, badstue & peis">
+  <meta property="og:description"
+    content="3 soverom, badstue og peis. Uteplass med grill, Wi-Fi og parkering. 15 min til alpinbakke. Sjekk ledig og pris.">
+  <meta property="og:url" content="https://cre8web.netlify.app/demos/hytte.html">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fjellro – Hytte ved skog og vann | 6 senger, badstue & peis">
+  <meta name="twitter:description"
+    content="3 soverom, badstue og peis. Uteplass med grill, Wi-Fi og parkering. 15 min til alpinbakke.">
+  <meta name="twitter:image"
+    content="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop">
+
+  <!-- Fav -->
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/hytte.css">
+  <link rel="stylesheet" href="..//assets/css/hytte.css">
+
+  <!-- Breadcrumbs JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Eksempler","item":"https://cre8web.netlify.app/eksempler.html"},
+      {"@type":"ListItem","position":2,"name":"Hytte – Fjellro","item":"https://cre8web.netlify.app/demos/hytte.html"}
+    ]
+  }
+  </script>
+</head>
+
+<body class="theme-hytte">
+  <a href="#main" class="skip-link">Hopp til innhold</a>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/eksempler.html" aria-label="Tilbake til eksempler">
+        <span class="logo-mark">FR</span><span class="logo-text">Fjellro</span>
+      </a>
+      <button class="nav-toggle" aria-label="Meny" onclick="document.querySelector('.nav').classList.toggle('open')">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav class="nav" aria-label="Hovedmeny">
+        <ul>
+          <li><a href="#fasiliteter">Fasiliteter</a></li>
+          <li><a href="#galleri">Galleri</a></li>
+          <li><a href="#priser">Priser</a></li>
+          <li><a href="#ledighet">Ledighet</a></li>
+          <li><a href="#kontakt" class="btn small">Forespørsel</a></li>
+          <a href="../eksempler.html">Tilbake til eksempler</a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero--titan">
+    <div class="hero-image" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <h1 class="titan-title" id="main">Hytte ved skog og vann</h1>
+      <p>3 soverom / 6 senger, badstue og peis. 15 min til alpinbakke, kort vei til skiløyper og turstier.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#kontakt">Sjekk pris / ledig</a>
+        <a class="btn ghost" href="/eksempler.html">Flere demoer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FASILITETER -->
+  <section id="fasiliteter" class="section">
+    <div class="container grid two">
+      <article class="card">
+        <h2>Fasiliteter</h2>
+        <div class="grid three services">
+          <div class="service">
+            <h3>🛌 Soverom</h3>
+            <p>3 rom / 6 senger, dyner & puter. Reiseseng ved behov.</p>
+          </div>
+          <div class="service">
+            <h3>🔥 Velvære</h3>
+            <p>Badstue, peis, ved inkludert. Uteplass med grill.</p>
+          </div>
+          <div class="service">
+            <h3>🍳 Kjøkken</h3>
+            <p>Komfyr, oppvaskmaskin, kaffetrakter – full pakke.</p>
+          </div>
+          <div class="service">
+            <h3>📶 Praktisk</h3>
+            <p>Wi-Fi, smart-TV, parkering ved hytta.</p>
+          </div>
+          <div class="service">
+            <h3>⛷️ Nærhet</h3>
+            <p>15 min til alpinbakke, 5 min til lysløype.</p>
+          </div>
+          <div class="service">
+            <h3>🐶 Familievennlig</h3>
+            <p>Barnevennlig. Små hunder etter avtale.</p>
+          </div>
+        </div>
+      </article>
+
+      <aside class="card kpi">
+        <h2>Nøkkeltall</h2>
+        <div class="kpi-row">
+          <div><strong>6</strong>
+            <div>Sengeplasser</div>
+          </div>
+          <div><strong>3</strong>
+            <div>Soverom</div>
+          </div>
+          <div><strong>15</strong>
+            <div>min til bakke</div>
+          </div>
+        </div>
+        <details class="faq" style="margin-top:10px">
+          <summary>Ofte spurt</summary>
+          <ul class="bullets">
+            <li>Innsjekk 15:00 – utsjekk 11:00</li>
+            <li>Obligatorisk utvask kan bestilles</li>
+            <li>Leietaker må være over 23 år</li>
+          </ul>
+        </details>
+      </aside>
+    </div>
+  </section>
+
+  <!-- GALLERI -->
+  <section id="galleri" class="section alt">
+    <div class="container">
+      <h2>Galleri</h2>
+      <div class="grid three gallery">
+        <a class="gallery-item" href="../assets/img/hytte-1.jpg" target="_blank" rel="noopener">
+          <img src="../assets/img/hytte-1.jpg" alt="Kos foran peisen" loading="lazy" decoding="async">
+        </a>
+        <a class="gallery-item" href="../assets/img/hytte-2.jpg" target="_blank" rel="noopener">
+          <img src="../assets/img/hytte-2.jpg" alt="Stue med store vinduer" loading="lazy" decoding="async">
+        </a>
+        <a class="gallery-item" href="../assets/img/hytte-3.jpg" target="_blank" rel="noopener">
+          <img src="../assets/img/hytte-3.jpg" alt="Moderne hytte med utsikt over vannet" loading="lazy" decoding="async">
+        </a>
+        <a class="gallery-item" href="../assets/img/hytte-4.jpg" target="_blank" rel="noopener">
+          <img src="../assets/img/hytte-4.jpg" alt="Terrasse og utsikt mot elven" loading="lazy" decoding="async">
+        </a>
+        <a class="gallery-item" href="../assets/img/hytte-5.jpg" target="_blank" rel="noopener">
+          <img src="../assets/img/hytte-5.jpg" alt="Soverom med tømmervegger" loading="lazy" decoding="async">
+        </a>
+        <a class="gallery-item" href="../assets/img/hytte-6.jpg" target="_blank" rel="noopener">
+          <img src="../assets/img/hytte-6.jpg" alt="Rustikt soverom med peis" loading="lazy" decoding="async">
+        </a>
+      </div>
+      <p class="muted small" style="margin-top:8px">* Bilder er illustrative for demo.</p>
+    </div>
+  </section>
+
+
+  <!-- PRISER -->
+  <section id="priser" class="section">
+    <div class="container">
+      <h2>Priser</h2>
+      <div class="grid three pricing">
+        <article class="price-card">
+          <div class="badge">Lavsesong</div>
+          <h3>Hverdag</h3>
+          <div class="price">1&nbsp;200,- / natt</div>
+          <ul class="check-grid">
+            <li>Min. 2 netter</li>
+            <li>Strøm inkludert</li>
+            <li>Utvask som tillegg</li>
+          </ul>
+          <p><a class="btn" href="#kontakt">Forespørsel</a></p>
+        </article>
+
+        <article class="price-card featured">
+          <div class="badge">Mest valgt</div>
+          <h3>Helg</h3>
+          <div class="price">3&nbsp;200,- / helg</div>
+          <ul class="check-grid">
+            <li>Fre–søn</li>
+            <li>Sen utsjekk søndag</li>
+            <li>Ved inkludert</li>
+          </ul>
+          <p><a class="btn" href="#kontakt">Reserver</a></p>
+        </article>
+
+        <article class="price-card">
+          <div class="badge">Høysesong</div>
+          <h3>Uke</h3>
+          <div class="price">7&nbsp;900,- / uke</div>
+          <ul class="check-grid">
+            <li>Lør–lør</li>
+            <li>Nær bakke & løyper</li>
+            <li>Parkering ved hytta</li>
+          </ul>
+          <p><a class="btn" href="#kontakt">Send forespørsel</a></p>
+        </article>
+      </div>
+      <p class="muted small" style="margin-top:8px">* Veiledende priser. Endelig total avhenger av dato og antall
+        personer.</p>
+    </div>
+  </section>
+
+  <!-- LEDIGHET (enkel demo-tabell) -->
+  <section id="ledighet" class="section alt">
+    <div class="container">
+      <h2>Ledighet (demo)</h2>
+      <div class="avail-grid">
+        <div class="m">Man</div>
+        <div class="m">Tir</div>
+        <div class="m">Ons</div>
+        <div class="m">Tor</div>
+        <div class="m">Fre</div>
+        <div class="m">Lør</div>
+        <div class="m">Søn</div>
+        <div class="d free">1</div>
+        <div class="d free">2</div>
+        <div class="d free">3</div>
+        <div class="d free">4</div>
+        <div class="d hold">5</div>
+        <div class="d booked">6</div>
+        <div class="d booked">7</div>
+        <div class="d free">8</div>
+        <div class="d free">9</div>
+        <div class="d hold">10</div>
+        <div class="d free">11</div>
+        <div class="d free">12</div>
+        <div class="d booked">13</div>
+        <div class="d free">14</div>
+        <div class="d free">15</div>
+        <div class="d free">16</div>
+        <div class="d free">17</div>
+        <div class="d hold">18</div>
+        <div class="d free">19</div>
+        <div class="d free">20</div>
+        <div class="d booked">21</div>
+        <div class="d free">22</div>
+        <div class="d free">23</div>
+        <div class="d free">24</div>
+        <div class="d free">25</div>
+        <div class="d hold">26</div>
+        <div class="d booked">27</div>
+        <div class="d free">28</div>
+      </div>
+      <p class="muted small" style="margin-top:8px">Grønn = ledig, Oransje = på hold, Rød = opptatt (eksempeldata).</p>
+    </div>
+  </section>
+
+  <!-- KART + OMTALER -->
+  <section class="section">
+    <div class="container grid two">
+      <aside class="card">
+        <h2>Kart</h2>
+        <div class="map-frame">
+          <iframe title="Kart" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=10.5%2060.0%2011.0%2060.4&layer=mapnik&marker=60.2,10.75">
+          </iframe>
+        </div>
+        <p class="muted small">Nær skog, vann og turstier – perfekt for helgetur.</p>
+      </aside>
+
+      <article class="card quote">
+        <h2>Omtaler</h2>
+        <p>“Super familiehelg! Hytta var varm, ren og godt utstyrt. Badstua etter skitur var 🔥.”</p>
+        <span>— Mari, februar 2025</span>
+        <details class="faq" style="margin-top:10px">
+          <summary>Flere tilbakemeldinger</summary>
+          <p>“Sov godt, rolig område og kort vei til bakken.” — Jonas</p>
+          <p>“Hyggelig vertskap og enkel nøkkelboks.” — Lina</p>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="section">
+    <div class="container grid two">
+      <article class="card">
+        <h2>Sjekk ledig / pris</h2>
+        <form class="form"
+          onsubmit="event.preventDefault(); this.querySelector('.form-msg').textContent='Takk! Vi svarer vanligvis innen 24t.';">
+          <label for="name">Navn</label>
+          <input id="name" name="name" type="text" required>
+          <label for="email">E-post</label>
+          <input id="email" name="email" type="email" required>
+          <label for="dates">Ønskede datoer</label>
+          <input id="dates" name="dates" type="text" placeholder="f.eks. 10–12 mars">
+          <label for="guests">Antall personer</label>
+          <select id="guests" name="guests">
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+          <label for="msg">Melding</label>
+          <textarea id="msg" name="msg" rows="3" placeholder="Evt. spørsmål eller ønsker"></textarea>
+          <button class="btn" type="submit">Send forespørsel</button>
+          <div class="form-msg muted small" aria-live="polite"></div>
+        </form>
+      </article>
+
+      <aside class="card">
+        <h2>Godt å vite</h2>
+        <ul class="info">
+          <li>Innsjekk 15:00 – utsjekk 11:00</li>
+          <li>Selvhushold – utvask kan bestilles</li>
+          <li>Senger: 6 (3 soverom)</li>
+          <li>Badstue og peis – ved er inkludert</li>
+          <li>Parkering ved hytta</li>
+        </ul>
+        <p style="margin-top:8px"><a class="link small" href="/eksempler.html">Tilbake til eksempler</a></p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Fjellro Hytte • Nettside laget av <strong>Cre8Web</strong></p>
+      <a class="btn ghost small" href="#main">Til toppen</a>
+    </div>
+  </footer>
+
+  <!-- JS: enkel scroll-reveal (valgfritt) -->
+  <script>
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => entries.forEach(e => e.isIntersecting && e.target.classList.add('in')), { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>

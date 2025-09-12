@@ -1,0 +1,50 @@
+:root {
+  --brand-1: #00d1ff;
+  --brand-2: #00ffa0;
+  --brand-on: #041015;
+  --bg: #080b10;
+  --bg-alt: #0c1016;
+  --panel: #111a22;
+  --line: #213041;
+  --text: #e6f7ff;
+  --muted: #a8c1d0;
+  --font: system-ui, Inter;
+  --lh: 1.6;
+  --container: 1100px;
+  --radius: 16px;
+  --chip-bg: rgba(255, 255, 255, 0.02);
+  --code-bg: #0a1218;
+  --code-border: #213041;
+  --edge-cyan: 0, 209, 255;
+  --edge-amber: 0, 255, 160;
+}
+.compare-cards {
+  grid-template-columns: 1fr 1fr;
+}
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  overflow: hidden;
+}
+.before-after img {
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+@media (max-width: 980px) {
+  .compare-cards {
+    grid-template-columns: 1fr;
+  }
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+}
+.contact {
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  max-width: 760px;
+}
+.contact label:nth-child(3),
+.contact label:nth-child(4) {
+  grid-column: 1/-1;
+}

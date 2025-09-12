@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="no" data-theme="neon">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ressurser – guider, maler og artikler | Cre8Web</title>
+    <meta name="description" content="Samling av guider, maler og artikler som hjelper småbedrifter raskt på nett.">
+    <link rel="canonical" href="https://cre8web.netlify.app/ressurser/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ressurser – guider, maler og artikler">
+    <meta property="og:description" content="Guider & maler, samt artikler og cases.">
+    <link rel="icon" href="../assets/favicon/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0b0d10">
+
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/themes.css">
+    <link rel="stylesheet" href="../assets/css/ui-polish.css">
+
+    <!-- Breadcrumbs -->
+    <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Hjem","item":"https://cre8web.netlify.app/"},
+    {"@type":"ListItem","position":2,"name":"Ressurser","item":"https://cre8web.netlify.app/ressurser/"}]}
+  </script>
+</head>
+
+<body class="theme-neon">
+    <a href="#main" class="skip-link">Hopp til innhold</a>
+
+    <!-- Header (samme som ellers) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html" aria-label="CRE8Web – til forsiden">
+                <img src="../assets/img/cre8web-header2.jpg" class="logo-img" width="160" alt="CRE8Web logo"
+                    loading="lazy" decoding="async">
+            </a>
+            <button class="nav-toggle" data-menu-btn aria-label="Meny">☰</button>
+            <nav class="nav" data-menu>
+                <a href="../index.html">Hjem</a>
+                <a href="../tjenester.html">Tjenester</a>
+                <a href="../priser.html">Priser</a>
+                <a href="../eksempler.html">Eksempler</a>
+                <a class="active" href="../ressurser.html">Ressurser</a>
+                <a href="../kontakt.html" class="btn small">Kom i gang</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero hero--sub">
+        <div class="container hero-inner">
+            <h1>Ressurser</h1>
+            <p class="muted">Guider, maler og artikler som hjelper deg raskt på nett.</p>
+        </div>
+        <div class="hero-bg" aria-hidden="true" style="
+      background-image:
+        linear-gradient(180deg, rgba(11,13,16,.25), rgba(11,13,16,.95)),
+        url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop');
+    "></div>
+    </section>
+
+    <!-- Tabs + søk -->
+    <main id="main" class="section">
+        <div class="container">
+            <div class="toolbar"
+                style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+                <div class="tabs" role="tablist" aria-label="Innholdskategorier">
+                    <button class="tab active" data-tab="guides" role="tab" aria-selected="true">Guider & maler</button>
+                    <button class="tab" data-tab="articles" role="tab" aria-selected="false">Artikler</button>
+                </div>
+                <label class="search small" style="display:flex;align-items:center;gap:8px">
+                    <input id="searchInput" type="search" placeholder="Søk i ressurser…" aria-label="Søk i ressurser">
+                </label>
+            </div>
+
+            <!-- Guider & maler (henter fra guide.html) -->
+            <section id="panel-guides" class="panel" data-panel="guides" aria-labelledby="tab-guides"
+                style="margin-top:18px">
+                <div class="grid three cards resource-grid">
+                    <!-- Eksempler – pek til guide.html seksjoner eller nedlastinger -->
+                    <a class="card resource" href="../guide.html#budsjettmal">
+                        <h3>Excel: Budsjettmal</h3>
+                        <p class="muted small">Gratis nedlasting – klar med formler og eksempeldata.</p>
+                        <span class="tag">Gratis</span>
+                    </a>
+                    <a class="card resource" href="../guide.html#innholdsplan">
+                        <h3>Innholdsplan for nettsiden</h3>
+                        <p class="muted small">Mal for struktur: hero, tjenester, om, kontakt.</p>
+                        <span class="tag">Mal</span>
+                    </a>
+                    <a class="card resource" href="../guide.html#sjekkliste">
+                        <h3>Sjekkliste før lansering</h3>
+                        <p class="muted small">SEO, ytelse, skjema og måling – alt på ett sted.</p>
+                        <span class="tag">Sjekkliste</span>
+                    </a>
+                </div>
+
+                <div class="card" style="margin-top:16px;text-align:center">
+                    <p>Trenger du en spesialmal? De fleste malene er gratis, og jeg lager gjerne <em>skreddersøm</em>
+                        ved bestilling.</p>
+                    <p><a class="btn ghost" href="../kontakt.html">Be om spesialmal</a></p>
+                </div>
+            </section>
+
+            <!-- Artikler (pek til /artikler/) -->
+            <section id="panel-articles" class="panel hidden" data-panel="articles" aria-labelledby="tab-articles"
+                style="margin-top:18px">
+                <div class="grid three cards resource-grid">
+                    <a class="card resource" href="../artikler/nettside-7-dager.html">
+                        <h3>Hvordan få en enkel nettside på 7 dager</h3>
+                        <p class="muted small">Plan → innhold → design → lansering.</p>
+                        <span class="tag">Guide</span>
+                    </a>
+                    <a class="card resource" href="../artikler/pris-nettside-2025.html">
+                        <h3>Hva koster en nettside i 2025?</h3>
+                        <p class="muted small">Prisnivå, hva som påvirker prisen.</p>
+                        <span class="tag">Priser</span>
+                    </a>
+                    <a class="card resource" href="../artikler/onepager-vs-flersidig.html">
+                        <h3>One-pager vs. flersidig</h3>
+                        <p class="muted small">Fordeler, ulemper og sjekkliste.</p>
+                        <span class="tag">Struktur</span>
+                    </a>
+                    <a class="card resource" href="../artikler/rorlegger-nettside-sjekkliste.html">
+                        <h3>Nettside for rørlegger</h3>
+                        <p class="muted small">Sjekkliste som gir kunder.</p>
+                        <span class="tag">Bransje</span>
+                    </a>
+                    <a class="card resource" href="../artikler/hytteutleie-nettside.html">
+                        <h3>Nettside for hytteutleie</h3>
+                        <p class="muted small">Booking, galleri, regler og kart.</p>
+                        <span class="tag">Bransje</span>
+                    </a>
+                    <a class="card resource" href="../artikler/skriv-tekster-som-konverterer.html">
+                        <h3>Skriv tekster som konverterer</h3>
+                        <p class="muted small">Maler og eksempler for overskrifter & CTA.</p>
+                        <span class="tag">Tekst</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="foot-brand">
+                <a class="logo" href="../index.html" aria-label="Cre8Web – til forsiden">
+                    <img class="logo-img" src="../assets/img/cre8web.jpg" width="200" height="200" alt="Cre8Web"
+                        loading="lazy" decoding="async">
+                </a>
+                <p>Raske, ryddige nettsider – fastpris og levering på 7 dager.</p>
+                <p class="foot-meta">© <span id="year"></span> Cre8Web · Roger Sørqvist</p>
+            </div>
+            <nav class="foot-nav" aria-label="Sider">
+                <h4>Sider</h4>
+                <ul>
+                    <li><a href="../index.html">Hjem</a></li>
+                    <li><a href="../tjenester.html">Tjenester</a></li>
+                    <li><a href="../priser.html">Priser</a></li>
+                    <li><a href="../eksempler.html">Eksempler</a></li>
+                    <li><a class="active" href="./">Ressurser</a></li>
+                    <li><a href="../kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="foot-contact">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li>E-post: <a href="mailto:cre8xf@gmail.com">cre8xf@gmail.com</a></li>
+                    <li>Telefon: <a href="tel:+4791558393">+47 91 55 83 93</a></li>
+                    <li>Fredrikstad, Norge</li>
+                </ul>
+                <button class="btn ghost small" data-to-top>Til toppen</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tabs + søk (lettvekts)
+        (function () {
+            const tabs = document.querySelectorAll('.tab');
+            const panels = document.querySelectorAll('.panel');
+            const search = document.getElementById('searchInput');
+
+            function show(tab) {
+                tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+                panels.forEach(p => p.classList.toggle('hidden', p.dataset.panel !== tab));
+                // reset søk når man bytter fane
+                if (search) search.value = '';
+                filter('');
+            }
+            function filter(q) {
+                document.querySelectorAll('.resource-grid .resource').forEach(card => {
+                    const txt = card.innerText.toLowerCase();
+                    card.style.display = txt.includes(q) ? '' : 'none';
+                });
+            }
+            tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.tab)));
+            if (search) search.addEventListener('input', e => filter(e.target.value.trim().toLowerCase()));
+
+            // hash-basert deep-link ?tab=articles
+            const params = new URLSearchParams(location.search);
+            show(params.get('tab') === 'articles' ? 'articles' : 'guides');
+        })();
+    </script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/effects.js"></script>
+</body>
+
+</html>
