@@ -1,25 +1,19 @@
 #hjem.hero .hero-bg {
-  background-image: linear-gradient(180deg, color-mix(in oklab, var(--bg) 20%, transparent), color-mix(in oklab, var(--bg) 90%, transparent)), 
-    url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop');
+  background-image: linear-gradient(180deg, var(--hero-ov-top), var(--hero-ov-bot)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop');
 }
-/* --- HJEM: tving hero lavere slik at neste seksjon vises --- */
 
-/* 1) Hard cap på høyde */
+/* --- HERO HØYDE & PADDING --- */
 #hjem.hero.hero--full {
-  height: 78vh !important; /* cap høyden */
-  min-height: 0 !important; /* overstyr base-verdien */
+  height: 78vh !important;
+  min-height: 0 !important;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* tekst ned mot bunnen */
-  overflow: hidden; /* skjul evt. bakgrunns-overspill */
+  justify-content: flex-end;
+  overflow: hidden;
 }
-
-/* 2) Strammere padding i tekstblokken */
 #hjem .hero-inner {
   padding: 18px 0 28px !important;
 }
-
-/* 3) Litt fade i bunn (valgfritt) */
 #hjem .hero-bg::after {
   content: '';
   position: absolute;
@@ -31,7 +25,7 @@
   pointer-events: none;
 }
 
-/* 4) Finjuster per skjermstørrelse */
+/* Responsiv høyde */
 @media (min-width: 1200px) {
   #hjem.hero.hero--full {
     height: 82vh !important;
@@ -39,37 +33,27 @@
 }
 @media (max-width: 640px) {
   #hjem.hero.hero--full {
-    height: 70vh !important;
+    height: 68vh !important;
   }
   #hjem .hero-inner {
     padding: 14px 0 22px !important;
   }
 }
-/* === Hero tweaks – forside === */
-#hjem.hero.hero--full {
-  height: 80vh !important;
-  min-height: 0 !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-#hjem .hero-inner {
-  padding: 18px 0 28px !important;
-}
 
-/* Glasspanel for bedre lesbarhet på tekst over bilde */
+/* --- HERO PANEL --- */
 .hero-panel {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  background: linear-gradient(to bottom, color-mix(in oklab, var(--bg) 45%, transparent), color-mix(in oklab, var(--bg) 70%, transparent));
-  border: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: color-mix(in oklab, var(--panel) var(--hero-panel-tint), transparent);
+  border: 1px solid var(--line);
   border-radius: 16px;
   padding: 16px 18px;
   max-width: 780px;
   box-shadow: var(--shadow);
+  margin-bottom: 12px;
 }
 
-/* Stats under CTA */
+/* --- HERO STATS --- */
 .hero-stats {
   display: flex;
   gap: 14px;
@@ -94,22 +78,50 @@
   font-size: 0.9rem;
 }
 
-/* Trust bar */
+/* --- HERO FEATURES --- */
+.hero-features {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  max-width: 980px;
+}
+@media (min-width: 760px) {
+  .hero-features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.hero-features .feat {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+.hero-features h3 {
+  margin: 0 0 6px;
+}
+.hero-features p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* --- TRUST BAR --- */
 .hero-trust {
   position: relative;
   z-index: 1;
   border-top: 1px solid var(--line);
-  background: color-mix(in oklab, var(--bg-alt) 82%, transparent);
+  background: var(--bg-alt);
 }
 .trust-inner {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 .trust-kicker {
   color: var(--muted);
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 .trust-logos {
   display: flex;
@@ -118,14 +130,36 @@
 }
 .tlogo {
   font-size: 0.85rem;
+  letter-spacing: 0.2px;
   color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--chip-bg);
+  opacity: 0.7;
+}
+.tlogo:hover {
+  opacity: 0.9;
+}
+:root[data-theme='neon'] .tlogo {
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+:root[data-theme='light'] .tlogo {
+  mix-blend-mode: normal;
   opacity: 0.8;
-  border: 1px dashed var(--line);
-  border-radius: 10px;
-  padding: 4px 8px;
 }
 
-/* Scroll cue */
+/* --- SCROLL CUE --- */
+@keyframes cue-bounce {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 6px);
+  }
+}
 .scroll-cue {
   position: absolute;
   left: 50%;
@@ -146,74 +180,8 @@
 .scroll-cue:hover {
   background: var(--chip-bg);
 }
-
-/* Intro – strammere spacing så alt sitter på en skjerm */
-.features--tight {
-  gap: 12px;
-}
-.features--tight .feat {
-  padding: 12px;
-  border-radius: 14px;
-}
-
-/* Små skjermer: litt lavere hero og tettere panel */
-@media (max-width: 640px) {
-  #hjem.hero.hero--full {
-    height: 68vh !important;
-  }
-  .hero-panel {
-    padding: 12px 14px;
-  }
-  .hero-stats {
-    gap: 10px;
-  }
-}
-/* LOGOER – ren chip/“partner bar” */
-.trust-inner {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 8px 0;
-}
-.trust-kicker {
-  color: var(--muted);
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-.trust-logos {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.tlogo {
-  font-size: 0.85rem;
-  letter-spacing: 0.2px;
-  color: var(--muted);
-  opacity: 0.55;
-  mix-blend-mode: screen;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 4px 10px;
-  background: var(--chip-bg);
-}
-.tlogo:hover {
-  opacity: 0.85;
-}
-
-/* NED-PIL – større, med label og bounce */
-@keyframes cue-bounce {
-  0%,
-  100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, 6px);
-  }
-}
 .scroll-cue.big {
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 78px;
+  bottom: 24px;
   width: auto;
   height: auto;
   padding: 6px 10px 6px 12px;
@@ -230,169 +198,11 @@
 .scroll-cue.big svg {
   opacity: 0.9;
 }
-/* --- HJEM: justert høyde, panel og sammenslått intro --- */
-#hjem.hero.hero--full {
-  height: 76vh !important; /* lavere enn 100vh så man skimter at det kommer mer */
-  min-height: 0 !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-#hjem .hero-inner {
-  padding: 18px 0 24px !important;
-}
-
-/* Glass-panel for heading/tekst */
-.hero-panel {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  background: linear-gradient(to bottom, color-mix(in oklab, var(--bg) 45%, transparent), color-mix(in oklab, var(--bg) 70%, transparent));
-  border: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
-  border-radius: 16px;
-  padding: 16px 18px;
-  max-width: 780px;
-  box-shadow: var(--shadow);
-  margin-bottom: 12px;
-}
-
-/* Stats under CTA */
-.hero-stats {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin: 12px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.hero-stats li {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 8px 10px;
-  display: grid;
-  line-height: 1.2;
-}
-.hero-stats strong {
-  font-size: 1.05rem;
-}
-.hero-stats span {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* USP-er inne i hero */
-.hero-features {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: 1fr;
-  max-width: 980px;
-}
-@media (min-width: 760px) {
-  .hero-features {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.hero-features .feat {
-  background: linear-gradient(to bottom, color-mix(in oklab, var(--bg) 40%, transparent), color-mix(in oklab, var(--bg) 62%, transparent));
-  border: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
-  border-radius: 14px;
-  padding: 12px;
-  box-shadow: var(--shadow);
-}
-.hero-features h3 {
-  margin: 0 0 6px;
-}
-.hero-features p {
-  margin: 0;
-  color: var(--muted);
-}
-
-/* Trust bar / logoer */
-.hero-trust {
-  position: relative;
-  z-index: 1;
-  border-top: 1px solid var(--line);
-  background: color-mix(in oklab, var(--bg-alt) 82%, transparent);
-}
-.trust-inner {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 8px 0;
-}
-.trust-kicker {
-  color: var(--muted);
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-.trust-logos {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.tlogo {
-  font-size: 0.85rem;
-  letter-spacing: 0.2px;
-  color: var(--muted);
-  opacity: 0.55;
-  mix-blend-mode: screen;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 4px 10px;
-  background: var(--chip-bg);
-}
-.tlogo:hover {
-  opacity: 0.85;
-}
-
-/* Ned-pil – større med tekst + rolig bounce */
-@keyframes cue-bounce {
-  0%,
-  100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, 6px);
-  }
-}
-.scroll-cue.big {
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 24px;
-  width: auto;
-  height: auto;
-  padding: 6px 10px 6px 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  box-shadow: var(--shadow);
-  animation: cue-bounce 1.6s ease-in-out infinite;
-}
 .scroll-cue.big:hover {
   background: var(--chip-bg);
 }
 
-/* Responsivt */
-@media (min-width: 1200px) {
-  #hjem.hero.hero--full {
-    height: 80vh !important;
-  }
-}
-@media (max-width: 640px) {
-  #hjem.hero.hero--full {
-    height: 66vh !important;
-  }
-  .hero-panel {
-    padding: 12px 14px;
-  }
-}
-/* ========== OM MEG ========== */
+/* --- OM MEG --- */
 .about-grid {
   display: grid;
   gap: 18px;
@@ -409,7 +219,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  aspect-ratio: 4 / 5; /* pen portrett-ratio */
+  aspect-ratio: 4 / 5;
   filter: saturate(0.96) contrast(1.02);
 }
 .about-body h2 {
@@ -436,14 +246,12 @@
   border: 1px solid var(--chip-border);
   background: var(--chip-bg);
 }
-
 .about-cta {
   margin-top: 1rem;
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
 }
-
 @media (min-width: 860px) {
   .about-grid {
     grid-template-columns: 0.9fr 1.1fr;

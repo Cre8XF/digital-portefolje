@@ -46,7 +46,7 @@
   opacity: 0.95;
 }
 
-/* 4) Details / summary (Tjenester: "Se hva som inngår") */
+/* 4) Details / summary */
 .offer-details summary {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -69,10 +69,10 @@
   background: linear-gradient(180deg, color-mix(in oklab, var(--text) 6%, transparent), color-mix(in oklab, var(--text) 35%, transparent));
 }
 :root[data-theme='light'] .demo-card .overlay {
-  background: linear-gradient(180deg, transparent, color-mix(in oklab, var(--text) 14%, transparent));
+  background: linear-gradient(180deg, transparent, color-mix(in oklab, var(--text) 10%, transparent));
 }
 
-/* 6) Ghost buttons — consistent premium look */
+/* 6) Ghost buttons */
 .btn.ghost {
   background: transparent;
   border: 1px solid var(--line);
@@ -84,22 +84,31 @@
   box-shadow: var(--shadow);
   transform: translateY(-1px);
 }
-/* 6b) Ghost buttons (små, f.eks. "Til innhold") */
+/* små ghost-knapper */
 .btn.ghost.small {
-  font-size: 0.95rem; /* litt større tekst */
-  padding: 0.45em 1em; /* mer luft rundt */
-  background: rgba(153, 135, 182, 0.48); /* lysere bakgrunn */
-  color: var(--text);
-  border: 1px solid rgb(255, 255, 255);
+  font-size: 0.95rem;
+  padding: 0.45em 1em;
   border-radius: 6px;
 }
-
+/* mørk/neon: lett lilla bakgrunn */
+:root[data-theme='neon'] .btn.ghost.small,
+:root[data-theme='dark'] .btn.ghost.small {
+  background: rgba(153, 135, 182, 0.35);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+/* lys: nøytral */
+:root[data-theme='light'] .btn.ghost.small {
+  background: var(--chip-bg);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
 .btn.ghost.small:hover {
-  background: rgba(255, 255, 255, 0.22); /* enda litt lysere på hover */
+  background: var(--chip-bg);
   transform: translateY(-1px);
 }
 
-/* 7) Footer layout helpers (non-intrusive) */
+/* 7) Footer */
 .site-footer .footer-inner {
   display: flex;
   flex-direction: column;
@@ -109,11 +118,7 @@
 }
 .site-footer a {
   color: inherit;
-} /* inherit footer text */
-/* If your theme uses a dark footer, you can enable inverse text per-theme:
-:root[data-theme="dark"]  .site-footer,
-:root[data-theme="neon"]  .site-footer{ --text: var(--text-inverse); }
-*/
+}
 
 /* 8) Hero typography / accent */
 .hero h1 {
@@ -128,7 +133,6 @@
   color: transparent;
   text-shadow: 0 0 22px color-mix(in oklab, var(--brand-1) 45%, transparent);
 }
-/* midtstilt, men flytt litt mot venstre for optisk balanse */
 .hero--optical .hero-inner {
   min-height: 72vh;
   display: grid;
@@ -138,10 +142,9 @@
   max-width: min(960px, 92vw);
   margin: 0;
   text-align: center;
-  transform: translateX(-4vw); /* 4–6vw er sweet-spot */
-  background: color-mix(in oklab, var(--panel) 16%, transparent);
+  transform: translateX(-4vw);
+  background: color-mix(in oklab, var(--panel) var(--hero-panel-tint), transparent);
   border: 1px solid var(--line);
-  -webkit-backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -149,23 +152,21 @@
 .hero--optical .hero-badges {
   justify-content: center;
 }
-
 @media (max-width: 900px) {
   .hero--optical .hero-panel {
     transform: none;
-  } /* ren midt på mobil */
+  }
 }
-/* Slik jobber jeg – kompakt, ryddig */
+
+/* 9) Steps grid */
 .section-steps h2 {
   margin-bottom: 12px;
 }
-
 .section-steps .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px 12px;
 }
-
 .section-steps .card {
   position: relative;
   padding: 14px 16px;
@@ -176,7 +177,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  min-height: 84px; /* lavere kort */
+  min-height: 84px;
   transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .section-steps .card:hover {
@@ -184,8 +185,6 @@
   box-shadow: var(--shadow);
   border-color: color-mix(in oklab, var(--brand-1) 26%, var(--line));
 }
-
-/* tynn brand-strap øverst for litt “wow” uten å ta plass */
 .section-steps .card::before {
   content: '';
   position: absolute;
@@ -196,7 +195,6 @@
   background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
   opacity: 0.75;
 }
-
 .section-steps h3 {
   margin: 0;
   font-size: clamp(1.02rem, 0.94rem + 0.25vw, 1.18rem);
@@ -207,8 +205,6 @@
   color: var(--muted);
   line-height: 1.35;
 }
-
-/* Responsivt: 2 kolonner → 1 kolonne */
 @media (max-width: 1100px) {
   .section-steps .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -222,20 +218,18 @@
     padding: 12px 14px;
   }
 }
-/* Fluid gutters – konsistent luft i sidene på alle skjermer */
-:root {
-  --page-max: 1100px; /* maks innholds-bredde (juster om du vil) */
-  --gutter-desktop: 40px; /* venstre/høyre luft desktop */
-  --gutter-tablet: 32px; /* venstre/høyre luft tablet */
-  --gutter-mobile: 18px; /* venstre/høyre luft mobil */
-}
 
+/* 10) Fluid gutters */
+:root {
+  --page-max: 1100px;
+  --gutter-desktop: 40px;
+  --gutter-tablet: 32px;
+  --gutter-mobile: 18px;
+}
 .container {
-  /* bredde = minst av max-bredde ELLER 100% minus dobbel gutter (begge sider) */
   width: min(var(--page-max), calc(100% - 2 * var(--gutter-desktop)));
   margin-inline: auto;
 }
-
 @media (max-width: 1024px) {
   .container {
     width: min(var(--page-max), calc(100% - 2 * var(--gutter-tablet)));
@@ -246,15 +240,14 @@
     width: min(var(--page-max), calc(100% - 2 * var(--gutter-mobile)));
   }
 }
-/* HERO – bedre kontrast i light/steel, mykt i dark/neon */
+
+/* 11) Hero bg filter */
 .hero {
   position: relative;
 }
 .hero .hero-bg {
   filter: var(--hero-filter);
 }
-
-/* overlay på toppen av bildet, styrt av tokens */
 .hero .hero-bg::before {
   content: '';
   position: absolute;
@@ -262,19 +255,17 @@
   pointer-events: none;
   background: linear-gradient(180deg, var(--hero-ov-top), var(--hero-ov-bot));
 }
-
-/* panelet i hero: tema-styrt “glass” */
 .hero .hero-panel {
   background: color-mix(in oklab, var(--panel) var(--hero-panel-tint), transparent);
   border: 1px solid var(--line);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-
-/* litt ekstra tekst-lesbarhet i hero */
 .hero h1 {
   text-shadow: 0 8px 36px color-mix(in oklab, var(--text) 35%, transparent);
 }
+
+/* 12) Theme select */
 .theme-select {
   appearance: none;
   padding: 6px 10px;
@@ -288,4 +279,10 @@
   outline: 0;
   border-color: color-mix(in oklab, var(--brand-1) 40%, var(--line));
   box-shadow: var(--shadow);
+}
+/* Hero-sub bakgrunnsbilde */
+.hero--sub .hero-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

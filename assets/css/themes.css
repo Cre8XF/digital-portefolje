@@ -44,4 +44,41 @@ body.theme-neon {
 
   --edge-cyan: 0, 240, 255; /* turkis neon */
   --edge-amber: 162, 89, 255; /* lilla neon */
+
+  --hero-ov-top: color-mix(in oklab, var(--bg) 10%, transparent);
+  --hero-ov-bot: color-mix(in oklab, var(--bg) 66%, transparent);
+  --hero-panel-tint: 16%;
+  --hero-filter: none;
+}
+/* ---------- LIGHT (Bright & Clean) ---------- */
+:root[data-theme='light'],
+body.theme-light {
+  --bg: #f9fafc; /* lys hovedbakgrunn */
+  --bg-alt: #ffffff; /* enda lysere seksjoner */
+  --panel: #ffffff; /* hvite paneler/kort */
+  --line: #dcdfe6; /* grå linjer */
+  --text: #1a1a1a; /* mørk tekst */
+  --muted: #555; /* sekundær tekst */
+  --brand-1: #007bff; /* blå accent */
+  --brand-2: #a259ff; /* lilla accent */
+  --brand-on: #ffffff; /* tekst på knapper */
+
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --footer-bg: #f1f3f6;
+  --chip-bg: rgba(0, 0, 0, 0.04);
+  --chip-border: var(--line);
+  --code-bg: #f4f6fa;
+  --code-border: #e0e5ec;
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 14px 32px rgba(0, 0, 0, 0.12);
+
+  --edge-cyan: 0, 123, 255; /* blå kant-effekt */
+  --edge-amber: 162, 89, 255; /* lilla kant-effekt */
+
+  --hero-ov-top: color-mix(in oklab, var(--text) 8%, transparent); /* litt skygge fra toppen for kontrast */
+  --hero-ov-bot: color-mix(in oklab, var(--bg) 72%, transparent); /* myk innfading mot bunn */
+  --hero-panel-tint: 28%; /* litt “mer glass” i lys modus */
+  --hero-filter: saturate(0.95) contrast(1.02) brightness(1.02);
 }

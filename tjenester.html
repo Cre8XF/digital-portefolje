@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="no" data-theme="neon">
+<html lang="no" data-theme="light">
 
 <head>
     <meta charset="utf-8">
@@ -45,6 +45,13 @@
     <!-- Favicon -->
     <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
 
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/themes.css">
@@ -77,6 +84,7 @@
                 <a href="guide.html">Guider & maler</a>
                 <a href="kontakt.html" class="btn small">Kom i gang</a>
             </nav>
+            <button id="theme-toggle" class="btn small" aria-label="Bytt tema">🌙</button>
         </div>
     </header>
 
@@ -87,13 +95,11 @@
                 <h1 class="grad">Tjenester</h1>
                 <p>Design, utvikling og innhold – raskt, ryddig og mobilvennlig.</p>
             </div>
-            <div class="hero-bg" aria-hidden="true" style="background-image:
-        linear-gradient(180deg,
-          color-mix(in oklab, var(--bg) 20%, transparent),
-          color-mix(in oklab, var(--bg) 72%, transparent)
-        ),
-        url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop');"></div>
+            <div class="hero-bg" aria-hidden="true"
+                style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop');">
+            </div>
         </section>
+
 
         <!-- Innhold -->
         <section class="section section--vh">

@@ -38,45 +38,71 @@
   font-size: 1.15rem;
 }
 
+/* Offer details – panel look */
 .offer-details {
-  border-top: 1px solid var(--line);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
   margin-top: 8px;
-  padding-top: 8px;
+  padding-top: 0; /* fjernet dobbel padding */
 }
 .offer-details summary {
   cursor: pointer;
   list-style: none;
   font-weight: 700;
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  transition: filter 0.15s ease;
-}
-.offer-details[open] summary {
-  filter: brightness(1.05);
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text);
+  transition: background 0.15s ease;
 }
 .offer-details summary::-webkit-details-marker {
   display: none;
 }
 .offer-details summary::after {
-  content: '▼';
-  float: right;
-  font-size: 0.9rem;
-  opacity: 0.7;
-  transform: translateY(1px);
+  content: '▾';
+  opacity: 0.85;
+  transition: transform 0.2s ease;
 }
 .offer-details[open] summary::after {
-  content: '▲';
+  transform: rotate(180deg);
+}
+.offer-details[open] summary {
+  background: var(--chip-bg);
 }
 
-/* Litt mer «snap» i chips på mørk bakgrunn */
-.chip {
-  background: color-mix(in oklab, var(--bg-alt) 80%, transparent);
-  color: var(--muted);
+/* Innhold */
+.offer-details .check-grid {
+  padding: 0 14px 12px;
+  margin-top: 6px;
 }
+.offer-details .chips {
+  margin: 12px 14px 14px;
+}
+
+/* Fokus-stil for tastaturbrukere */
+.offer-details summary:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--brand-1) 65%, transparent);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+/* Chips */
+.chip {
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.9rem;
+}
+
 /* --- Compact desktop: få alt på én skjerm --- */
 @media (min-width: 1200px) {
-  /* Mindre hero */
   .hero--sub .hero-bg {
     height: 220px;
   }
@@ -87,12 +113,10 @@
     margin-bottom: 4px;
   }
 
-  /* Tettere seksjon */
   .section {
     padding: 22px 0;
   }
 
-  /* Features-grid: 4 kolonner, liten gap */
   .grid.features {
     grid-template-columns: repeat(4, 1fr);
     gap: 14px;
@@ -109,7 +133,6 @@
     font-size: 0.95rem;
   }
 
-  /* Steps: 4 kolonner, liten gap og lavere kort */
   .steps {
     margin-top: 14px;
   }
@@ -135,7 +158,6 @@
     font-size: 0.95rem;
   }
 
-  /* Tilbudskort kompakt */
   .card.offer {
     margin-top: 18px;
     padding: 14px;
@@ -151,59 +173,12 @@
     padding: 10px 14px;
   }
 
-  /* Footer litt tettere */
   .site-footer .footer-inner {
     padding: 12px 0 18px;
   }
 }
-.offer-details {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
 
-/* Summary-knappen */
-.offer-details summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 12px 14px;
-  font-weight: 800;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.offer-details summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Pilindikator */
-.offer-details summary::after {
-  content: '▾';
-  opacity: 0.85;
-  transition: transform 0.2s ease;
-}
-.offer-details[open] summary::after {
-  transform: rotate(180deg);
-}
-
-/* Innholdet */
-.offer-details .check-grid {
-  padding: 0 14px 12px;
-  margin-top: 6px;
-}
-.offer-details .chips {
-  margin: 12px 14px 14px;
-}
-
-/* Fokus-stil for tastaturbrukere */
-.offer-details summary:focus-visible {
-  outline: 2px solid color-mix(in oklab, var(--brand-1) 65%, transparent);
-  outline-offset: 4px;
-  border-radius: 10px;
-}
+/* Tekst-link */
 .text-link {
   border-bottom: 1px dashed var(--line);
   padding-bottom: 2px;

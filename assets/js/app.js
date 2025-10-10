@@ -33,27 +33,14 @@ document.addEventListener('click', e => {
   });
 })();
 
-// ---------------------------------------------------------
-// Tema: lås til NEON (ingen switcher)
-// ---------------------------------------------------------
-(function () {
-  const root = document.documentElement;
-  const body = document.body;
-
-  // Sett alltid neon (og lagre verdien hvis du bruker den andre steder)
-  root.setAttribute('data-theme', 'neon');
-  body.classList.add('theme-neon');
-  try { localStorage.setItem('theme', 'neon'); } catch {}
-
-  // Oppdater <meta name="theme-color"> med --bg fra CSS-variabler
-  function setThemeColor(){
-    const m = document.querySelector('meta[name="theme-color"]');
-    if (!m) return;
-    const val = getComputedStyle(root).getPropertyValue('--bg').trim();
-    if (val) m.setAttribute('content', val);
-  }
-  document.addEventListener('DOMContentLoaded', setThemeColor);
-})();
+// Oppdater <meta name="theme-color"> med --bg fra CSS-variabler
+function setThemeColor() {
+  const m = document.querySelector('meta[name="theme-color"]');
+  if (!m) return;
+  const val = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+  if (val) m.setAttribute('content', val);
+}
+document.addEventListener('DOMContentLoaded', setThemeColor);
 
 // ---------------------------------------------------------
 // Inkluder delte partials (footer) + to-top
@@ -80,3 +67,30 @@ async function includePartials(){
   });
 }
 document.addEventListener('DOMContentLoaded', includePartials);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("theme-toggle");
+  const root = document.documentElement; // <html>
+
+  // Start med light
+  let currentTheme = root.getAttribute("data-theme") || "light";
+
+  // Oppdater knapp-ikon
+  toggleBtn.textContent = currentTheme === "light" ? "🌙" : "☀️";
+
+  toggleBtn.addEventListener("click", () => {
+    currentTheme = currentTheme === "light" ? "neon" : "light";
+    root.setAttribute("data-theme", currentTheme);
+    toggleBtn.textContent = currentTheme === "light" ? "🌙" : "☀️";
+
+    // Valgfritt: lagre i localStorage
+    localStorage.setItem("theme", currentTheme);
+  });
+
+  // Hent fra localStorage hvis lagret
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    root.setAttribute("data-theme", savedTheme);
+    toggleBtn.textContent = savedTheme === "light" ? "🌙" : "☀️";
+  }
+});

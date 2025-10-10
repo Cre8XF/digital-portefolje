@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="no" data-theme="neon">
+<html lang="no" data-theme="light">
 
 <head>
     <meta charset="utf-8">
@@ -16,13 +16,20 @@
     <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
     <meta name="theme-color" content="#0b0d10">
 
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/page-priser.css">
     <link rel="stylesheet" href="assets/css/themes.css">
     <link rel="stylesheet" href="assets/css/ui-polish.css">
 </head>
 
-<body class="theme-neon">
+<body>
     <!-- rett etter <body> -->
     <a href="#main" class="skip-link">Hopp til innhold</a>
 
@@ -43,11 +50,12 @@
             <nav class="nav" data-menu>
                 <a href="index.html">Hjem</a>
                 <a href="tjenester.html">Tjenester</a>
-                <a href="priser.html">Priser</a>
+                <a href="priser.html" aria-current="page">Priser</a>
                 <a href="eksempler.html">Eksempler</a>
-                <a href="ressurser.html">Ressurser</a>
+               <a href="guide.html">Guider & maler</a>
                 <a href="kontakt.html" class="btn small">Kom i gang</a>
             </nav>
+            <button id="theme-toggle" class="btn small" aria-label="Bytt tema">🌙</button>
         </div>
     </header>
 
@@ -57,11 +65,10 @@
             <h1>Priser</h1>
             <p>Fastpris og tydelig scope. Ingen skjulte kostnader.</p>
         </div>
-        <div class="hero-bg" aria-hidden="true" style="
-      background-image:
-        linear-gradient(180deg, rgba(11,13,16,.25), rgba(11,13,16,.95)),
-        url('https://cdn.pixabay.com/photo/2024/05/26/11/16/handshake-8788570_1280.jpg');
-    "></div>
+        <div class="hero-bg" aria-hidden="true"
+            style="background-image:url('https://cdn.pixabay.com/photo/2024/05/26/11/16/handshake-8788570_1280.jpg');">
+        </div>
+
 
     </section>
 
