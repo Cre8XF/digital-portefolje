@@ -13,8 +13,31 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bella Frisør – Profesjonell hårstyling i Oslo</title>
-  <meta name="description"
-    content="Moderne, raske og brukervennlige nettsider – fastpris, 7 dagers levering, og ubegrensede revisjoner.">
+  <meta name="description" content="Demo-nettside for frisør. Klipp, farge, extensions og behandlinger. Book time online og se prisliste.">
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Hjem",
+      "item": "https://cre8web.netlify.app/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Eksempler",
+      "item": "https://cre8web.netlify.app/eksempler.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Frisør Demo"
+    }]
+  }
+  </script>
+
   <link rel="canonical" href="https://dittdomene.no/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Cre8Web – Digital Design & Nettsider">
@@ -23,7 +46,6 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#0b0d10">
-  <meta name="description" content="Frisørsalong i Oslo med klipp, farging og behandlinger. Book time enkelt på nett.">
 
   <!-- Ryddet og konsolidert CSS -->
   <link rel="stylesheet" href="/demos/assets/css/base.css">
@@ -233,7 +255,12 @@
       <p class="subtitle">Se noen av våre nylige transformasjoner</p>
 
       <div class="gallery">
-        <figure class="shot"><img src="./assets/img/bob.jpg" alt="Moderne bob" loading="lazy"></figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="./assets/img/bob.webp" type="image/webp">
+            <img src="./assets/img/bob.jpg" alt="Moderne bob" loading="lazy">
+          </picture>
+        </figure>
         <figure class="shot"><img src="./assets/img/balayage.jfif" alt="Balayage" loading="lazy"></figure>
         <figure class="shot"><img src="./assets/img/festfrisyre.jfif" alt="Festfrisyre" loading="lazy"></figure>
         <figure class="shot"><img src="./assets/img/kreativ-farging.jfif" alt="Kreativ farging" loading="lazy"></figure>
