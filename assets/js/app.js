@@ -14,6 +14,15 @@ document.addEventListener('click', e => {
     btn.setAttribute('aria-expanded','false');
   }
 });
+// Escape key closes menu (accessibility)
+document.addEventListener('keydown', e => {
+  if (!menu || !btn) return;
+  if (e.key === 'Escape' && menu.classList.contains('open')) {
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.focus(); // Return focus to menu button
+  }
+});
 
 // ---------------------------------------------------------
 // Aktiv lenke + aria-current

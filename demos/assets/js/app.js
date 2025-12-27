@@ -28,8 +28,13 @@
     if (a) closeMenu();
   });
 
-  // Lukk på ESC
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+  // Lukk på ESC (accessibility enhancement)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+      btn?.focus(); // Return focus to menu button for better keyboard navigation
+    }
+  });
 
   // Reset til desktop når >900px
   const mq = window.matchMedia('(min-width: 901px)');
