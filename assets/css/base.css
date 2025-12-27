@@ -795,3 +795,44 @@ body::before {
   transform: translateY(-2px);
   filter: brightness(1.06);
 }
+
+/* ================================================================
+   ENHANCED KEYBOARD NAVIGATION & FOCUS STATES
+   ================================================================ */
+
+/* Enhanced focus for navigation toggle */
+.nav-toggle:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 4px;
+}
+
+/* Clear focus indicators for all interactive elements */
+button:focus-visible,
+a:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Enhanced focus for form inputs */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 15%, transparent);
+}
+
+/* Focus for card-style links */
+.showcase-card a:focus-visible,
+.card a:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 4px;
+}
+
+/* Skip link focus (for screen reader users) */
+.skip-link:focus {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
