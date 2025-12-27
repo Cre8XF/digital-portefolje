@@ -13,7 +13,31 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Solstua Kafé – Håndbakt & lokalt</title>
-  <meta name="description" content="Kafé-demo med meny, åpningstider og catering-forespørsel.">
+  <meta name="description" content="Demo-nettside for kafé. Håndbakt mat, lokale råvarer og lunsjtilbud. Se meny, åpningstider og bestill catering.">
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Hjem",
+      "item": "https://cre8web.netlify.app/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Eksempler",
+      "item": "https://cre8web.netlify.app/eksempler.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kafé Demo"
+    }]
+  }
+  </script>
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="Solstua Kafé – Håndbakt & lokalt">
   <meta property="og:description" content="Kafé-demo med meny, åpningstider og catering-forespørsel.">
@@ -21,8 +45,8 @@
   <meta name="theme-color" content="#0b0d10">
 
   <!-- Shared demo CSS -->
-  <link rel="stylesheet" href="/demos/assets/css/base.css">
-  <link rel="stylesheet" href="/demos/assets/css/kafe.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/kafe.css">
 </head>
 <body class="theme-kafe">
   <a href="#main" class="skip-link">Hopp til innhold</a>
