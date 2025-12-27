@@ -1,0 +1,12 @@
+# robots.txt for Cre8Web
+# https://cre8web.netlify.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cre8web.netlify.app/sitemap.xml
+
+# Disallow admin/internal areas (if any)
+# Disallow: /admin/
+# Disallow: /_redirects

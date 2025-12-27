@@ -61,13 +61,13 @@ h3 {
   margin: 0 0 var(--space-2);
 }
 h1 {
-  font-size: clamp(2rem, 3.4vw + 1rem, 3.6rem);
+  font-size: clamp(var(--text-3xl), 3.4vw + 1rem, var(--text-5xl));
 }
 h2 {
-  font-size: clamp(1.5rem, 1.6vw + 1rem, 2.1rem);
+  font-size: clamp(var(--text-2xl), 1.6vw + 1rem, var(--text-3xl));
 }
 h3 {
-  font-size: 1.12rem;
+  font-size: var(--text-lg);
 }
 p {
   margin: 0.25rem 0 1rem;
@@ -96,7 +96,7 @@ p {
 }
 .btn.small {
   padding: 0.55rem 0.9rem;
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
 }
 
 /* Header/Nav */
@@ -162,7 +162,7 @@ p {
   background: transparent;
   border: 0;
   color: var(--text);
-  font-size: 1.25rem;
+  font-size: var(--text-xl);
 }
 @media (max-width: 920px) {
   .nav-toggle {
@@ -260,7 +260,7 @@ p {
 }
 .price-card .badge {
   justify-self: start;
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
   padding: 0.32rem 0.6rem;
   border-radius: 999px;
   border: 0;
@@ -271,12 +271,12 @@ p {
 }
 .price-card .price {
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: var(--text-xl);
 }
 .price-card .strike {
   text-decoration: line-through;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   font-weight: 600;
   margin-left: 8px;
 }
@@ -311,7 +311,7 @@ p {
   background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
   color: var(--brand-on);
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   margin-bottom: 6px;
 }
 .check-grid {
@@ -407,7 +407,7 @@ p {
   margin-top: 2px;
 }
 .price-card .price {
-  font-size: 1.35rem;
+  font-size: var(--text-2xl);
   margin-top: 6px;
 }
 
@@ -434,7 +434,7 @@ p {
 /* badge alltid over tekst/innehold */
 .price-card .badge {
   justify-self: start;
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
   padding: 0.32rem 0.6rem;
   border-radius: 999px;
   border: 0;
@@ -579,7 +579,7 @@ p {
   color: var(--muted);
 }
 .foot-meta {
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
 }
 /* Neon-effekt på footer-logo */
 .foot-brand .logo-img {
