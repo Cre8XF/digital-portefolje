@@ -8,6 +8,31 @@
    ========================================================= */
 
 :root {
+  /* Typography & Layout Tokens */
+  --font: system-ui, -apple-system, "Segoe UI", "Roboto", sans-serif;
+  --lh: 1.6;
+  --container: 1200px;
+
+  /* Spacing Scale */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 48px;
+  --space-5: 64px;
+  --space-6: 96px;
+
+  /* Typography Scale */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 2rem;       /* 32px */
+  --text-4xl: 2.5rem;     /* 40px */
+  --text-5xl: 3rem;       /* 48px */
+
+  /* Legacy/Computed Tokens */
   --footer-bg: color-mix(in oklab, var(--bg) 10%, var(--text) 90%);
   --text-inverse: #eaf2ff;
 
@@ -60,7 +85,7 @@ body.theme-light {
   --text: #1a1a1a; /* mørk tekst */
   --muted: #555; /* sekundær tekst */
   --brand-1: #007bff; /* blå accent */
-  --brand-2: #a259ff; /* lilla accent */
+  --brand-2: #8b47cc; /* lilla accent - darkened for WCAG AA contrast */
   --brand-on: #ffffff; /* tekst på knapper */
 
   --header-bg: rgba(255, 255, 255, 0.8);

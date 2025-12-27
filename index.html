@@ -34,6 +34,9 @@
     <!-- Favicon -->
     <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
 
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="assets/img/profil1.webp" type="image/webp" fetchpriority="high">
+
     <script>
         (function () {
             const saved = localStorage.getItem('theme');
@@ -63,7 +66,7 @@
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+47 000 00 000",
+        "telephone": "+47 91 55 83 93",
         "contactType": "customer service",
         "availableLanguage": ["Norwegian", "English"]
       }
@@ -268,7 +271,10 @@
         <div class="about-grid">
             <figure class="about-photo card edge" data-reveal>
                 <!-- Bytt til ditt eget bilde/sti -->
-                <img src="assets/img/profil1.jpg" alt="Portrett" width="960" height="1200" loading="lazy" decoding="async">
+                <picture>
+                    <source srcset="assets/img/profil1.webp" type="image/webp">
+                    <img src="assets/img/profil1.jpg" alt="Portrett" width="960" height="1200" loading="lazy" decoding="async">
+                </picture>
             </figure>
 
             <div class="about-body" data-reveal>
